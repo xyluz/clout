@@ -1,0 +1,62 @@
+.showcase {
+  padding: 0.2vh 2vw;
+  /* width: 100%; */
+}
+
+.showcase .showcase-content {
+  margin-top: 55px;
+  padding: 0 2rem;
+
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col_txt {
+  max-width: 50%;
+}
+
+.txt {
+  font-size: 2.0rem;
+  padding-bottom: 15px;
+}
+
+.col {
+  padding-left: 24px;
+}
+
+.txt-content {
+
+  font-weight: 200;
+  font-size: 1.4rem;
+  line-height: 1.5;
+;
+}
+
+.box_top4 {
+  padding-top: 3.2rem;
+}
+
+.box {
+  display: block;
+}
+
+.hr {
+  background-color: #ea005e;
+  height: 1px;
+  margin: 0;
+  width: 4rem;
+  text-align: left;
+}
+
+hr {
+  display: block;
+}
+
+
+@media only screen and (max-width: 35em) { .col_txt {
+  max-width: 100% !important;
+} }
+
