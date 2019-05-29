@@ -27,6 +27,6 @@ class HomeController extends Controller
     }
 
     public function packages(){
-        return view('packages');
+        return view('packages')
     }
 }
