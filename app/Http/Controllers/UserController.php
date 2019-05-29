@@ -16,4 +16,8 @@ class UserController extends Controller
         return $package;
         return view('invoice');
     }
+
+    public function dashboard(){
+        return view('user.home');
+    }
 }

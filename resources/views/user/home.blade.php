@@ -1,5 +1,5 @@
-@extends('layouts.dashboard')
+@extends('user.layouts.dashboard')
  
 @section('content')
-@include('layouts.menu')
+@include('user.layouts.menu')
 @endsection

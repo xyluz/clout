@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Lancers') }}</title>
+    <title>{{ config('app.name', 'Clout') }}</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -53,12 +53,9 @@
 <div class="slim-header">
       <div class="container">
         <div class="slim-header-left">
-          <h2 class="slim-logo"><a href="index.html">Lancers<span>.</span></a></h2>
+          <h2 class="slim-logo"><a href="/">Clout<span>.ng</span></a></h2>
 
-          <div class="search-box">
-            <input type="text" class="form-control" placeholder="Search">
-            <button class="btn btn-primary"><i class="fa fa-search"></i></button>
-          </div><!-- search-box -->
+          
         </div><!-- slim-header-left -->
         <div class="slim-header-right">
           <div class="dropdown dropdown-a">
