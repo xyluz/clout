@@ -6,14 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateProductsTable extends Migration
 {
-    'user_id',
-    'account_id',
-    'product_name',
-    'product_price',
-    'onsale_price',
-    'product_description',
-    'product_image',
-    'purchase_url'
+
     /**
      * Run the migrations.
      *
