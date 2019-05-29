@@ -10,14 +10,14 @@
           <li class="nav-item">
             <a class="nav-link" href="#">
               <i class="icon ion-ios-filing-outline"></i>
-              <span>Projects</span>
+              <span>Accounts</span>
             </a>
           
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
               <i class="icon ion-ios-book-outline"></i>
-              <span>Customers</span>
+              <span>Campaigns</span>
             </a>
            
           </li>

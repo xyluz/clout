@@ -23,11 +23,7 @@
   
 
 
-</section> 
-
-
-
-        
+</section>         
       
 
     @include('layout.main')

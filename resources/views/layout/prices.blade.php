@@ -5,9 +5,9 @@
                 <label for="" class="uppercase tracking-loose font-bold text-lg font-smooth font-termina-m ">Clout</label>
                 <h1 style="color: #fc005e" for="" class="uppercase tracking-loose font-smooth font-bold text-5xl my-2 font-termina-m">N150,000</h1>
                 <p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4 w-74 m-auto text-lg leading-tight">Ideal for music artistes that want to promote their music with the Lagos crowd specifically. </p>
-                <button style="background:#fc005e;" class="butn font-smooth btn-4 bg-transparent hover:bg-black text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+                <a href="{{route('invoice',['package'=>'clout'])}}" style="background:#fc005e;" class="butn font-smooth btn-4 bg-transparent hover:bg-black text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                     Buy Now
-                </button>
+                </a>
                 <p style="width: 50%" class="text-center m-auto  text-m mt-4 mb-2 font-termina-m"> Promotion Available in Lagos ONLY </p>
             </div>
             <div style="border-right:1px solid #f06d46; border-bottom:1px solid #f06d46;" class="w-full sm:w-1/3 lg:w-1/3 text-center bg-white  h-85">
@@ -17,9 +17,9 @@
                 <h1 style="color: #0087fc" for="" class="uppercase tracking-loose font-bold text-5xl my-2 font-smooth font-termina-m ">   N200,000 <label for="" class="capitalize tracking-loose font-bold text-lg font-termina-m font-smooth block">25% off for Gospel Artistes</label></h1>
                 <p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4 w-74 m-auto text-lg leading-tight">If you are looking to gain clout with your music with audiences from Lagos, Port-harcourt, Onitsha, Abuja &amp; Kano</p>
 
-                <button style="background:#0087fc;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+                <a href="{{route('invoice',['package'=>'more clout'])}}" style="background:#0087fc;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                     Buy Now
-                </button>
+                </a>
                 <p class="text-center text-grey-darker text-m mt-4 mb-2 font-termina-m"> Also Included : </p>
                 <p class="text-center text-m mt-2 mb-2 font-termina-m"> Network-Syndicated Radio Interview </p>
                 <p class="text-center text-m mt-2 mb-4 font-termina-m"> Digitally-Syndicated Spotlight feature </p>

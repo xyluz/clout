@@ -7,12 +7,10 @@
 <div class="slim-mainpanel">
       <div class="container">
         <div class="slim-pageheader">
-          <ol class="breadcrumb slim-breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
-            <li class="breadcrumb-item"><a href="#">Pages</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Invoice Page</li>
-          </ol>
-          <h6 class="slim-pagetitle">Invoice Page</h6>
+           <ol class="breadcrumb slim-breadcrumb">
+            <li class="breadcrumb-item">Clout Package Name</li>            
+          </ol> 
+          <h6 class="slim-pagetitle right">Invoice</h6>
         </div><!-- slim-pageheader -->
 
         <div class="card card-invoice">
