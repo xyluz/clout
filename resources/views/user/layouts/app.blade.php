@@ -22,11 +22,11 @@
 
 
     <!-- Twitter -->
-    <meta name="twitter:site" content="@staybusyio">
-    <meta name="twitter:creator" content="@staybusyio">
+    <meta name="twitter:site" content="@clout">
+    <meta name="twitter:creator" content="@clout">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="StayBusy">
-    <meta name="twitter:description" content="Freelancer tool">
+    <meta name="twitter:title" content="Clout">
+    <meta name="twitter:description" content="Home of Music">
     <meta name="twitter:image" content="http://themepixels.me/slim/img/slim-social.png">
     <!-- <meta name="twitter:image" content="http://themepixels.me/slim/img/slim-social.png"> -->
 
