@@ -6,6 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateProfilesTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -15,6 +16,12 @@ class CreateProfilesTable extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id');
+            $table->string('picture')->nullable();
+            $table->string('nickname')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('office')->nullable();
+            $table->string('location')->nullable();
             $table->timestamps();
         });
     }

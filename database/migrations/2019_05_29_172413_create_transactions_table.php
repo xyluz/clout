@@ -6,6 +6,7 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateTransactionsTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -15,6 +16,13 @@ class CreateTransactionsTable extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id');
+            $table->integer('account_id');
+            $table->string('amount');
+            $table->string('method');
+            $table->text('ref');
+            $table->text('description');
+            $table->string('status');
             $table->timestamps();
         });
     }

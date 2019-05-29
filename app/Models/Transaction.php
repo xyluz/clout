@@ -13,6 +13,6 @@ class Transaction extends Model
         'method',
         'ref',
         'status',
-        'description'
+        'description' 
     ];
 }

@@ -6,6 +6,14 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateProductsTable extends Migration
 {
+    'user_id',
+    'account_id',
+    'product_name',
+    'product_price',
+    'onsale_price',
+    'product_description',
+    'product_image',
+    'purchase_url'
     /**
      * Run the migrations.
      *
@@ -15,6 +23,14 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->integer('user_id');
+            $table->integer('account_id');
+            $table->string('product_name');
+            $table->string('product_price');
+            $table->string('onsale_price')->nullable();
+            $table->text('product_description')->nullable();
+            $table->text('product_image')->nullable();
+            $table->string('purchase_url')->nullable();
             $table->timestamps();
         });
     }
