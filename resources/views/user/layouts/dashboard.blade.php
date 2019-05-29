@@ -55,7 +55,6 @@
         <div class="slim-header-left">
           <h2 class="slim-logo"><a href="/">Clout<span>.ng</span></a></h2>
 
-          
         </div><!-- slim-header-left -->
         <div class="slim-header-right">
           <div class="dropdown dropdown-a">

@@ -17,7 +17,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/packages', 'HomeController@packages')->name('package');
-Route::get('/selectpackage/{package}', 'UserController@selectPackage')->name('invoice');
+
 
 
 
@@ -25,6 +25,7 @@ Route::get('/selectpackage/{package}', 'UserController@selectPackage')->name('in
 Route::prefix('user')->group(function () {
 
     Route::get('dashboard','UserController@dashboard')->name('dashboard');
+    Route::get('/invoice/{package}', 'UserController@invoice')->name('invoice');
 
 });
 

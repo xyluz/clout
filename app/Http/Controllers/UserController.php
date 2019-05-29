@@ -12,9 +12,8 @@ class UserController extends Controller
     }
 
 
-    public function selectPackage($package){
-        return $package;
-        return view('invoice');
+    public function invoice($package){
+        return view('user.invoice');
     }
 
     public function dashboard(){
