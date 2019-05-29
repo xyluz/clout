@@ -76,7 +76,7 @@
 
                 <li id="about" class="">
                     <a class="mt-2" href="#0" class="label"> Inquiries </a>
-
+ 
                 </li>
 
                 <li class=" mt-8" data-content="experience">
