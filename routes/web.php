@@ -25,6 +25,11 @@ Route::post('test','HomeController@test')->name('test');
 Route::prefix('u')->group(function () { 
 
     Route::get('d','UserController@dashboard')->name('dashboard');
+
+    Route::get('p/{user}','UserController@profile')->name('profile');
+    Route::get('e/p/{user}','UserController@edit')->name('edit.profile');
+    Route::get('s/{user?}','UserController@settings')->name('settings');
+
     Route::get('/i/{package}', 'UserController@invoice')->name('invoice');
 
 });

@@ -17,11 +17,12 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('css/slim.css') }}" rel="stylesheet">
+    
     <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet">
     <link href="{{ asset('css/ionicons.css') }}" rel="stylesheet">
     <link href="{{ asset('css/chartist.css') }}" rel="stylesheet">
     <link href="{{ asset('css/rickshaw.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/slim.css') }}" rel="stylesheet">
 
 
     <!-- Twitter -->
@@ -179,11 +180,10 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right">
               <nav class="nav">
-                <a href="page-profile.html" class="nav-link"><i class="icon ion-person"></i> View Profile</a>
-                <a href="page-edit-profile.html" class="nav-link"><i class="icon ion-compose"></i> Edit Profile</a>
-                <a href="page-activity.html" class="nav-link"><i class="icon ion-ios-bolt"></i> Activity Log</a>
-                <a href="page-settings.html" class="nav-link"><i class="icon ion-ios-gear"></i> Account Settings</a>
-                <a href="page-signin.html" class="nav-link"><i class="icon ion-forward"></i> Sign Out</a>
+                <a href="{{route('profile',['user'=>Auth::user()])}}" class="nav-link"><i class="icon ion-person"></i> View Profile</a>
+                <a href="{{route('edit.profile',['user'=>Auth::user()])}}" class="nav-link"><i class="icon ion-compose"></i> Edit Profile</a>
+                <a href="{{route('settings')}}" class="nav-link"><i class="icon ion-ios-gear"></i> Account Settings</a>
+                <a href="#" class="nav-link"><i class="icon ion-forward"></i> Sign Out</a>
               </nav>
             </div><!-- dropdown-menu -->
           </div><!-- dropdown -->
@@ -198,7 +198,6 @@
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/popper.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
-    <script src="{{ asset('js/slim.js') }}"></script>
     <script src="{{ asset('js/jquery.cookie.js') }}"></script>
     <script src="{{ asset('js/chartist.js') }}"></script>
     <script src="{{ asset('js/d3.js') }}"></script>

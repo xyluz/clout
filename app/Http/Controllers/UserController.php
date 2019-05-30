@@ -18,4 +18,16 @@ class UserController extends Controller
     public function dashboard(){
         return view('user.home');
     }
+    
+    public function profile(User $user){
+        return $user->id;
+    }
+
+    public function edit(User $user){
+        return $user->id;
+    }
+
+    public function settings(User $user){
+        return $user->id;
+    }
 }
