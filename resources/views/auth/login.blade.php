@@ -1,11 +1,11 @@
-@extends('layouts.auth')
+@extends('user.layouts.auth')
 
 @section('content')
 
 <div class="signin-wrapper">
 
       <div class="signin-box signup">
-        <h2 class="slim-logo"><a href="/">lancers<span>.</span></a></h2>
+        <h2 class="slim-logo"><a href="/">Clout<span>.ng</span></a></h2>
         <h3 class="signin-title-primary">Welcome back!</h3>
         <h5 class="signin-title-secondary lh-4">Sign in to continue.</h5>
 

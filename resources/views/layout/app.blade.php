@@ -80,7 +80,7 @@
                 </li>
 
                 <li class=" mt-8" data-content="experience">
-                    <button class="butn btn-4 font-smooth font-termina-m btn-4a icon-arrow-right mb-8 ">Get Started</button>
+                    <button onclick="window.location='/register'" class="butn btn-4 font-smooth font-termina-m btn-4a icon-arrow-right mb-8 ">Get Started</button>
                 </li>
             </ul>
         </nav>

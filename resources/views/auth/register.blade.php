@@ -1,10 +1,10 @@
-@extends('layouts.auth')
+@extends('user.layouts.auth')
 
 @section('content')
 <div class="signin-wrapper">
 
     <div class="signin-box signup">
-    <h2 class="slim-logo"><a href="/">lancers<span>.</span></a></h2>
+    <h2 class="slim-logo"><a href="/">Clout<span>.ng</span></a></h2>
     <h3 class="signin-title-primary">{{ __('Get Started!') }}</h3>
     <h5 class="signin-title-secondary lh-4">It's free to signup and only takes a minute.</h5>
     <form method="POST" action="{{ route('register') }}">
@@ -30,7 +30,7 @@
 
             </div>
            
-        </div><!-- row -->
+        </div><!-- row -->       
 
         <div class="row row-xs mg-b-10">
            
@@ -53,6 +53,23 @@
                 @enderror
             </div>
         </div><!-- row -->
+        <div class="row row-xs mg-b-10">           
+          
+           <div class="col-sm mg-t-10 mg-sm-t-0">
+                <select class="form-control select2" data-placeholder="Account Type">
+                    <option label="Account Type"></option>
+                    <option value="business">Business Owner</option>
+                    <option value="manager">Manager</option>
+                    <option value="artist">Artist</option>                                      
+                </select>
+
+               @error('password')
+                   <span class="invalid-feedback" role="alert">
+                       <strong>{{ $message }}</strong>
+                   </span>
+               @enderror
+           </div>
+       </div><!-- row -->
 
         <button class="btn btn-primary btn-block btn-signin">{{ __('Register') }}</button>
     </form>

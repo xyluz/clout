@@ -1,11 +1,11 @@
-@extends('layouts.app')
+@extends('user.layouts.app')
 
 @section('content')
 
 <div class="signin-wrapper">
 
       <div class="signin-box signup">
-        <h2 class="slim-logo"><a href="/">lancers<span>.</span></a></h2>
+        <h2 class="slim-logo"><a href="/">Clout<span>.ng</span></a></h2>
         <h3 class="signin-title-primary">Almost Done!</h3>
         <h5 class="signin-title-secondary lh-4">{{ __('Verify Your Email Address') }}</h5>
 
