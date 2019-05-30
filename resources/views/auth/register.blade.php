@@ -60,7 +60,7 @@
                     <option label="Account Type">Account Type</option>
                     <option value="business">Business Owner</option>
                     <option value="manager">Manager</option>
-                    <option value="artist">Artist</option>                                      
+                    <option value="artist">Artist</option> 
                 </select>
 
                @error('password')
