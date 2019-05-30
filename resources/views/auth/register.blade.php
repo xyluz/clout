@@ -57,7 +57,7 @@
           
            <div class="col-sm mg-t-10 mg-sm-t-0">
                 <select class="form-control select2" data-placeholder="Account Type">
-                    <option label="Account Type"></option>
+                    <option label="Account Type">Account Type</option>
                     <option value="business">Business Owner</option>
                     <option value="manager">Manager</option>
                     <option value="artist">Artist</option>                                      
