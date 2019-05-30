@@ -15,7 +15,9 @@ class HomeController extends Controller
     {
         // $this->middleware('auth');
     }
-
+    public function test(Request $request){
+        return $request->all();
+    }
     /**
      * Show the application dashboard.
      *

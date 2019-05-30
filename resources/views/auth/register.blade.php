@@ -56,14 +56,14 @@
         <div class="row row-xs mg-b-10">           
           
            <div class="col-sm mg-t-10 mg-sm-t-0">
-                <select class="form-control select2" data-placeholder="Account Type">
+                <select name="account_type" class="form-control select2" data-placeholder="Account Type">
                     <option label="Account Type">Account Type</option>
                     <option value="business">Business Owner</option>
                     <option value="manager">Manager</option>
                     <option value="artist">Artist</option> 
                 </select>
 
-               @error('password')
+               @error('account_type')
                    <span class="invalid-feedback" role="alert">
                        <strong>{{ $message }}</strong>
                    </span>

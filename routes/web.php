@@ -17,14 +17,14 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/packages', 'HomeController@packages')->name('package');
+Route::post('test','HomeController@test')->name('test');
 
 
 
 
+Route::prefix('u')->group(function () { 
 
-Route::prefix('u')->group(function () {
-
-    Route::get('dashboard','UserController@dashboard')->name('dashboard');
+    Route::get('d','UserController@dashboard')->name('dashboard');
     Route::get('/i/{package}', 'UserController@invoice')->name('invoice');
 
 });
