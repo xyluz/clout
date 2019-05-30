@@ -18,10 +18,10 @@
             <div class="invoice-header">
               <h1 class="invoice-title">Invoice</h1>
               <div class="billed-from">
-                <h6>ThemePixels, Inc.</h6>
-                <p>201 Something St., Something Town, YT 242, Country 6546<br>
-                Tel No: 324 445-4544<br>
-                Email: youremail@companyname.com</p>
+                <h6>Clout.ng</h6>
+                <p>267A Etim Inyang Cres, Victoria Island, Lagos<br>
+                Tel No: 01 280 1375<br>
+                Email: accounts@clout.ng</p>
               </div><!-- billed-from -->
             </div><!-- invoice-header -->
 

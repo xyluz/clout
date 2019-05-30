@@ -22,10 +22,10 @@ Route::get('/packages', 'HomeController@packages')->name('package');
 
 
 
-Route::prefix('user')->group(function () {
+Route::prefix('u')->group(function () {
 
     Route::get('dashboard','UserController@dashboard')->name('dashboard');
-    Route::get('/invoice/{package}', 'UserController@invoice')->name('invoice');
+    Route::get('/i/{package}', 'UserController@invoice')->name('invoice');
 
 });
 
