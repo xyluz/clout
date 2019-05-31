@@ -5,7 +5,7 @@ namespace App\Repositories;
 use Illuminate\Database\Eloquent\Model;
 use App\Contracts\Repository as RepositoryContract;
 
-abstract class Repository implements Repository
+abstract class Repository implements RepositoryContract
 {
     /**
      * The model instance.

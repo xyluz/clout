@@ -1,6 +1,6 @@
 <?php 
 
-namespace App\Contracts\Eloquent;
+namespace App\Contracts;
 
 interface Repository{
     /**

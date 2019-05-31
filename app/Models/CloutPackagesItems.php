@@ -1,10 +1,11 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\CloutPackages;
 
-class CloutPackageItem extends Model
+class CloutPackagesItems extends Model
 {
     protected $fillable = [
         'clout_package_id',
@@ -14,4 +15,8 @@ class CloutPackageItem extends Model
         'package_item_salesprice',
         'package_item_available_count'
     ];
+
+    public function package(){
+        return $this->belongsTo(CloutPackages::class);
+    }
 }

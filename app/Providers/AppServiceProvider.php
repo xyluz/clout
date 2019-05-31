@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->registerModelMakeCommand();
     }
 
     /**
@@ -25,5 +25,17 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
+    }
+
+    /**
+     * Register custom make command and override default command.
+     * 
+     * @return void
+    */
+    protected function registerModelMakeCommand()
+    {
+        $this->app->extend('command.model.make', function ($command, $app) {
+            return new ModelMakeCommand($app['files']);
+        });
     }
 }

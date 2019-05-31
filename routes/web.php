@@ -29,12 +29,17 @@ Route::prefix('u')->group(function () {
     Route::get('p/{user}','UserController@profile')->name('profile');
     Route::get('e/p/{user}','UserController@edit')->name('edit.profile');
     Route::get('s/{user?}','UserController@settings')->name('settings');
-
     Route::get('/i/{package}', 'PurchasesController@index')->name('invoice');
 
 });
 
-Route::prefix('admin')->group(function () {
+Route::prefix('a')->group(function () {
+
+
+
+});
+
+Route::prefix('p')->group(function (){
 
 
 

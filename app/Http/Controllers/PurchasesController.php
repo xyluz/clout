@@ -4,18 +4,27 @@ namespace App\Http\Controllers;
 
 use App\Models\Purchases;
 use Illuminate\Http\Request;
+use App\Services\PurchaseService; 
 
 class PurchasesController extends Controller
 { 
+        /**
+     * The service instance.
+     * 
+     * @var \App\Services\CategoryService
+    */
+    protected $service;
+
      /**
      * Create a new controller instance.
      *
      * @return void
      */
     
-    public function __construct()
+    public function __construct(PurchaseService $service)
     {
         $this->middleware('auth');
+        $this->service = $service;        
     } 
 
     /**
@@ -23,9 +32,13 @@ class PurchasesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($package)
     {
-        return view('user.invoice');
+        $items = $this->service->packageItems($package);
+        $package = $this->service->package($package);
+        // $totalprice = $this->service->total($package); for when we start adding more products
+
+        return view('user.invoice',compact('items','package'));
     }
 
     /**

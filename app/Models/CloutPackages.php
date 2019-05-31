@@ -1,11 +1,11 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\CloutPackageItems as Items;
+use App\Models\CloutPackagesItems as Items;
 
-class CloutPackage extends Model
+class CloutPackages extends Model
 {
     protected $fillable = [
         'package_name',
@@ -19,7 +19,7 @@ class CloutPackage extends Model
     ];
 
 
-    public function items(){
-        return $this->hasMany(Items::class);
+    public function items($id){
+        return Items::where('clout_package_id',$id)->get();
     }
 }
