@@ -30,7 +30,7 @@ Route::prefix('u')->group(function () {
     Route::get('e/p/{user}','UserController@edit')->name('edit.profile');
     Route::get('s/{user?}','UserController@settings')->name('settings');
 
-    Route::get('/i/{package}', 'UserController@invoice')->name('invoice');
+    Route::get('/i/{package}', 'PurchasesController@index')->name('invoice');
 
 });
 

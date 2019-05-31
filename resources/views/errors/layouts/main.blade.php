@@ -17,8 +17,6 @@
     
     <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet">
     <link href="{{ asset('css/ionicons.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/chartist.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/rickshaw.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/slim.css') }}" rel="stylesheet">
 
 
@@ -48,51 +46,16 @@
 
 </head>
 <body>
-<div class="slim-header">
-      <div class="container">
-        <div class="slim-header-left">
-          <h2 class="slim-logo"><a href="/">Clout<span>.ng</span></a></h2>
-
-        </div><!-- slim-header-left -->
-        <div class="slim-header-right">
-         
-          <div class="dropdown dropdown-c">
-            <a href="#" class="logged-user" data-toggle="dropdown">
-              <img src="http://via.placeholder.com/500x500" alt="">
-              <span>{{Auth::user()->name}}</span> 
-              <i class="fa fa-angle-down"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-right">
-              <nav class="nav">
-                <a href="{{route('profile',['user'=>Auth::user()])}}" class="nav-link"><i class="icon ion-person"></i> View Profile</a>
-                <a href="{{route('edit.profile',['user'=>Auth::user()])}}" class="nav-link"><i class="icon ion-compose"></i> Edit Profile</a>
-                <a href="{{route('settings')}}" class="nav-link"><i class="icon ion-ios-gear"></i> Account Settings</a>
-                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link"><i class="icon ion-forward"></i> Sign Out
-                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                      @csrf
-                  </form>
-              </a>
-              </nav>
-            </div><!-- dropdown-menu -->
-          </div><!-- dropdown -->
-        </div><!-- header-right -->
-      </div><!-- container -->
-    </div>
+<div class="page-error-wrapper">
+      
         <main>
             @yield('content')
         </main>
  
-
+</div>
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/popper.js') }}"></script>
-    <script src="{{ asset('js/bootstrap.js') }}"></script>
-    <script src="{{ asset('js/jquery.cookie.js') }}"></script>
-    <script src="{{ asset('js/chartist.js') }}"></script>
-    <script src="{{ asset('js/d3.js') }}"></script>
-    <script src="{{ asset('js/rickshaw.min.js') }}"></script>
-    <script src="{{ asset('js/jquery.sparkline.min.js') }}"></script>
-    <script src="{{ asset('js/ResizeSensor.js') }}"></script>
-    <script src="{{ asset('js/dashboard.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.js') }}"></script>   
     <script src="{{ asset('js/slim.js') }}"></script>
 
 
