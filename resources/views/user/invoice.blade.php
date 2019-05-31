@@ -3,6 +3,7 @@
 @section('content')
 @include('user.layouts.menu')
 
+<script src="https://js.paystack.co/v1/inline.js"></script>
 
 <div class="slim-mainpanel">
       <div class="container">
@@ -51,9 +52,9 @@
               <table class="table table-invoice">
                 <thead>
                   <tr>
-                    <th class="wd-20p">Type</th>
+                    <th class="wd-30p">Type</th>
                     <th class="wd-40p">Description</th>                   
-                    <th class="tx-left">Price</th>
+                    <th class="tx-left wd-30">Price</th>
                 
                   </tr>
                 </thead>
@@ -87,7 +88,7 @@
 
             <hr class="mg-b-60">
 
-            <a href="" class="btn btn-primary btn-block">Pay Now</a>
+            <button onclick="payWithPaystack()" class="btn btn-primary btn-block">Pay Now</button>
 
           </div><!-- card-body -->
         </div><!-- card -->
@@ -95,6 +96,40 @@
       </div><!-- container -->
     </div><!-- slim-mainpanel -->
 
-    
+    <script>
+  function payWithPaystack(){
+    var handler = PaystackPop.setup({
+      key: 'pk_live_96225c07868c79dfa4651c2d085c65e8d26ddfe0',
+      email: '{{Auth::user()->email}}',
+      amount: '{{$package->package_price}}' * 100,
+      currency: "NGN",
+      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+      metadata: {
+         custom_fields: [
+            {
+                display_name: "Customer Name",
+                variable_name: "customer_name",
+                value: "{{Auth::user()->name}}"
+            },
+            {
+                display_name: "Clout Package Name",
+                variable_name: "clout_package_name",
+                value: "{{$package->package_name}}"
+            }
+         ]
+      },
+      callback: function(response){
+        //do ajax call to update my transactions table, update user purchases
+          alert('success. transaction ref is ' + response.reference);
+      },
+      onClose: function(){
+        //give error that something went wrong
+          alert('window closed');
+      }
+    });
+    handler.openIframe();
+  }
+</script>
+
 
 @endsection
