@@ -121,10 +121,36 @@
       callback: function(response){
         //do ajax call to update my transactions table, update user purchases
           alert('success. transaction ref is ' + response.reference);
+
+          $.post( "{{route('register.purchase')}}", function() {
+            alert( "success" );
+          })
+            .done(function() {
+              alert( "second success" );
+            })
+            .fail(function() {
+              alert( "error" );
+            })
+            .always(function() {
+              alert( "finished" );
+            });
+ 
+
       },
       onClose: function(){
-        //give error that something went wrong
-          alert('window closed');
+        
+        $.post( "{{route('register.purchase')}}", function() {
+            alert( "success" );
+          })
+            .done(function() {
+              alert( "second success" );
+            })
+            .fail(function() {
+              alert( "error" );
+            })
+            .always(function() {
+              alert( "finished" );
+            });
       }
     });
     handler.openIframe();

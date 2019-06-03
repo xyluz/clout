@@ -24,5 +24,4 @@ class PurchaseRepository extends Repository
         return CloutPackages::where('id',$package)->first();
     }
 
-
 }

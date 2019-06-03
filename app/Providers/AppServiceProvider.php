@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerModelMakeCommand();
+        // $this->registerModelMakeCommand();
     }
 
     /**

@@ -46,9 +46,10 @@ class PurchasesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Array $data)
     {
-        //
+        //called via ajax, after invoice is paid
+        return $this->service->registerPurchase($data);
     }
 
     /**

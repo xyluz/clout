@@ -31,4 +31,10 @@ class PurchaseService extends BaseService
         return $this->repository->package($package);
     }
 
+    public function registerPurchase(Array $data){
+
+        return $this->repository->create($data);
+       
+    }
+
 }

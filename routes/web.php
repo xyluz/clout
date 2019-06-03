@@ -31,6 +31,15 @@ Route::prefix('u')->group(function () {
     Route::get('s/{user?}','UserController@settings')->name('settings');
     Route::get('/i/{package}', 'PurchasesController@index')->name('invoice');
 
+
+    //User Purchase Register -- prefix -- pur
+    Route::prefix('pur')->group(function(){
+
+        Route::post('create','PurchasesController@store'); // register purchased items
+    
+    });
+   
+
 });
 
 Route::prefix('a')->group(function () {
