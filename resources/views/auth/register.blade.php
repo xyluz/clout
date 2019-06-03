@@ -53,8 +53,7 @@
                 @enderror
             </div>
         </div><!-- row -->
-        <div class="row row-xs mg-b-10">           
-          
+        <div class="row row-xs mg-b-10"> 
            <div class="col-sm mg-t-10 mg-sm-t-0">
                 <select name="account_type" class="form-control select2" data-placeholder="Account Type">
                     <option label="Account Type">Account Type</option>

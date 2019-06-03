@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class UserController extends Controller
 {
@@ -16,7 +17,20 @@ class UserController extends Controller
     }
 
     public function dashboard(){
-        return view('user.home');
+
+         if(Auth::user()->hasRole('user')){
+            return view('user.home');
+         }else if(Auth::user()->hasRole('superadmin')){
+            return "superadmin";
+         }else if(Auth::user()->hasRole('admin')){
+            return "admin";
+         }else if(Auth::user()->hasRole('presener')){
+             return "presenter";
+         }else{
+             return "role not defined";
+         }
+        
+       
     }
     
     public function profile(User $user){
