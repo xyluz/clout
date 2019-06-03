@@ -10,9 +10,8 @@
               <tr class="tx-10">
                 <th class="wd-10p pd-y-5">&nbsp;</th>
                 <th class="pd-y-5">Item Details</th>
-                <th class="pd-y-5 tx-right">Sold</th>
-                <th class="pd-y-5">Gain</th>
-                <th class="pd-y-5 tx-center">Actions</th>
+                <th class="pd-y-5 tx-right">Total</th>
+                <th class="pd-y-5">Pending</th>               
               </tr>
             </thead>
             <tbody>
@@ -26,9 +25,7 @@
                 </td>
                 <td class="valign-middle tx-right">3,345</td>
                 <td class="valign-middle"><span class="tx-success"><i class="icon ion-android-arrow-up mg-r-5"></i>33.34%</span> from last week</td>
-                <td class="valign-middle tx-center">
-                  <a href="" class="tx-gray-600 tx-24"><i class="icon ion-android-more-horizontal"></i></a>
-                </td>
+                
               </tr>
               <tr>
                 <td class="pd-l-20">
@@ -39,10 +36,7 @@
                   <span class="tx-11 d-block"><span class="square-8 bg-success mg-r-5 rounded-circle"></span> In stock</span>
                 </td>
                 <td class="valign-middle tx-right">720</td>
-                <td class="valign-middle"><span class="tx-danger"><i class="icon ion-android-arrow-down mg-r-5"></i>21.20%</span> from last week</td>
-                <td class="valign-middle tx-center">
-                  <a href="" class="tx-gray-600 tx-24"><i class="icon ion-android-more-horizontal"></i></a>
-                </td>
+                <td class="valign-middle"><span class="tx-danger"><i class="icon ion-android-arrow-down mg-r-5"></i>21.20%</span> from last week</td>               
               </tr>
               <tr>
                 <td class="pd-l-20">
@@ -54,9 +48,7 @@
                 </td>
                 <td class="valign-middle tx-right">1,445</td>
                 <td class="valign-middle"><span class="tx-success"><i class="icon ion-android-arrow-up mg-r-5"></i>23.34%</span> from last week</td>
-                <td class="valign-middle tx-center">
-                  <a href="" class="tx-gray-600 tx-24"><i class="icon ion-android-more-horizontal"></i></a>
-                </td>
+                
               </tr>
               <tr>
                 <td class="pd-l-20">
@@ -68,9 +60,7 @@
                 </td>
                 <td class="valign-middle tx-right">2,500</td>
                 <td class="valign-middle"><span class="tx-success"><i class="icon ion-android-arrow-up mg-r-5"></i>28.78%</span> from last week</td>
-                <td class="valign-middle tx-center">
-                  <a href="" class="tx-gray-600 tx-24"><i class="icon ion-android-more-horizontal"></i></a>
-                </td>
+                
               </tr>
               <tr>
                 <td class="pd-l-20">
@@ -82,9 +72,7 @@
                 </td>
                 <td class="valign-middle tx-14 tx-right">223</td>
                 <td class="valign-middle"><span class="tx-danger"><i class="icon ion-android-arrow-down mg-r-5"></i>18.18%</span> from last week</td>
-                <td class="valign-middle tx-center">
-                  <a href="" class="tx-gray-600 tx-24"><i class="icon ion-android-more-horizontal"></i></a>
-                </td>
+                
               </tr>
             </tbody>
           </table>
