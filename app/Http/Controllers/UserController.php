@@ -17,8 +17,9 @@ class UserController extends Controller
     }
 
     public function dashboard(){
-
-         if(Auth::user()->hasRole('user')){
+        //TODO: Change this to point to a single dashboard with different hidden apects
+         
+        if(Auth::user()->hasRole('user')){
             return view('user.home');
          }else if(Auth::user()->hasRole('superadmin')){
             return "superadmin";
