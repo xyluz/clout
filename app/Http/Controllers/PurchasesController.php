@@ -6,6 +6,7 @@ use App\Models\Purchases;
 use Illuminate\Http\Request;
 use App\Services\PurchaseService; 
 
+
 class PurchasesController extends Controller
 { 
         /**
@@ -59,8 +60,9 @@ class PurchasesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {
-        //
+    {        
+       return  $this->service->registerPurchase($request->all());
+        
     }
 
     /**

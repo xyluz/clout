@@ -31,7 +31,7 @@ Route::prefix('u')->group(function () {
     //User Purchase Register -- prefix -- pur
     Route::prefix('pur')->group(function(){
 
-        Route::post('create','PurchasesController@store'); // register purchased items
+        Route::post('create','PurchasesController@store')->name('register.purchase'); // register purchased items
     
     });
    

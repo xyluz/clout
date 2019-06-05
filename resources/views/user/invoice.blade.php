@@ -1,9 +1,10 @@
 @extends('user.layouts.dashboard')
  
 @section('content')
-@include('user.layouts.menu')
+@include('user.layouts.user-menu')
 
 <script src="https://js.paystack.co/v1/inline.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
 <div class="slim-mainpanel">
       <div class="container">
@@ -54,12 +55,13 @@
                   <tr>
                     <th class="wd-30p">Type</th>
                     <th class="wd-40p">Description</th>                   
-                    <th class="tx-left wd-30">Price</th>
+                    <th class="tx-left wd-30" colspan="2">Price</th>
                 
                   </tr>
                 </thead>
                 <tbody>
                   @if($items)
+                  
                     @foreach($items as $item)
                     <tr>
                       <td>{{$item->package_item_name}}</td>
@@ -98,8 +100,9 @@
 
     <script>
   function payWithPaystack(){
+    // console.dir('{!!$items!!}');
     var handler = PaystackPop.setup({
-      key: 'pk_live_96225c07868c79dfa4651c2d085c65e8d26ddfe0',
+      key: 'pk_test_40719ca06aa132f9c4ca687fd54f3e4332178240',
       email: '{{Auth::user()->email}}',
       amount: '{{$package->package_price}}' * 100,
       currency: "NGN",
@@ -107,8 +110,8 @@
       metadata: {
          custom_fields: [
             {
-                display_name: "Customer Name",
-                variable_name: "customer_name",
+                display_name: "Full Name",
+                variable_name: "full_name",
                 value: "{{Auth::user()->name}}"
             },
             {
@@ -119,38 +122,38 @@
          ]
       },
       callback: function(response){
-        //do ajax call to update my transactions table, update user purchases
-          alert('success. transaction ref is ' + response.reference);
+          //TODO:display preloader
+        console.log('response',response);
+          $.ajax({
+              type: 'POST',             
+              url: "{{route('register.purchase')}}",
+              data: { 
+                  'items': '{!!$items!!}',                  
+                  'transaction': response, 
+                  "_token": "{{ csrf_token() }}",
+                  'amount' : '{{$package->package_price}}' * 100,
+              },
+              success: function(msg){
+                if(msg == "done"){
+                  // send alert
+                  Swal.fire({
+                    type: 'success',
+                    title: 'Success!',
+                    text: 'Your purchase was successful',
+                    footer: '<a href="{{route('dashboard')}}">redirecting... click here if it takes too long</a>'
+                  });
+                }else{
 
-          $.post( "{{route('register.purchase')}}", function() {
-            alert( "success" );
-          })
-            .done(function() {
-              alert( "second success" );
-            })
-            .fail(function() {
-              alert( "error" );
-            })
-            .always(function() {
-              alert( "finished" );
-            });
- 
+                }
+                  //TODO:redirect them to the dashboard with alert
+                 
+                  console.log(msg);
+              }
+          });
 
       },
       onClose: function(){
-        
-        $.post( "{{route('register.purchase')}}", function() {
-            alert( "success" );
-          })
-            .done(function() {
-              alert( "second success" );
-            })
-            .fail(function() {
-              alert( "error" );
-            })
-            .always(function() {
-              alert( "finished" );
-            });
+      console.log('closed window...');
       }
     });
     handler.openIframe();

@@ -13,13 +13,13 @@ class CreateTransactionsTable extends Migration
      * @return void
      */
     public function up()
-    {
+    { 
         Schema::create('transactions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('user_id');
-            $table->integer('account_id');
+            $table->integer('account_id')->nullable();
             $table->string('amount');
-            $table->string('method');
+            $table->string('method')->nullable();
             $table->text('ref');
             $table->text('description');
             $table->string('status');
