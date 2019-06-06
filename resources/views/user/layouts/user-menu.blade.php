@@ -8,7 +8,7 @@
             </a>           
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+          <a class="nav-link" href="{{route('account')}}">
               <i class="icon ion-ios-filing-outline"></i>
               <span>Accounts</span>
             </a>
