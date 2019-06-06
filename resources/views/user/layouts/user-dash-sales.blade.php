@@ -57,8 +57,8 @@
             <thead>
               <tr class="tx-10">
                 <th class="wd-10p pd-y-5">&nbsp;</th>
-                <th class="pd-y-5">User</th>
-                <th class="pd-y-5">Type</th>
+                <th class="pd-y-5">Method</th>
+                <th class="pd-y-5">Status</th> 
                 <th class="pd-y-5">Date</th>
               </tr>
             </thead>
@@ -67,16 +67,17 @@
                 @foreach(Auth::user()->transactions()->get() as $trans)
                   <tr>
                     <td class="pd-l-20">
-                      <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
+                    <img title="{{$trans->method}}" src="{{$trans->method == 'paystack' ? 'https://pbs.twimg.com/profile_images/810741743436124160/sfGjeR7F_400x400.jpg' : 'http://via.placeholder.com/800x533'}}" class="wd-36 rounded-circle" alt="Image">
                     </td>
                     <td>
-                      <a href="" class="tx-inverse tx-14 tx-medium d-block">Mark K. Peters</a>
-                      <span class="tx-11 d-block">TRANSID: 1234567890</span>
+                    <a href="#" class="tx-inverse tx-14 tx-medium d-block">NGN {{$trans->amount}}</a>
+                    <span class="tx-11 d-block">Ref: {{$trans->ref}}</span>
                     </td>
                     <td class="tx-12">
-                      <span class="square-8 bg-success mg-r-5 rounded-circle"></span> Email verified
+                      <span class="square-8 @if($trans->status == 'success')bg-success @else bg-danger @endif mg-r-5 rounded-circle"></span> {{$trans->status}}
+                      <span class="tx-11 d-block">{{$trans->description}}</span>
                     </td>
-                    <td>Just Now</td>
+                    <td>{{\Carbon\Carbon::createFromTimeStamp(strtotime($trans->created_at))->diffForHumans() ?? 'null'}}</td>
                   </tr>
                 @endforeach
              @endif
