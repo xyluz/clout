@@ -32,6 +32,7 @@
                               <th class="pd-y-5">Details</th>
                               <th class="pd-y-5">Type</th>
                               <th class="pd-y-5">Date</th>
+                              <th class="pd-y-5">Action</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -43,13 +44,23 @@
                                     </td>
                                     <td>
                                     <a href="" class="tx-inverse tx-14 tx-medium d-block">{{$account->name ?? 'undefined'}}</a>
-                                    <span class="tx-11 d-block">{{$account->phone ?? 'undefined'}}</span>
+                                    <span class="tx-11 d-block">{{$account->phone ?? ''}}</span>
                                     </td>
                                     <td class="tx-12">
                                         {{ $account->type ?? 'undefined' }}
                                     </td>
                                     <td>
                                             {{\Carbon\Carbon::createFromTimeStamp(strtotime($account->created_at))->diffForHumans() ?? 'null'}}
+                                    </td>
+                                    <td>
+                                        <div class="btn-group" role="group" aria-label="Basic example">
+
+                                            <a href="{{route('acc.delete',['id'=>$account->id])}}" title="delete account" class="btn btn-danger active"><i class="fa fa-trash"></i></a>
+                                            <a href="{{route('acc.details',['id'=>$account->id])}}" title="view account details"  class="btn btn-primary active"><i class="fa fa-eye"></i></a>
+                                            <a href="{{route('acc.details',['id'=>$account->id])}}" title="start campaign"  class="btn btn-secondary active"><i class="fa fa-minus"></i></a>
+                                           
+                                        </div>
+                                    
                                     </td>
                                 </tr>
                                 @endforeach
