@@ -14,7 +14,7 @@ class Account extends Model
     //account type can be buiness or artist
     protected $fillable = [
         'user_id',
-        'account_type',
+        'type',
         'name',
         'genre',
         'description',

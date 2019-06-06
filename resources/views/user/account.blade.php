@@ -12,7 +12,7 @@
                 <div class="d-flex justify-content-center mg-b-30">
                     <img src="../img/icon1.svg" class="wd-100" alt="">
                 </div>
-                <h5 class="tx-inverse mg-b-20">Accounts</h5>
+                <h5 class="tx-inverse mg-b-20">Brands</h5>
                 <p>Setup a new profile, you can create multiple business profiles attached to your main account </p>
                 <a href="#modaldemo8" data-toggle="modal" data-effect="effect-super-scaled" class="btn btn-primary btn-block">Getting Started</a>
                 </div><!-- card -->

@@ -18,6 +18,7 @@ class CreateAccountsTable extends Migration
             $table->integer('user_id');           
             $table->string('genre'); //genre or motto
             $table->string('name');
+            $table->string('type');
             $table->string('website')->nullable();
             $table->text('description');
             $table->string('email')->nullable();

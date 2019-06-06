@@ -4,9 +4,31 @@ namespace App\Http\Controllers;
 
 use App\Account\Models;
 use Illuminate\Http\Request;
+use App\Services\AccountService; 
+use Alert;
+
 
 class AccountController extends Controller
 {
+        /**
+     * The service instance.
+     * 
+     * @var \App\Services\AccountService
+    */
+    protected $service;
+
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    
+    public function __construct(AccountService $service)
+    {
+        $this->middleware('auth');
+        $this->service = $service;        
+    } 
+
     /**
      * Display a listing of the resource.
      *
@@ -35,7 +57,17 @@ class AccountController extends Controller
      */
     public function store(Request $request)
     {
-        //
+          
+        
+            
+             return $this->service->create($request->all());
+            //  alert()->success('Brand Profile Created', 'Success!');
+
+            // }catch(Exception $e){
+            //     alert()->error($e, 'Error!');
+            // }
+
+            // return redirect()->back();
     }
 
     /**
