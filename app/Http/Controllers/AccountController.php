@@ -76,7 +76,7 @@ class AccountController extends Controller
      * @param  \App\Account  $account
      * @return \Illuminate\Http\Response
      */
-    public function show(Account $account)
+    public function view(Account $account)
     {
         //
     }
@@ -110,8 +110,14 @@ class AccountController extends Controller
      * @param  \App\Account  $account
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Account $account)
+    public function destroy($account)
     {
-        //
+        try{
+            $this->service->delete($account);
+            alert()->success('Brand Profile Deleted', 'Success!');
+        }catch(Exception $c){
+            alert()->error($c, 'Error!');
+        }
+        return redirect()->back();
     }
 }

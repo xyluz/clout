@@ -27,4 +27,8 @@ class AccountService extends BaseService
         return $this->repository->create($data);
     }
 
+    public function delete($account){
+        return $this->repository->delete($account);
+    }
+
 }

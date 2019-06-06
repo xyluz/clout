@@ -30,8 +30,8 @@ Route::prefix('u')->group(function () {
 
         Route::get('/','AccountController@index')->name('account');
         Route::post('create','AccountController@store')->name('acc.create');
-        Route::post('delete/{id?}','AccountController@destroy')->name('acc.delete');
-        Route::post('details/{id?}','AccountController@view')->name('acc.details');
+        Route::get('delete/{id?}','AccountController@destroy')->name('acc.delete');
+        Route::get('details/{id?}','AccountController@view')->name('acc.details');
 
     });
    
