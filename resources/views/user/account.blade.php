@@ -29,77 +29,33 @@
                           <thead>
                             <tr class="tx-10">
                               <th class="wd-10p pd-y-5">&nbsp;</th>
-                              <th class="pd-y-5">User</th>
+                              <th class="pd-y-5">Details</th>
                               <th class="pd-y-5">Type</th>
                               <th class="pd-y-5">Date</th>
                             </tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <td class="pd-l-20">
-                                <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
-                              </td>
-                              <td>
-                                <a href="" class="tx-inverse tx-14 tx-medium d-block">Mark K. Peters</a>
-                                <span class="tx-11 d-block">TRANSID: 1234567890</span>
-                              </td>
-                              <td class="tx-12">
-                                <span class="square-8 bg-success mg-r-5 rounded-circle"></span> Email verified
-                              </td>
-                              <td>Just Now</td>
-                            </tr>
-                            <tr>
-                              <td class="pd-l-20">
-                                <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
-                              </td>
-                              <td>
-                                <a href="" class="tx-inverse tx-14 tx-medium d-block">Karmen F. Brown</a>
-                                <span class="tx-11 d-block">TRANSID: 1234567890</span>
-                              </td>
-                              <td class="tx-12">
-                                <span class="square-8 bg-warning mg-r-5 rounded-circle"></span> Pending verification
-                              </td>
-                              <td>Apr 21, 2017 8:34am</td>
-                            </tr>
-                            <tr>
-                              <td class="pd-l-20">
-                                <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
-                              </td>
-                              <td>
-                                <a href="" class="tx-inverse tx-14 tx-medium d-block">Gorgonio Magalpok</a>
-                                <span class="tx-11 d-block">TRANSID: 1234567890</span>
-                              </td>
-                              <td class="tx-12">
-                                <span class="square-8 bg-success mg-r-5 rounded-circle"></span> Purchased success
-                              </td>
-                              <td>Apr 10, 2017 4:40pm</td>
-                            </tr>
-                            <tr>
-                              <td class="pd-l-20">
-                                <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
-                              </td>
-                              <td>
-                                <a href="" class="tx-inverse tx-14 tx-medium d-block">Ariel T. Hall</a>
-                                <span class="tx-11 d-block">TRANSID: 1234567890</span>
-                              </td>
-                              <td class="tx-12">
-                                <span class="square-8 bg-warning mg-r-5 rounded-circle"></span> Payment on hold
-                              </td>
-                              <td>Apr 02, 2017 6:45pm</td>
-                            </tr>
-                            <tr>
-                              <td class="pd-l-20">
-                                <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
-                              </td>
-                              <td>
-                                <a href="" class="tx-inverse tx-14 tx-medium d-block">John L. Goulette</a>
-                                <span class="tx-11 d-block">TRANSID: 1234567890</span>
-                              </td>
-                              <td class="tx-12">
-                                <span class="square-8 bg-pink mg-r-5 rounded-circle"></span> Account deactivated
-                              </td>
-                              <td>Mar 30, 2017 10:30am</td>
-                            </tr>
+                              @if(Auth::user()->accounts()->count() > 0)
+                                @foreach(Auth::user()->accounts()->get() as $account)
+                                <tr>
+                                    <td class="pd-l-20">
+                                        <img src="{{$account->logo ?? 'http://via.placeholder.com/500x500' }}" class="wd-36 rounded-circle" alt="Image">
+                                    </td>
+                                    <td>
+                                    <a href="" class="tx-inverse tx-14 tx-medium d-block">{{$account->name ?? 'undefined'}}</a>
+                                    <span class="tx-11 d-block">{{$account->phone ?? 'undefined'}}</span>
+                                    </td>
+                                    <td class="tx-12">
+                                        {{ $account->type ?? 'undefined' }}
+                                    </td>
+                                    <td>
+                                            {{\Carbon\Carbon::createFromTimeStamp(strtotime($account->created_at))->diffForHumans() ?? 'null'}}
+                                    </td>
+                                </tr>
+                                @endforeach
+                            @endif
+                           
+                            
                           </tbody>
                         </table>
                       </div><!-- table-responsive -->

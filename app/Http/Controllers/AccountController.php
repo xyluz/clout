@@ -58,16 +58,16 @@ class AccountController extends Controller
     public function store(Request $request)
     {
           
-        
+         try{
             
-             return $this->service->create($request->all());
-            //  alert()->success('Brand Profile Created', 'Success!');
+             $this->service->create($request->all());
+             alert()->success('Brand Profile Created', 'Success!');
 
-            // }catch(Exception $e){
-            //     alert()->error($e, 'Error!');
-            // }
+            }catch(Exception $e){
+                alert()->error($e, 'Error!');
+            }
 
-            // return redirect()->back();
+            return redirect()->back();
     }
 
     /**
