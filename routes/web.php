@@ -18,8 +18,11 @@ Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/packages', 'HomeController@packages')->name('package');
 Route::post('test','HomeController@test')->name('test');
- 
+Route::get('test','UserController@test');
+
 Route::prefix('u')->group(function () { 
+
+    
 
     Route::get('d','UserController@dashboard')->name('dashboard');
     Route::get('p/{user}','UserController@profile')->name('profile');

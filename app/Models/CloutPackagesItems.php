@@ -16,7 +16,7 @@ class CloutPackagesItems extends Model
         'package_item_available_count'
     ];
 
-    public function package(){
+    public function items(){
         return $this->belongsTo(CloutPackages::class);
     }
 }

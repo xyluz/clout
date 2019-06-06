@@ -11,74 +11,39 @@
                 <th class="wd-10p pd-y-5">&nbsp;</th>
                 <th class="pd-y-5">Item Details</th>
                 <th class="pd-y-5 tx-right">Total</th>
-                <th class="pd-y-5">Pending</th>               
+                <th class="pd-y-5">Plays</th>               
+                <th class="pd-y-5">Date</th>               
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="pd-l-20">
-                  <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
-                </td>
-                <td>
-                  <a href="" class="tx-inverse tx-14 tx-medium d-block">The Dothraki Shoes</a>
-                  <span class="tx-11 d-block"><span class="square-8 bg-danger mg-r-5 rounded-circle"></span> 20 remaining</span>
-                </td>
-                <td class="valign-middle tx-right">3,345</td>
-                <td class="valign-middle"><span class="tx-success"><i class="icon ion-android-arrow-up mg-r-5"></i>33.34%</span> from last week</td>
-                
-              </tr>
-              <tr>
-                <td class="pd-l-20">
-                  <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
-                </td>
-                <td>
-                  <a href="" class="tx-inverse tx-14 tx-medium d-block">Westeros Sneaker</a>
-                  <span class="tx-11 d-block"><span class="square-8 bg-success mg-r-5 rounded-circle"></span> In stock</span>
-                </td>
-                <td class="valign-middle tx-right">720</td>
-                <td class="valign-middle"><span class="tx-danger"><i class="icon ion-android-arrow-down mg-r-5"></i>21.20%</span> from last week</td>               
-              </tr>
-              <tr>
-                <td class="pd-l-20">
-                  <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
-                </td>
-                <td>
-                  <a href="" class="tx-inverse tx-14 tx-medium d-block">Selonian Hand Bag</a>
-                  <span class="tx-11 d-block"><span class="square-8 bg-success mg-r-5 rounded-circle"></span> In stock</span>
-                </td>
-                <td class="valign-middle tx-right">1,445</td>
-                <td class="valign-middle"><span class="tx-success"><i class="icon ion-android-arrow-up mg-r-5"></i>23.34%</span> from last week</td>
-                
-              </tr>
-              <tr>
-                <td class="pd-l-20">
-                  <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
-                </td>
-                <td>
-                  <a href="" class="tx-inverse tx-14 tx-medium d-block">Kel Dor Sunglass</a>
-                  <span class="tx-11 d-block"><span class="square-8 bg-warning mg-r-5 rounded-circle"></span> 45 remaining</span>
-                </td>
-                <td class="valign-middle tx-right">2,500</td>
-                <td class="valign-middle"><span class="tx-success"><i class="icon ion-android-arrow-up mg-r-5"></i>28.78%</span> from last week</td>
-                
-              </tr>
-              <tr>
-                <td class="pd-l-20">
-                  <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
-                </td>
-                <td>
-                  <a href="" class="tx-inverse tx-14 tx-medium d-block">Kubaz Sunglass</a>
-                  <span class="tx-11 d-block"><span class="square-8 bg-success mg-r-5 rounded-circle"></span> In stock</span>
-                </td>
-                <td class="valign-middle tx-14 tx-right">223</td>
-                <td class="valign-middle"><span class="tx-danger"><i class="icon ion-android-arrow-down mg-r-5"></i>18.18%</span> from last week</td>
-                
-              </tr>
+              @if(Auth::user()->purchases()->count() > 0)
+            
+                @foreach(Auth::user()->purchases()->get() as $item)
+                <tr>
+                  <td class="pd-l-20">
+                    <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
+                  </td>
+                  <td>
+                  <a href="" class="tx-inverse tx-14 tx-medium d-block">{{$item->details()->get()[0]['package_item_name'] ?? 'not set'}}</a>
+                    <span class="tx-11 d-block"><span class="square-8 bg-danger mg-r-5 rounded-circle"></span> {{$item->details()->get()[0]['package_item_available_count'] ?? '0'}} remaining</span>
+                  </td>
+                  <td class="valign-middle tx-right">0</td>
+                  <td class="valign-middle tx-right">0</td>
+                <td class="valign-middle"><span>{{\Carbon\Carbon::createFromTimeStamp(strtotime($item->created_at))->diffForHumans() ?? 'null'}}</span></td>
+                  
+                </tr>
+              
+              @endforeach
+            @else 
+                No records
+            @endif
+             
+              
             </tbody>
           </table>
         </div><!-- table-responsive -->
         <div class="card-footer tx-12 pd-y-15 bg-transparent">
-          <a href=""><i class="fa fa-angle-down mg-r-5"></i>View All Products</a>
+          <a href="#"><i class="fa fa-angle-down mg-r-5"></i>View All Products</a>
         </div><!-- card-footer -->
       </div><!-- card -->
     </div><!-- col-6 -->
@@ -98,71 +63,24 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="pd-l-20">
-                  <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
-                </td>
-                <td>
-                  <a href="" class="tx-inverse tx-14 tx-medium d-block">Mark K. Peters</a>
-                  <span class="tx-11 d-block">TRANSID: 1234567890</span>
-                </td>
-                <td class="tx-12">
-                  <span class="square-8 bg-success mg-r-5 rounded-circle"></span> Email verified
-                </td>
-                <td>Just Now</td>
-              </tr>
-              <tr>
-                <td class="pd-l-20">
-                  <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
-                </td>
-                <td>
-                  <a href="" class="tx-inverse tx-14 tx-medium d-block">Karmen F. Brown</a>
-                  <span class="tx-11 d-block">TRANSID: 1234567890</span>
-                </td>
-                <td class="tx-12">
-                  <span class="square-8 bg-warning mg-r-5 rounded-circle"></span> Pending verification
-                </td>
-                <td>Apr 21, 2017 8:34am</td>
-              </tr>
-              <tr>
-                <td class="pd-l-20">
-                  <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
-                </td>
-                <td>
-                  <a href="" class="tx-inverse tx-14 tx-medium d-block">Gorgonio Magalpok</a>
-                  <span class="tx-11 d-block">TRANSID: 1234567890</span>
-                </td>
-                <td class="tx-12">
-                  <span class="square-8 bg-success mg-r-5 rounded-circle"></span> Purchased success
-                </td>
-                <td>Apr 10, 2017 4:40pm</td>
-              </tr>
-              <tr>
-                <td class="pd-l-20">
-                  <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
-                </td>
-                <td>
-                  <a href="" class="tx-inverse tx-14 tx-medium d-block">Ariel T. Hall</a>
-                  <span class="tx-11 d-block">TRANSID: 1234567890</span>
-                </td>
-                <td class="tx-12">
-                  <span class="square-8 bg-warning mg-r-5 rounded-circle"></span> Payment on hold
-                </td>
-                <td>Apr 02, 2017 6:45pm</td>
-              </tr>
-              <tr>
-                <td class="pd-l-20">
-                  <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
-                </td>
-                <td>
-                  <a href="" class="tx-inverse tx-14 tx-medium d-block">John L. Goulette</a>
-                  <span class="tx-11 d-block">TRANSID: 1234567890</span>
-                </td>
-                <td class="tx-12">
-                  <span class="square-8 bg-pink mg-r-5 rounded-circle"></span> Account deactivated
-                </td>
-                <td>Mar 30, 2017 10:30am</td>
-              </tr>
+              @if(Auth::user()->transactions()->count() > 0)
+                @foreach(Auth::user()->transactions()->get() as $trans)
+                  <tr>
+                    <td class="pd-l-20">
+                      <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
+                    </td>
+                    <td>
+                      <a href="" class="tx-inverse tx-14 tx-medium d-block">Mark K. Peters</a>
+                      <span class="tx-11 d-block">TRANSID: 1234567890</span>
+                    </td>
+                    <td class="tx-12">
+                      <span class="square-8 bg-success mg-r-5 rounded-circle"></span> Email verified
+                    </td>
+                    <td>Just Now</td>
+                  </tr>
+                @endforeach
+             @endif
+              
             </tbody>
           </table>
         </div><!-- table-responsive -->

@@ -10,6 +10,8 @@ use Spatie\Permission\Traits\HasRoles;
 use App\Models\Account;
 use App\Models\Profile;
 use App\Models\Transaction;
+use App\Models\Purchase;
+
 
 
 class User extends Authenticatable
@@ -58,7 +60,11 @@ class User extends Authenticatable
         return $this->hasMany(Transaction::class);
     }
 
-    public function campaign(){
+    public function purchases(){
+        return $this->hasMany(Purchase::class);
+    }
+
+    public function campaigns(){
         return $this->hasMany(Campaign::class);
     }
 }

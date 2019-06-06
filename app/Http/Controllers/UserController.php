@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Auth;
+use App\Models\User as userModel;
 
 class UserController extends Controller
 {
@@ -16,21 +17,14 @@ class UserController extends Controller
         return view('user.invoice');
     }
 
+    public function test(){
+        return dd(Auth::user()->purchases());
+    }
+
     public function dashboard(){
         //TODO: Change this to point to a single dashboard with different hidden apects
-         
-        if(Auth::user()->hasRole('user')){
-            return view('user.home');
-         }else if(Auth::user()->hasRole('superadmin')){
-            return "superadmin";
-         }else if(Auth::user()->hasRole('admin')){
-            return "admin";
-         }else if(Auth::user()->hasRole('presener')){
-             return "presenter";
-         }else{
-             return "role not defined";
-         }
-        
+      
+        return view('user.home');
        
     }
     

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePurchasesTable extends Migration
+class CreatePageVisitsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,9 @@ class CreatePurchasesTable extends Migration
      * @return void
      */
     public function up()
-    { //associate item with user
-        Schema::create('purchases', function (Blueprint $table) {
+    {
+        Schema::create('page_visits', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('user_id');
-            $table->integer('package_item_id');
             $table->timestamps();
         });
     }
@@ -28,6 +26,6 @@ class CreatePurchasesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('purchases');
+        Schema::dropIfExists('page_visits');
     }
 }

@@ -123,7 +123,7 @@
       },
       callback: function(response){
           //TODO:display preloader
-        console.log('response',response);
+       
           $.ajax({
               type: 'POST',             
               url: "{{route('register.purchase')}}",
@@ -135,25 +135,38 @@
               },
               success: function(msg){
                 if(msg == "done"){
-                  // send alert
+                  
                   Swal.fire({
                     type: 'success',
                     title: 'Success!',
                     text: 'Your purchase was successful',
                     footer: '<a href="{{route('dashboard')}}">redirecting... click here if it takes too long</a>'
                   });
+
+                  window.location = "{{route('dashboard')}}";
+
                 }else{
 
+                  Swal.fire({
+                    type: 'error',
+                    title: 'Oops!',
+                    text: 'Something went wrong with your purchase, try later or contact admin',
+                    footer: '<a href="{{route('dashboard')}}">go to dashboard</a>'
+                  });
+
                 }
-                  //TODO:redirect them to the dashboard with alert
                  
-                  console.log(msg);
               }
           });
 
       },
       onClose: function(){
-      console.log('closed window...');
+        Swal.fire({
+                    type: 'info',
+                    title: 'Transaction Stopped!',
+                    text: 'Your transaction has been stopped',
+                    footer: '<a href="{{route('dashboard')}}">go to dashboard</a>'
+                  });
       }
     });
     handler.openIframe();
