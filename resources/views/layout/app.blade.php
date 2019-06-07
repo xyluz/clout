@@ -10,7 +10,7 @@
 
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
 
-<link href="{{asset('css/linearicons.css')}}" rel="stylesheet">
+    <link href="{{asset('css/linearicons.css')}}" rel="stylesheet">
     <link href="{{asset('css/menu.css')}}" rel="stylesheet">
     <link href="{{asset('css/button.css')}}" rel="stylesheet">
     <link href="{{asset('css/list.css')}}" rel="stylesheet">
@@ -85,9 +85,9 @@
 
                 <li class=" mt-8" data-content="experience">
                     @guest 
-                    <button onclick="window.location='/register'" class="butn btn-4 font-smooth font-termina-m btn-4a icon-arrow-right mb-8 ">Get Started</button>
+                <button onclick="window.location='{{route('login')}}'" class="butn btn-4 font-smooth font-termina-m btn-4a icon-arrow-right mb-8 ">Get Started</button>
                     @else
-                    <button onclick="window.location='/u/d'" class="butn btn-4 font-smooth font-termina-m btn-4a icon-arrow-right mb-8 ">Dashboard</button>
+                <button onclick="window.location='{{route('dashboard')}}'" class="butn btn-4 font-smooth font-termina-m btn-4a icon-arrow-right mb-8 ">Dashboard</button>
                     @endguest
                 </li>
             </ul>

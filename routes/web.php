@@ -12,7 +12,7 @@ Route::get('test','UserController@test');
 
 Route::prefix('u')->group(function () { 
 
-    Route::get('d','UserController@dashboard')->name('dashboard');
+    Route::get('/','UserController@dashboard')->name('dashboard');
     Route::get('p/{user}','UserController@profile')->name('profile');
     Route::get('e/p/{user}','UserController@edit')->name('edit.profile');
     Route::get('s/{user?}','UserController@settings')->name('settings');
@@ -41,13 +41,19 @@ Route::prefix('u')->group(function () {
             Route::post('create','ProductController@store')->name('prod.create');
             Route::get('delete/{id?}','ProductController@destroy')->name('prod.delete');
         
-        });
+        });        
 
         Route::prefix('media')->group(function(){
+
             Route::post('create','MediaController@store')->name('media.create');
             Route::get('delete/{id?}','MediaController@destroy')->name('media.delete');
+        
         });
 
+    });
+
+    Route::prefix('camp')->group(function(){
+        Route::get('/','CampaignController@index')->name('campaign');
     });
    
 
