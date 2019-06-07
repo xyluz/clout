@@ -27,7 +27,7 @@
                               <a href="" class="card-profile-direct">http://thmpxls.me/profile?id=katherine</a>
                               <div>
                                 <a href="#modaldemo4" data-toggle="modal" data-effect="effect-super-scaled">Edit Profile</a>
-                                <a href="">Profile Settings</a>
+                              <a href="#"><img class="img-fluid" style="border-radius: 0% !important;" alt="Google Business Logo" src="{{asset('img/googlebusiness.png')}}" /></a>
                               </div>
                             </div><!-- card-footer -->
                           </div><!-- card --> 
@@ -60,10 +60,10 @@
                                                 </td>
                                                 <td>
                                                   <a href="" class="tx-inverse tx-14 tx-medium d-block">{{ $product->product_name }}</a>
-                                                <span class="tx-11 d-block"><span class="square-8 bg-danger mg-r-5 rounded-circle"></span>{{  $product->product_price }}</span>
+                                                <span class="tx-11 d-block"><span>{{  $product->product_price }}</span>
                                                 </td>                                           
                                                 <td class="valign-middle tx-center">
-                                                <a href="#" class="tx-gray-600 tx-24"><i class="fa fa-trash"></i></a>
+                                                <a href="{{route('prod.delete',['id'=>$product->id])}}" class="tx-danger tx-24"><i class="fa fa-trash" title="delete this product"></i></a>                                               
                                                 </td>
                                               </tr> 
                                             @endforeach                                        

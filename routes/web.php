@@ -38,6 +38,7 @@ Route::prefix('u')->group(function () {
         Route::prefix('prod')->group(function(){
 
             Route::post('create','ProductController@store')->name('prod.create');
+            Route::get('delete/{id?}','ProductController@destroy')->name('prod.delete');
         
         });
 

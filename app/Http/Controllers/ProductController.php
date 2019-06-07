@@ -115,8 +115,14 @@ class ProductController extends Controller
      * @param  \App\Models\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($product)
     {
-        //
+        try{
+            $this->service->delete($product);
+            alert()->success('Product Deleted', 'Success!');
+        }catch(Exception $c){
+            alert()->error($c, 'Error!');
+        }
+        return redirect()->back();
     }
 }
