@@ -8,15 +8,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Clout | Home of Music</title>
 
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{asset('css/style.css')}}" rel="stylesheet">
 
 <link href="{{asset('css/linearicons.css')}}" rel="stylesheet">
     <link href="{{asset('css/menu.css')}}" rel="stylesheet">
     <link href="{{asset('css/button.css')}}" rel="stylesheet">
-    
+    <link href="{{asset('css/list.css')}}" rel="stylesheet">
+    <link href="{{asset('css/input.css')}}" rel="stylesheet">    
     <link href="{{asset('css/search.css')}}" rel="stylesheet">
     <link href="{{asset('css/faq.css')}}" rel="stylesheet">
+    <link href="{{asset('css/maps.css')}}" rel="stylesheet">
+    <link href="{{asset('css/lightbox.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/style_dis.css')}}">
+
 
 
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css">
@@ -98,6 +102,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
 <script src="{{asset('js/faq.js')}}"></script>
+<script src="{{asset('js/nlform.js')}}"></script>
+<script src="{{asset('js/list.js')}}"></script>
+<script src="{{asset('js/maps.js')}}"></script>
+<script src="{{asset('js/lightbox.js')}}"></script>
 
 </body>
 

@@ -26,7 +26,7 @@
                             <div class="card-footer">
                               <a href="" class="card-profile-direct">http://thmpxls.me/profile?id=katherine</a>
                               <div>
-                                <a href="#modaldemo4" data-toggle="modal" data-effect="effect-super-scaled">Edit Profile</a>
+                                <a href="#modaldemo4" data-toggle="modal" data-effect="effect-super-scaled" title="edit profile"><i class="fa fa-edit"></i></a>
                               <a href="#"><img class="img-fluid" style="border-radius: 0% !important;" alt="Google Business Logo" src="{{asset('img/googlebusiness.png')}}" /></a>
                               </div>
                             </div><!-- card-footer -->

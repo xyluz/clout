@@ -1,0 +1,120 @@
+
+.gallery {
+  -webkit-columns: 4 300px;
+          columns: 4 300px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  padding: 0 10px 5px;
+  font-size: 0;
+}
+.gallery img {
+  display: inline-block;
+  width: 100%;
+  height: auto; z-index: 1000;
+  margin: 10px 0 0 0;
+  cursor: pointer;
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0; z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(34, 34, 34, 0.9);
+  cursor: pointer;
+  cursor: -webkit-zoom-out;
+}
+.lightbox figure {
+  position: relative;
+  margin: 0;
+  cursor: auto;
+  box-shadow: 0 0 30px -5px #000;
+}
+.lightbox figure figcaption {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  padding: 5px;font-family: 'SegoeUIRegular';
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 1.2em;
+  font-weight: 300;
+  opacity: 0;
+  transition: opacity 400ms;
+  cursor: text;
+  /* IE didn't inherit "cursor: auto;" as set in "figure {}" */
+}
+.lightbox figure figcaption:empty {
+  display: none;
+}
+.lightbox figure img {
+  display: block;
+  max-width: 95vw;
+  max-height: 95vh;
+}
+.lightbox figure .prev, .lightbox figure .next {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: block;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  -webkit-filter: drop-shadow(0 1px 1px #000);
+          filter: drop-shadow(0 1px 1px #000);
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  opacity: 0;
+  transition: 400ms;
+}
+.lightbox figure .prev {
+  left: 0;
+  border-right: 24px solid #fff;
+}
+.lightbox figure .next {
+  right: 0;
+  border-left: 24px solid #fff;
+}
+
+figure:hover figcaption, figure:hover .prev, figure:hover .next {
+  opacity: 1;
+}
+figure:hover .prev {
+  left: 10px;
+}
+figure:hover .next {
+  right: 10px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+.overlay h1 {
+  font-weight: 400;
+}
+.overlay .close {
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  color: #f00;
+  font-size: 2em;
+  cursor: pointer;
+}

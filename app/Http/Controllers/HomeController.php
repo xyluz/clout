@@ -20,4 +20,8 @@ class HomeController extends Controller
     public function packages(){
         return view('price');
     }
+
+    public function business($id = '', $name=''){
+        return view('business-single');
+    }
 }
