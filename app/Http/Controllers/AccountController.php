@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Account\Models;
 use Illuminate\Http\Request;
-use App\Models\Account; 
 use App\Services\AccountService;
 
 use Alert;
@@ -81,12 +80,14 @@ class AccountController extends Controller
      */
     public function view($account)
     {
-        $acc = new Account;
-        $products = $acc->products($account);        
+       
+        $products = $this->service->products($account);
+        
+        $media = $this->service->media($account);        
 
         $details = $this->service->details($account);
         
-        return view('user.account-profile',compact('details','products'));
+        return view('user.account-profile',compact('details','products','media'));
     }
 
     /**

@@ -33,7 +33,7 @@
                           </div><!-- card --> 
                           <ul class="nav nav-activity-profile mg-t-20"> 
                             <li class="nav-item"><a href="#modaldemo2" data-toggle="modal" data-effect="effect-super-scaled" class="nav-link"><i class="icon ios-basket tx-success"></i> Add Product</a></li>
-                            <li class="nav-item"><a href="" class="nav-link"><i class="icon ion-image tx-secondary"></i> Add Photo</a></li>
+                            <li class="nav-item"><a href="#modaldemo5" data-toggle="modal" data-effect="effect-super-scaled" class="nav-link"><i class="icon ion-image tx-secondary"></i> Add Photo</a></li>
                         </ul><!-- nav -->
 
                         <div class="row row-sm mg-t-20">
@@ -91,18 +91,23 @@
                                           </tr>
                                         </thead>
                                         <tbody>
+                                          @if($media->count() > 0)
+                                          @foreach($media->get() as $single)
                                           <tr>
                                             <td class="pd-l-20">
-                                              <img src="http://via.placeholder.com/500x500" class="wd-36 rounded-circle" alt="Image">
+                                              <img src="{{'/storage/'. substr($single->media_url,7) ?? 'http://via.placeholder.com/500x500' }}"" class="wd-36 rounded-circle" alt="Image">
                                             </td>
                                             <td>
-                                              <a href="" class="tx-inverse tx-14 tx-medium d-block">Mark K. Peters</a>
-                                              <span class="tx-11 d-block">TRANSID: 1234567890</span>
+                                            <a href="" class="tx-inverse tx-14 tx-medium d-block">{{$single->media_title}}</a>
+                                            <span class="tx-11 d-block">TYPE: {{$single->media_type}}</span>
                                             </td>
                                           
-                                            <td>Just Now</td>
+                                            <td>
+                                                <a href="{{route('media.delete',['id'=>$single->id])}}" class="tx-danger tx-24"><i class="fa fa-trash" title="delete this photo"></i></a>                                               
+                                            </td>
                                           </tr>
-                                          
+                                          @endforeach
+                                          @endif
                                           
                                         </tbody>
                                       </table>
@@ -183,6 +188,7 @@
 @include('user.user-edit-account-contact-modal')
 @include('user.user-edit-account-main-modal')
 @include('user.user-edit-account-create-product-modal')
+@include('user.user-edit-account-add-photo-modal')
 <script>
         $(function(){
   

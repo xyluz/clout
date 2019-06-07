@@ -30,8 +30,8 @@ class Account extends Model
         'spotlight'
     ];
 
-    public function media(){
-        return $this->hasMany(Media::class);
+    public function media($brand_id){
+        return Media::where('account_id',$brand_id);
     }
 
     public function products($brand_id){

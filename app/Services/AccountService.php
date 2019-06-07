@@ -31,6 +31,14 @@ class AccountService extends BaseService
         return $this->repository->delete($account);
     }
 
+    public function products($account){
+        return $this->repository->products($account);
+    }
+
+    public function media($account){
+        return $this->repository->media($account);
+    }
+
     public function details($account){
         return $this->repository->find($account);
     }

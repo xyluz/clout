@@ -42,6 +42,11 @@ Route::prefix('u')->group(function () {
         
         });
 
+        Route::prefix('media')->group(function(){
+            Route::post('create','MediaController@store')->name('media.create');
+            Route::get('delete/{id?}','MediaController@destroy')->name('media.delete');
+        });
+
     });
    
 

@@ -6,6 +6,7 @@ use App\Models\Account;
 
 class AccountRepository extends Repository
 {
+    
 
     /**
      * {@inheritdoc}
@@ -27,6 +28,17 @@ class AccountRepository extends Repository
             'description'=>$request['description']
         ]);
 
+    }
+
+    public function products($account){
+       $acc = new Account;
+        return $acc->products($account);
+    }
+
+    public function media($account){
+        $acc = new Account;
+      
+        return $acc->media($account);
     }
 
    

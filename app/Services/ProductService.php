@@ -41,22 +41,4 @@ class ProductService extends BaseService
         return $this->repository->delete($product);
     }
 
-      public function editProduct($data){
-       
-        $id = $data['brand_id'];
-
-        $prep = [
-            'twitter'=>$data['twitter'],
-            'facebook'=>$data['facebook'],
-            'instagram'=>$data['instagram'],
-            'spotlight'=>$data['spotlight'],
-            'linkedin'=>$data['linkedin'],
-            'phone'=>$data['phone'],
-            'website'=>$data['website'],
-            'email'=>$data['email']
-        ];
-
-        return $this->repository->update($prep,$id);
-    }
-
 }
