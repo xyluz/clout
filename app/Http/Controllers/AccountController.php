@@ -76,9 +76,9 @@ class AccountController extends Controller
      * @param  \App\Account  $account
      * @return \Illuminate\Http\Response
      */
-    public function view(Account $account)
+    public function view($account)
     {
-        //
+        return view('user.account-profile');
     }
 
     /**
