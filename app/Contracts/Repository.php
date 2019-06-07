@@ -172,7 +172,7 @@ interface Repository{
      * @param string  $type
      * @param string  $column
      * 
-     * @return mixed
+     * @return mixed 
     */
     public function aggregate($type, $column);
 }

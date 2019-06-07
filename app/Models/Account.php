@@ -25,7 +25,9 @@ class Account extends Model
         'linkedin',
         'phone',
         'facebook',
-        'logo'
+        'logo',
+        'address',
+        'spotlight'
     ];
 
     public function media(){

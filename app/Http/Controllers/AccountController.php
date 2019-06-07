@@ -78,7 +78,9 @@ class AccountController extends Controller
      */
     public function view($account)
     {
-        return view('user.account-profile');
+        $details = $this->service->details($account);
+        
+        return view('user.account-profile',compact('details'));
     }
 
     /**

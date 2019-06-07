@@ -6,25 +6,19 @@
 <div class="slim-mainpanel">
         <div class="container">
                 <div class="slim-pageheader">
-                        {{-- <ol class="breadcrumb slim-breadcrumb">
-                          <li class="breadcrumb-item"><a href="#">Home</a></li>
-                          <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Profile Page</li>
-                        </ol> --}}
-                        {{-- <h6 class="slim-pagetitle">My Profile</h6> --}}
-                      </div><!-- slim-pageheader -->
+                     
                 <div class="row row-sm">
                         <div class="col-lg-8">
                           <div class="card card-profile">
                             <div class="card-body">
                               <div class="media">
-                                <img src="http://via.placeholder.com/500x500" alt="">
+                                <img src="{{$details->logo ?? 'http://via.placeholder.com/500x500' }}" alt="">
                                 <div class="media-body">
-                                  <h3 class="card-profile-name">Katherine Lumaad</h3>
-                                  <p class="card-profile-position">Executive Director at <a href="">ThemePixels, Inc.</a></p>
-                                  <p>San Francisco, California</p>
+                                <h3 class="card-profile-name">{{$details->name ?? 'company name not set'}}</h3>
+                                <p class="card-profile-position">{{$details->genre ?? 'motto/genre not set'}}</p>
+                                <p>{{$details->address ?? 'address not set'}}</p>
               
-                                  <p class="mg-b-0">A consummate human capital management professional with international training and talent management implementations experience across the entire universe...<a href="">Read more</a></p>
+                                <p class="mg-b-0">{{ $details->description ?? 'brand description not set' }}</p>
                                 </div><!-- media-body -->
                               </div><!-- media -->
                             </div><!-- card-body -->
@@ -129,50 +123,50 @@
                                             <div><i class="icon ion-link tx-24 lh-0"></i></div>
                                             <div class="media-body mg-l-15 mg-t-4">
                                               <h6 class="tx-14 tx-gray-700">Websites</h6>
-                                              <a href="" class="d-block">http://themepixels.me</a>
-                                              <a href="" class="d-block">http://themeforest.net</a>
+                                            <a href="" class="d-block">{{ $details->website ?? 'undefined' }}</a>
+                                             
                                             </div><!-- media-body -->
                                           </div><!-- media -->
                                           <div class="media mg-t-25">
                                             <div><i class="icon ion-ios-telephone-outline tx-24 lh-0"></i></div>
                                             <div class="media-body mg-l-15 mg-t-4">
                                               <h6 class="tx-14 tx-gray-700">Phone Number</h6>
-                                              <span class="d-block">+1 234 5678 910</span>
+                                            <span class="d-block">{{ $details->phone ?? 'undefined'}}</span>
                                             </div><!-- media-body -->
                                           </div><!-- media -->
                                           <div class="media mg-t-25">
                                             <div><i class="icon ion-ios-email-outline tx-24 lh-0"></i></div>
                                             <div class="media-body mg-l-15 mg-t-4">
                                               <h6 class="tx-14 tx-gray-700">Email Address</h6>
-                                              <span class="d-block">yourname@sample.com</span>
+                                            <span class="d-block">{{ $details->email ?? 'undefined' }}</span>
                                             </div><!-- media-body -->
                                           </div><!-- media -->
                                           <div class="media mg-t-25">
                                             <div><i class="icon ion-social-twitter tx-18 lh-0"></i></div>
                                             <div class="media-body mg-l-15 mg-t-2">
                                               <h6 class="tx-14 tx-gray-700">Twitter</h6>
-                                              <a href="#" class="d-block">@themepixels</a>
+                                            <a href="#" class="d-block">{{ $details->twitter ?? 'undefined' }}</a>
                                             </div><!-- media-body -->
                                           </div><!-- media -->
                                           <div class="media mg-t-25">
                                                 <div><i class="icon ion-social-twitter tx-18 lh-0"></i></div>
                                                 <div class="media-body mg-l-15 mg-t-2">
                                                   <h6 class="tx-14 tx-gray-700">Instagram</h6>
-                                                  <a href="#" class="d-block">@themepixels</a>
+                                                <a href="#" class="d-block">{{ $details->instagram ?? 'undefined' }}</a>
                                                 </div><!-- media-body -->
                                               </div><!-- media -->
                                               <div class="media mg-t-25">
                                                     <div><i class="icon ion-social-twitter tx-18 lh-0"></i></div>
                                                     <div class="media-body mg-l-15 mg-t-2">
                                                       <h6 class="tx-14 tx-gray-700">Linkedin</h6>
-                                                      <a href="#" class="d-block">@themepixels</a>
+                                                    <a href="#" class="d-block">{{ $details->linkedin ?? 'undefined' }}</a>
                                                     </div><!-- media-body -->
                                                   </div><!-- media -->
                                                   <div class="media mg-t-25">
                                                         <div><i class="icon ion-social-twitter tx-18 lh-0"></i></div>
                                                         <div class="media-body mg-l-15 mg-t-2">
                                                           <h6 class="tx-14 tx-gray-700">Spotlight Video</h6>
-                                                          <a href="#" class="d-block"><video src="" controls></video></a>
+                                                        <a href="#" class="d-block">{{ $details->spotlight ?? 'undefined' }}</a>
                                                         </div><!-- media-body -->
                                                       </div><!-- media -->
                                         </div><!-- media-list -->

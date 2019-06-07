@@ -27,7 +27,9 @@ class CreateAccountsTable extends Migration
             $table->string('linkedin')->nullable();
             $table->string('phone')->nullable();
             $table->string('facebook')->nullable();
+            $table->string('spotlight')->nullable();
             $table->text('logo')->nullable();
+            $table->text('address')->nullable();
             $table->timestamps();
         });
     }

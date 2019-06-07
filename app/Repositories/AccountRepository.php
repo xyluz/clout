@@ -24,7 +24,6 @@ class AccountRepository extends Repository
             'name'=>$request['brand_name'],
             'type'=>$request['brand_type'],
             'description'=>$request['description']
-
         ]);
 
     }
