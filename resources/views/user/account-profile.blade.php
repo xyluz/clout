@@ -31,9 +31,8 @@
                               </div>
                             </div><!-- card-footer -->
                           </div><!-- card --> 
-                          <ul class="nav nav-activity-profile mg-t-20">                               
-                            <li class="nav-item"><a href="" class="nav-link"><i class="icon ion-play tx-primary"></i> Add Spotlight Video</a></li>
-                            <li class="nav-item"><a href="" class="nav-link"><i class="icon ios-basket tx-success"></i> Add Product</a></li>
+                          <ul class="nav nav-activity-profile mg-t-20"> 
+                            <li class="nav-item"><a href="#modaldemo2" data-toggle="modal" data-effect="effect-super-scaled" class="nav-link"><i class="icon ios-basket tx-success"></i> Add Product</a></li>
                             <li class="nav-item"><a href="" class="nav-link"><i class="icon ion-image tx-secondary"></i> Add Photo</a></li>
                         </ul><!-- nav -->
 
@@ -48,24 +47,27 @@
                                         <thead>
                                           <tr>
                                             <th>&nbsp;</th>
-                                            <th>Item Details</th>                                          
+                                            <th>Product Details</th>                                          
                                             <th>Actions</th>
                                           </tr>
                                         </thead>
                                         <tbody>
-                                          <tr>
-                                            <td>
-                                              <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
-                                            </td>
-                                            <td>
-                                              <a href="" class="tx-inverse tx-14 tx-medium d-block">The Dothraki Shoes</a>
-                                              <span class="tx-11 d-block"><span class="square-8 bg-danger mg-r-5 rounded-circle"></span> 20 remaining</span>
-                                            </td>                                           
-                                            <td class="valign-middle tx-center">
-                                              <a href="" class="tx-gray-600 tx-24"><i class="icon ion-android-more-horizontal"></i></a>
-                                            </td>
-                                          </tr>                                         
-                                    
+                                         @if($products->count() > 0)
+                                            @foreach($products->get() as $product)
+                                              <tr>
+                                                <td>
+                                                  <img src="{{'/storage/'. substr($product->product_image,7) ?? 'http://via.placeholder.com/500x500' }}" class="wd-55" alt="Image">
+                                                </td>
+                                                <td>
+                                                  <a href="" class="tx-inverse tx-14 tx-medium d-block">{{ $product->product_name }}</a>
+                                                <span class="tx-11 d-block"><span class="square-8 bg-danger mg-r-5 rounded-circle"></span>{{  $product->product_price }}</span>
+                                                </td>                                           
+                                                <td class="valign-middle tx-center">
+                                                <a href="#" class="tx-gray-600 tx-24"><i class="fa fa-trash"></i></a>
+                                                </td>
+                                              </tr> 
+                                            @endforeach                                        
+                                          @endif
                                         </tbody>
                                       </table>
                                     </div><!-- table-responsive -->
@@ -180,6 +182,7 @@
 </div>
 @include('user.user-edit-account-contact-modal')
 @include('user.user-edit-account-main-modal')
+@include('user.user-edit-account-create-product-modal')
 <script>
         $(function(){
   

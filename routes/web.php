@@ -34,12 +34,19 @@ Route::prefix('u')->group(function () {
         Route::get('details/{id?}','AccountController@view')->name('acc.details');
         Route::post('edit/contact','AccountController@contactEdit')->name('acc.edit.contact');
         Route::post('edit/main','AccountController@mainEdit')->name('acc.edit.main');
+        
+        Route::prefix('prod')->group(function(){
+
+            Route::post('create','ProductController@store')->name('prod.create');
+        
+        });
+
     });
    
 
 });
 
-Route::prefix('sa')->group(function () {
+Route::prefix('a')->group(function () {
 
 //super admin routes
 

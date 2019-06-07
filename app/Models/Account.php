@@ -34,8 +34,8 @@ class Account extends Model
         return $this->hasMany(Media::class);
     }
 
-    public function products(){
-        return $this->hasMany(Product::class);
+    public function products($brand_id){
+        return Product::where('account_id',$brand_id);
     }
 
     public function transactions(){

@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Account\Models;
 use Illuminate\Http\Request;
-use App\Services\AccountService; 
+use App\Models\Account; 
+use App\Services\AccountService;
+
 use Alert;
 
 
@@ -35,7 +37,8 @@ class AccountController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    { 
+       
         return view('user.account');
     }
 
@@ -78,9 +81,12 @@ class AccountController extends Controller
      */
     public function view($account)
     {
+        $acc = new Account;
+        $products = $acc->products($account);        
+
         $details = $this->service->details($account);
         
-        return view('user.account-profile',compact('details'));
+        return view('user.account-profile',compact('details','products'));
     }
 
     /**
@@ -108,8 +114,14 @@ class AccountController extends Controller
     }
 
     public function mainEdit(Request $request){
-        
-        $logo = $request->file('logo')->store('public');
+
+        $logo = $request->logo_old;
+
+        if($request->logo){
+            
+            $logo = $request->file('logo')->store('public');
+
+        }        
 
         try{
 

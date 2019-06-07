@@ -61,7 +61,8 @@ class AccountService extends BaseService
             'name'=>$data['brand_name'],
             'genre'=>$data['genre'],
             'description'=>$data['description'],
-            'logo'=>$logo            
+            'logo'=>$logo,
+            'address'=>$data['address']            
         ];
 
         return $this->repository->update($prep,$id);

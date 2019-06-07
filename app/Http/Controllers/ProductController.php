@@ -4,9 +4,29 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Services\ProductService; 
 
 class ProductController extends Controller
 {
+       /**
+     * The service instance.
+     * 
+     * @var \App\Services\ProductService
+    */
+    protected $service;
+
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    
+    public function __construct(ProductService $service)
+    {
+        $this->middleware('auth');
+        $this->service = $service;        
+    } 
+
     /**
      * Display a listing of the resource.
      *
@@ -35,7 +55,24 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $product_image = '';
+
+        if($request->product_image){
+            
+            $product_image = $request->file('product_image')->store('public');
+
+        }    
+       
+        try{
+
+            $this->service->create($request,$product_image);
+            alert()->success('Product Added','Success');
+
+        }catch(Exception $e){
+            alert()->error($e,'Error');
+        }
+        return redirect()->back();
     }
 
     /**
