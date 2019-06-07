@@ -60,9 +60,10 @@
                                     <div class="row no-gutters">
                                         <div class="col-5 col-sm-4">
                                             Description:
+                                            
                                         </div><!-- col-4 -->
                                         <div class="col-9 col-sm-8">
-                                            <textarea required rows="3" name="description" class="form-control"></textarea>
+                                            <textarea required minlength="150" rows="3" name="description" class="form-control"></textarea>
                                         </div><!-- col-8 -->
                                     </div><!-- row -->                                   
 

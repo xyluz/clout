@@ -12,7 +12,8 @@
                           <div class="card card-profile">
                             <div class="card-body">
                               <div class="media">
-                                <img src="{{$details->logo ?? 'http://via.placeholder.com/500x500' }}" alt="">
+                                <img src="{{'/storage/'. substr($details->logo,7) ?? 'http://via.placeholder.com/500x500' }}" alt="">
+                               
                                 <div class="media-body">
                                 <h3 class="card-profile-name">{{$details->name ?? 'company name not set'}}</h3>
                                 <p class="card-profile-position">{{$details->genre ?? 'motto/genre not set'}}</p>
@@ -25,7 +26,7 @@
                             <div class="card-footer">
                               <a href="" class="card-profile-direct">http://thmpxls.me/profile?id=katherine</a>
                               <div>
-                                <a href="">Edit Profile</a>
+                                <a href="#modaldemo4" data-toggle="modal" data-effect="effect-super-scaled">Edit Profile</a>
                                 <a href="">Profile Settings</a>
                               </div>
                             </div><!-- card-footer -->
@@ -178,6 +179,7 @@
         </div>
 </div>
 @include('user.user-edit-account-contact-modal')
+@include('user.user-edit-account-main-modal')
 <script>
         $(function(){
   

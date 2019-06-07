@@ -53,4 +53,18 @@ class AccountService extends BaseService
         return $this->repository->update($prep,$id);
     }
 
+    public function editMainDetails($data,$logo){
+       
+        $id = $data['brand_id'];
+
+        $prep = [
+            'name'=>$data['brand_name'],
+            'genre'=>$data['genre'],
+            'description'=>$data['description'],
+            'logo'=>$logo            
+        ];
+
+        return $this->repository->update($prep,$id);
+    }
+
 }

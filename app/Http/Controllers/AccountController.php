@@ -106,6 +106,21 @@ class AccountController extends Controller
         return redirect()->back();
 
     }
+
+    public function mainEdit(Request $request){
+        
+        $logo = $request->file('logo')->store('public');
+
+        try{
+
+            $this->service->editMainDetails($request->all(),$logo);
+            alert()->success('Brand Details has been edited','Edit Successful');
+
+        }catch(Exception $e){
+            alert()->error($e,'Error');
+        }
+        return redirect()->back();
+    }
     /**
      * Update the specified resource in storage.
      *

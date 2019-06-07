@@ -22,6 +22,7 @@ class AccountRepository extends Repository
             'user_id'=>$request['user_id'],
             'genre'=>$request['genre'],
             'name'=>$request['brand_name'],
+            'phone'=>$request['phone'],
             'type'=>$request['brand_type'],
             'description'=>$request['description']
         ]);
