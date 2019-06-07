@@ -32,7 +32,7 @@ Route::prefix('u')->group(function () {
         Route::post('create','AccountController@store')->name('acc.create');
         Route::get('delete/{id?}','AccountController@destroy')->name('acc.delete');
         Route::get('details/{id?}','AccountController@view')->name('acc.details');
-
+        Route::post('edit/contact','AccountController@contactEdit')->name('acc.edit.contact');
     });
    
 

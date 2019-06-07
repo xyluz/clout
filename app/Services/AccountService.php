@@ -35,4 +35,22 @@ class AccountService extends BaseService
         return $this->repository->find($account);
     }
 
+    public function editContactDetails($data){
+       
+        $id = $data['brand_id'];
+
+        $prep = [
+            'twitter'=>$data['twitter'],
+            'facebook'=>$data['facebook'],
+            'instagram'=>$data['instagram'],
+            'spotlight'=>$data['spotlight'],
+            'linkedin'=>$data['linkedin'],
+            'phone'=>$data['phone'],
+            'website'=>$data['website'],
+            'email'=>$data['email']
+        ];
+
+        return $this->repository->update($prep,$id);
+    }
+
 }

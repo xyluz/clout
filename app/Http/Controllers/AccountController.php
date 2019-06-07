@@ -89,11 +89,23 @@ class AccountController extends Controller
      * @param  \App\Account  $account
      * @return \Illuminate\Http\Response
      */
-    public function edit(Account $account)
+    public function edit(Request $request)
     {
-        //
+        return $request->all();
     }
 
+    public function contactEdit(Request $request){
+        try{
+            $this->service->editContactDetails($request->all());
+            alert()->success('Brand contact details has been edited','Edit Successful');
+        }catch(Exception $e){
+            
+            alert()->error($e,'Oops! Error');
+
+        }
+        return redirect()->back();
+
+    }
     /**
      * Update the specified resource in storage.
      *

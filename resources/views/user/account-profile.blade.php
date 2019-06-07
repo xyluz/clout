@@ -116,13 +116,13 @@
              
                         <div class="col-lg-4 ">
                                 <div class="card pd-25">
-                                        <div class="slim-card-title">Contact &amp; Personal Info</div>
+                                        <div class="slim-card-title">Contact &amp; Personal Info <a href="#modaldemo8" data-toggle="modal" data-effect="effect-super-scaled">  <i class="fa fa-pencil"></i></a></div>
                           
                                         <div class="media-list mg-t-25">
                                           <div class="media">
                                             <div><i class="icon ion-link tx-24 lh-0"></i></div>
                                             <div class="media-body mg-l-15 mg-t-4">
-                                              <h6 class="tx-14 tx-gray-700">Websites</h6>
+                                              <h6 class="tx-14 tx-gray-700">Websites  </h6>
                                             <a href="" class="d-block">{{ $details->website ?? 'undefined' }}</a>
                                              
                                             </div><!-- media-body -->
@@ -130,42 +130,42 @@
                                           <div class="media mg-t-25">
                                             <div><i class="icon ion-ios-telephone-outline tx-24 lh-0"></i></div>
                                             <div class="media-body mg-l-15 mg-t-4">
-                                              <h6 class="tx-14 tx-gray-700">Phone Number</h6>
+                                              <h6 class="tx-14 tx-gray-700">Phone Number  </h6>
                                             <span class="d-block">{{ $details->phone ?? 'undefined'}}</span>
                                             </div><!-- media-body -->
                                           </div><!-- media -->
                                           <div class="media mg-t-25">
                                             <div><i class="icon ion-ios-email-outline tx-24 lh-0"></i></div>
                                             <div class="media-body mg-l-15 mg-t-4">
-                                              <h6 class="tx-14 tx-gray-700">Email Address</h6>
+                                              <h6 class="tx-14 tx-gray-700">Email Address </h6>
                                             <span class="d-block">{{ $details->email ?? 'undefined' }}</span>
                                             </div><!-- media-body -->
                                           </div><!-- media -->
                                           <div class="media mg-t-25">
                                             <div><i class="icon ion-social-twitter tx-18 lh-0"></i></div>
                                             <div class="media-body mg-l-15 mg-t-2">
-                                              <h6 class="tx-14 tx-gray-700">Twitter</h6>
+                                              <h6 class="tx-14 tx-gray-700">Twitter  </h6>
                                             <a href="#" class="d-block">{{ $details->twitter ?? 'undefined' }}</a>
                                             </div><!-- media-body -->
                                           </div><!-- media -->
                                           <div class="media mg-t-25">
                                                 <div><i class="icon ion-social-twitter tx-18 lh-0"></i></div>
                                                 <div class="media-body mg-l-15 mg-t-2">
-                                                  <h6 class="tx-14 tx-gray-700">Instagram</h6>
+                                                  <h6 class="tx-14 tx-gray-700">Instagram  </h6>
                                                 <a href="#" class="d-block">{{ $details->instagram ?? 'undefined' }}</a>
                                                 </div><!-- media-body -->
                                               </div><!-- media -->
                                               <div class="media mg-t-25">
                                                     <div><i class="icon ion-social-twitter tx-18 lh-0"></i></div>
                                                     <div class="media-body mg-l-15 mg-t-2">
-                                                      <h6 class="tx-14 tx-gray-700">Linkedin</h6>
+                                                      <h6 class="tx-14 tx-gray-700">Linkedin </h6>
                                                     <a href="#" class="d-block">{{ $details->linkedin ?? 'undefined' }}</a>
                                                     </div><!-- media-body -->
                                                   </div><!-- media -->
                                                   <div class="media mg-t-25">
                                                         <div><i class="icon ion-social-twitter tx-18 lh-0"></i></div>
                                                         <div class="media-body mg-l-15 mg-t-2">
-                                                          <h6 class="tx-14 tx-gray-700">Spotlight Video</h6>
+                                                          <h6 class="tx-14 tx-gray-700">Spotlight Video  </h6>
                                                         <a href="#" class="d-block">{{ $details->spotlight ?? 'undefined' }}</a>
                                                         </div><!-- media-body -->
                                                       </div><!-- media -->
@@ -177,5 +177,24 @@
 
         </div>
 </div>
+@include('user.user-edit-account-contact-modal')
+<script>
+        $(function(){
+  
+          // showing modal with effect
+          $('.modal-effect').on('click', function(e){
+            e.preventDefault();
+            var effect = $(this).attr('data-effect');
+            $('#modaldemo8').addClass(effect);
+          });
+  
+          // hide modal with effect
+          $('#modaldemo8').on('hidden.bs.modal', function (e) {
+            $(this).removeClass (function (index, className) {
+                return (className.match (/(^|\s)effect-\S+/g) || []).join(' ');
+            });
+          });
+        });
+      </script>
 
 @endsection
