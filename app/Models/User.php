@@ -72,7 +72,7 @@ class User extends Authenticatable
     }
 
     public function allCampaigns(){
-        return Campaign::all();
+        return Campaign::whereNotNull('id');
     }
 
     public function allUsers(){

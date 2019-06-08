@@ -19,8 +19,8 @@
               </tr>
             </thead>
             <tbody>
-            @if(Auth::user()->campaigns()->count() > 0)
-                @foreach(Auth::user()->campaigns()->get() as $campaign)
+            @if(Auth::user()->allCampaigns()->count() > 0)
+                @foreach(Auth::user()->allCampaigns()->get() as $campaign)
 
               <tr>
                 <td class="tx-center">
