@@ -70,4 +70,16 @@ class User extends Authenticatable
     public function pageViews(){
         return PageVisits::where('user_id',$this->id);
     }
+
+    public function allCampaigns(){
+        return Campaign::all();
+    }
+
+    public function allUsers(){
+        return User::all();
+    }
+
+    public function allTransactions(){
+        return Transaction::all();
+    }
 }

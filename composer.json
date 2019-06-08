@@ -12,6 +12,7 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
+        "laravolt/avatar": "^2.2",
         "spatie/laravel-permission": "^2.37",
         "uxweb/sweet-alert": "^2.0"
     },

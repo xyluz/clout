@@ -6,7 +6,7 @@
 {{-- Joint Views --}}
 
 @role('user')
-@include('user.layouts.user-menu')
+@include('user.layouts.admin-menu')
 <div class="slim-mainpanel">
     <div class="container">
 
@@ -18,11 +18,15 @@
 @endrole
 
 @role('superadmin')
-Superadmin Dashboard specifics
-@endrole
+@include('user.layouts.admin-menu')
+<div class="slim-mainpanel">
+    <div class="container">
 
-@role('admin')
-Admin Dashboard Specifics
+        @include('user.layouts.admin-dash-cards')
+        @include('user.layouts.admin-dash-sales')
+
+    </div>
+</div>
 @endrole
 
 @role('presenter')

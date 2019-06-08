@@ -63,7 +63,7 @@ Route::prefix('u')->group(function () {
 
 Route::prefix('a')->group(function () {
 
-//super admin routes
+    Route::get('users','AdminController@users')->name('a.users');
 
 });
 
