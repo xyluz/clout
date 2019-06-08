@@ -82,4 +82,14 @@ class User extends Authenticatable
     public function allTransactions(){
         return Transaction::all();
     }
+
+    public function recentTransactions(){
+        return Transaction::whereNotNull('id')->limit('5');
+    }
+
+    public function recentPurchases(){
+
+        return Purchase::whereNotNull('id')->limit('5');
+
+    }
 }

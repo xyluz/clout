@@ -16,9 +16,9 @@
               </tr>
             </thead>
             <tbody>
-              @if(Auth::user()->purchases()->count() > 0)
+              @if(Auth::user()->recentPurchases()->count() > 0)
             
-                @foreach(Auth::user()->purchases()->get() as $item)
+                @foreach(Auth::user()->recentPurchases()->get() as $item)
                 <tr>
                   <td class="pd-l-20">
                     <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
@@ -63,8 +63,9 @@
               </tr>
             </thead>
             <tbody>
-              @if(Auth::user()->transactions()->count() > 0)
-                @foreach(Auth::user()->transactions()->get() as $trans)
+              @if(Auth::user()->recentTransactions()->count() > 0)
+                @foreach(Auth::user()->recentTransactions()->get() as $trans)
+                
                   <tr>
                     <td class="pd-l-20">
                     <img title="{{$trans->method}}" src="{{$trans->method == 'paystack' ? 'https://pbs.twimg.com/profile_images/810741743436124160/sfGjeR7F_400x400.jpg' : 'http://via.placeholder.com/800x533'}}" class="wd-36 rounded-circle" alt="Image">
