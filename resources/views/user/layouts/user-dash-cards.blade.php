@@ -12,14 +12,15 @@
         <i class="icon ion-ios-pie-outline"></i>
         <div class="dash-content">
           <label class="tx-success">Page Visits</label>
-          <h2>0</h2>
+        {{-- <h2>{{ Auth::user()->pageViews()->count() }}</h2> --}}
+        <h2>0</h2>
         </div><!-- dash-content -->
       </div><!-- col-3 -->
       <div class="col-lg-3">
         <i class="icon ion-ios-stopwatch-outline"></i>
         <div class="dash-content">
           <label class="tx-purple">Plays</label>
-          <h2>0</h2>
+        <h2>0</h2>
         </div><!-- dash-content -->
       </div><!-- col-3 -->
       <div class="col-lg-3">

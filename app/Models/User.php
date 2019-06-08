@@ -11,6 +11,7 @@ use App\Models\Account;
 use App\Models\Profile;
 use App\Models\Transaction;
 use App\Models\Purchase;
+use App\Models\PageVisits;
 
 
 
@@ -64,5 +65,9 @@ class User extends Authenticatable
 
     public function campaigns(){
         return $this->hasMany(Campaign::class);
+    }
+
+    public function pageViews(){
+        return PageVisits::where('user_id',$this->id);
     }
 }

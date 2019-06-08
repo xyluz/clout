@@ -80,7 +80,7 @@
                                 </td>
                                 <td>
                                 <a href="" class="tx-inverse tx-right tx-medium d-block">{{$campaign->campaign_name}}</a>
-                                  <span class="tx-12 d-block tx-right"><span class="square-8 @if($campaign->campaign_status == 'pending') bg-danger @else bg-success @endif mg-r-5 rounded-circle"></span>{{$campaign->campaign_status}}</span>
+                                  <span class="tx-12 d-block tx-right"><span class="square-8 @if($campaign->campaign_status != 'running') bg-danger @else bg-success @endif mg-r-5 rounded-circle"></span>{{$campaign->campaign_status}}</span>
                                 </td>
                             <td class="valign-middle tx-right">
                                 {{$campaign->purchase()->first()['package_item_name']}}</td>
