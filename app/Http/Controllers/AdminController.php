@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Admin;
 use Illuminate\Http\Request;
+use App\Models\Campaign;
+
 
 class AdminController extends Controller
 {
@@ -15,6 +17,25 @@ class AdminController extends Controller
     public function index()
     {
         //
+    }
+
+    public function campaignUpdate(Request $request){
+       
+        $find = Campaign::where('id',$request->id)->first();
+             
+        if($find){
+
+            $find->campaign_status = 'running';
+            $present = (integer)$find->total_played;
+            $find->total_played = $present + (integer)$request->play;
+            $find->save();
+
+            return "success";
+
+        }else{
+            return "error";
+        }
+       
     }
 
     public function users(){

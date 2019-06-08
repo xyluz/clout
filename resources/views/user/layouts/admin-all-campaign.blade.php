@@ -1,3 +1,5 @@
+
+
 <div class="card card-table mg-t-20 mg-sm-t-30">
         <div class="card-header">
           <h6 class="slim-card-title">Campaigns</h6>
@@ -41,14 +43,37 @@
                 <td class="valign-middle tx-right">
                         {{\Carbon\Carbon::createFromTimeStamp(strtotime($campaign->created_at))->diffForHumans() ?? 'null'}}
                 </td>
-                <td class="valign-middle tx-right">
+                <td class="valign-middle tx-right">                       
                        {{$campaign->start_date}}
                 </td>
                 <td class="valign-middle tx-right">
                         {{\Carbon\Carbon::createFromTimeStamp(strtotime($campaign->updated_at))->diffForHumans() ?? 'null'}}
                 </td>
                 <td class="valign-middle tx-center">
-                  <a href="#" title="view full report" class="tx-gray-600 tx-15"><i class="fa fa-eye"></i></a>
+                <a href="#modaldemo{{$campaign->id}}" data-toggle="modal" data-effect="effect-slide-in-bottom" title="Update Plays" class="tx-gray-600 tx-15"><i class="fa fa-plus"></i></a>
+                  &nbsp; &nbsp;
+
+                <div id="modaldemo{{$campaign->id}}" class="modal fade">
+                        <div class="modal-dialog modal-dialog-vertical-center" role="document">
+                          <div class="modal-content bd-0 tx-14">
+                          <button id="closeModal{{$campaign->id}}" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                      </button>
+            
+                            <div class="modal-body pd-25">
+                                Update play for campaign#{{$campaign->id}}
+                            <input type="text" placeholder="play count" id="count{{$campaign->id}}" class="form-control pd-y-12"  /> <br />
+                            <button onclick="updateCampaignPlay({{$campaign->id}})" type="button" class="btn btn-primary">Save</button>
+                             
+                            </div>
+                       
+                          </div>
+                        </div><!-- modal-dialog -->
+                      </div><!-- modal -->
+                  
+
+
+                  <a href="#" title="View Details" class="tx-gray-600 tx-15"><i class="fa fa-eye"></i></a>
                 </td>
               </tr>
 
@@ -62,3 +87,65 @@
           <a href=""><i class="fa fa-angle-down mg-r-5"></i>View All Products</a>
         </div><!-- card-footer --> --}}
       </div><!-- card -->
+
+      <script>
+            $(function(){
+      
+              // showing modal with effect
+              $('.modal-effect').on('click', function(e){
+                e.preventDefault();
+                var effect = $(this).attr('data-effect');
+                $('#modaldemo8').addClass(effect);
+              });
+      
+              // hide modal with effect
+              $('#modaldemo8').on('hidden.bs.modal', function (e) {
+                $(this).removeClass (function (index, className) {
+                    return (className.match (/(^|\s)effect-\S+/g) || []).join(' ');
+                });
+              });
+            });
+
+            function updateCampaignPlay(n){
+
+                let id = '#count'+n;
+                let button = '#closeModal'+n;
+                let val = $(id).val();
+                               
+                $.ajax({
+                    type: 'POST',                  
+                    url: '{{route("a.campaign.update")}}',
+                    data: { 
+                        'id': n, 
+                        'play': val ,
+                        "_token": "{{ csrf_token() }}",
+                    },
+                    success: function(msg){
+                        $(button).click();
+                       
+                       if(msg == 'success'){
+                            Swal.fire({
+                                    type: 'success',
+                                    title: 'Update Done',
+                                    text: 'Campaign has been updated',
+                                    footer: 'User has been notified'
+                                });
+                            
+                       }else{
+                        Swal.fire({
+                                    type: 'error',
+                                    title: 'Update Not Done : ' + msg,
+                                    text: 'Campaign was not updated',
+                                    footer: 'User will not be notified'
+                                });
+                       }
+
+                    },
+                    error: function(response){
+                        console.log(response);
+                    }
+                });
+
+            }
+          </script>
+      

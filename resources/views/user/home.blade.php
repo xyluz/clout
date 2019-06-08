@@ -6,7 +6,7 @@
 {{-- Joint Views --}}
 
 @role('user')
-@include('user.layouts.admin-menu')
+@include('user.layouts.user-menu')
 <div class="slim-mainpanel">
     <div class="container">
 

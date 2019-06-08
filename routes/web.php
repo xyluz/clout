@@ -65,6 +65,7 @@ Route::prefix('a')->group(function () {
 
     Route::get('users','AdminController@users')->name('a.users');
     Route::get('camp','AdminController@campaign')->name('a.campaign');
+    Route::post('camp/update','AdminController@campaignUpdate')->name('a.campaign.update');
 
 });
 
