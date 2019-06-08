@@ -14,6 +14,8 @@ class CampaignController extends Controller
      */
     public function index()
     {
+        //fetch products relating to this user
+        //fetch accounts relating to this account
         return view('user.campaign');
     }
 

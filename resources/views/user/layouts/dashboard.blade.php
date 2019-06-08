@@ -19,7 +19,10 @@
     <link href="{{ asset('css/ionicons.css') }}" rel="stylesheet">
     <link href="{{ asset('css/chartist.css') }}" rel="stylesheet">
     <link href="{{ asset('css/rickshaw.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/select.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap-tagsinput.css') }}" rel="stylesheet">
     <link href="{{ asset('css/slim.css') }}" rel="stylesheet">
+
 
 
     <!-- Twitter -->
@@ -81,7 +84,7 @@
         <main>
             @yield('content')
         </main>
- 
+        
 
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/popper.js') }}"></script>
@@ -93,10 +96,36 @@
     <script src="{{ asset('js/jquery.sparkline.min.js') }}"></script>
     <script src="{{ asset('js/ResizeSensor.js') }}"></script>
     <script src="{{ asset('js/dashboard.js') }}"></script>
+    <script src="{{ asset('js/bootstrap-tagsinput.js') }}"></script>
+    <script src="{{ asset('js/select.min.js') }}"></script>
+    <script src="{{ asset('js/moment.js') }}"></script>
+    <script src="{{ asset('js/jquery-ui.js') }}"></script>
+
+    <script src="{{ asset('js/jquery.maskedinput.js') }}"></script>
+
     <script src="{{ asset('js/slim.js') }}"></script>
+ 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     @include('sweet::alert')
-
+    <script>
+  
+        $(function(){
+          'use strict'
+  
+          // Datepicker
+          $('.fc-datepicker').datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: true
+          });
+  
+          $('#datepickerNoOfMonths').datepicker({
+            showOtherMonths: true,
+            selectOtherMonths: true,
+            numberOfMonths: 2
+          });
+  
+        });
+      </script>
 </body>
 </html>
