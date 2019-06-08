@@ -64,6 +64,7 @@ Route::prefix('u')->group(function () {
 Route::prefix('a')->group(function () {
 
     Route::get('users','AdminController@users')->name('a.users');
+    Route::get('camp','AdminController@campaign')->name('a.campaign');
 
 });
 

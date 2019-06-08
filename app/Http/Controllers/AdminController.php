@@ -21,6 +21,11 @@ class AdminController extends Controller
         return 'users dashboard';
     }
 
+    public function campaign(){
+        
+        return view('user.superadmin.campaign');
+    }
+
     /**
      * Show the form for creating a new resource.
      *

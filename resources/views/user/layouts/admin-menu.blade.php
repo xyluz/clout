@@ -10,7 +10,7 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{{route('campaign')}}">
+            <a class="nav-link" href="{{route('a.campaign')}}">
               <i class="icon ion-ios-book-outline"></i>
               <span>Campaigns</span>
             </a>           
