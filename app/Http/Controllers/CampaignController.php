@@ -4,9 +4,31 @@ namespace App\Http\Controllers;
 
 use App\Models\Campaign;
 use Illuminate\Http\Request;
+use App\Services\CampaignService; 
+
+use Alert;
 
 class CampaignController extends Controller
-{
+{    
+    /**
+     * The service instance.
+     * 
+     * @var \App\Services\CampaignService
+    */
+    protected $service;
+
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    
+    public function __construct(CampaignService $service)
+    {
+        $this->middleware('auth');
+        $this->service = $service;        
+    } 
+
     /**
      * Display a listing of the resource.
      *
@@ -14,8 +36,6 @@ class CampaignController extends Controller
      */
     public function index()
     {
-        //fetch products relating to this user
-        //fetch accounts relating to this account
         return view('user.campaign');
     }
 
@@ -37,7 +57,17 @@ class CampaignController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // return $request->all();
+        try{
+            
+            $this->service->create($request->all());
+            alert()->success('Campaign Request Submitted. Your campaign will be reviewed, and started accordingly', 'Success!');
+
+           }catch(Exception $e){
+               alert()->error($e, 'Error!');
+           }
+
+           return redirect()->back();
     }
 
     /**

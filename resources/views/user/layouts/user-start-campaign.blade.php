@@ -1,5 +1,4 @@
  <!-- MODAL GRID -->
-
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
  <div id="modaldemo6" class="modal fade">
         <div class="modal-dialog modal-lg" role="document">
@@ -22,27 +21,49 @@
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
+                <form action="{{route('campaign.create')}}" method="POST">
+                    @csrf
                     <div class="pd-x-30 pd-y-10">
-                     
+                        <div class="form-group">
+                                <input class="form-control" type="text" name="campaign_name"  placeholder="Name this Campaign">
+
+                        </div>
                       <div class="form-group">
                         {{-- TODO: Check if user already has accounts created --}}
-                            <select name="account_type" class="form-control select2" data-placeholder="Account Type">
-                                    <option label="Account Type">Select Account</option>
-                                    <option value="business">Business Owner</option>
-                                    <option value="manager">Manager</option>
-                                    <option value="artist">Artist</option> 
-                                </select>
+                        @if(Auth::user()->accounts()->count() > 0)
+                            <select name="account_id" class="form-control select2" data-placeholder="Select Brand">
+                                <option label="Select Brand">Select Brand</option>
+                            @foreach(Auth::user()->accounts()->get() as $account)
+                           
+                            <option label="{{$account->name}}" value="{{$account->id}}">{{$account->name}}</option>
+                               
+                            @endforeach
+                            </select>
+                        @else
+                            You need to create a brand profile before you can start a campaign,
+                            <a href="{{route('account')}}">click here to create one now.</a>
+                        @endif
 
                       </div><!-- form-group -->
                       <div class="form-group mg-b-20">
                         {{-- TODO: Check if user has products available for usage --}}
-                            <select name="account_type" class="form-control select2" data-placeholder="Account Type">
-                                    <option label="Account Type">Select Product</option>
-                                    <option value="business">Business Owner</option>
-                                    <option value="manager">Manager</option>
-                                    <option value="artist">Artist</option> 
-                            </select>                   
-                       
+                        @if(Auth::user()->purchases()->count() > 0)
+
+                            <select name="campaign_package" class="form-control select2" data-placeholder="Select Product">
+                                    <option label="Select Product">Select Product</option>
+
+                                @foreach(Auth::user()->purchases()->get() as $item)
+                               
+                            <option value="{{$item->details()->get()[0]['package_item_name']}}">{{$item->details()->get()[0]['package_item_name']}} | {{$item->details()->get()[0]['package_item_available_count']}} plays</option>
+                                   
+
+                                @endforeach
+                            </select> 
+                        @else 
+                            
+                        You have not bought any package, you need at least 1 package to be able to run a campaign <a href="{{route('package')}}">click here to get one now.</a>
+                        
+                        @endif
                       </div><!-- form-group -->
 
                       <div class="form-group mg-b-20">
@@ -54,15 +75,15 @@
                                 </div>
                             </div>
                       
-                            <input type="text" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
+                            <input type="text" name="start_date" class="form-control fc-datepicker" placeholder="MM/DD/YYYY">
 
                         </div>
                        
                       </div><!-- form-group -->
   
-                      <button class="btn btn-primary pd-y-12 btn-block">Save Changes</button>
+                      <button type="submit" class="btn btn-primary pd-y-12 btn-block">Save Changes</button>
   
-                      
+                </form>  
                     </div>
                   </div><!-- pd-20 -->
                 </div><!-- col-6 -->
