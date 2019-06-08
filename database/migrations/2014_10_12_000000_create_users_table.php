@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('account_type');
+            $table->string('photo')->default('http://via.placeholder.com/500x500');
             $table->string('referral_code')->nullable();
             $table->rememberToken();
             $table->timestamps();
