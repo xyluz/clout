@@ -122,12 +122,12 @@
                     },
                     success: function(msg){
                         $(button).click();
-                       
+                       console.log(msg);
                        if(msg == 'success'){
                             Swal.fire({
                                     type: 'success',
                                     title: 'Update Done',
-                                    text: 'Campaign has been updated',
+                                    text: 'Campaign has been updated, refresh to reload view',
                                     footer: 'User has been notified'
                                 });
                             

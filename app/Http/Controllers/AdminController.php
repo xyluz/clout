@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Admin;
 use Illuminate\Http\Request;
 use App\Models\Campaign;
+use App\Models\CloutPackagesItems;
 
 
 class AdminController extends Controller
@@ -22,12 +23,26 @@ class AdminController extends Controller
     public function campaignUpdate(Request $request){
        
         $find = Campaign::where('id',$request->id)->first();
+        
              
         if($find){
+            
+            $package = CloutPackagesItems::where('id',$find->campaign_package)->first();
+        
+            $find->campaign_status = 'running';         
 
-            $find->campaign_status = 'running';
-            $present = (integer)$find->total_played;
-            $find->total_played = $present + (integer)$request->play;
+
+            $present = $find->total_played;
+            $new = $present + $request->play;
+
+            if($new >= $package->package_item_available_count){
+                //this means plays has finished
+                $new = $package->package_item_available_count;
+                $find->campaign_status = 'finished';
+
+            }
+           
+            $find->total_played = $new;
             $find->save();
 
             return "success";

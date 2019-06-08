@@ -54,7 +54,7 @@
 
                                 @foreach(Auth::user()->purchases()->get() as $item)
                                
-                            <option value="{{$item->details()->get()[0]['package_item_name']}}">{{$item->details()->get()[0]['package_item_name']}} | {{$item->details()->get()[0]['package_item_available_count']}} plays</option>
+                            <option value="{{$item->details()->get()[0]['id']}}">{{$item->details()->get()[0]['package_item_name']}} | {{$item->details()->get()[0]['package_item_available_count']}} plays</option>
                                    
 
                                 @endforeach
