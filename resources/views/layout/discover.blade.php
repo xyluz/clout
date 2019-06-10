@@ -40,7 +40,7 @@
     background: url(https://previews.123rf.com/images/drawkman/drawkman1709/drawkman170900312/85465240-cartoon-monster-face-wearing-eyeglasses-vector-halloween-funny-green-smart-monster-square-avatar.jpg);
     background-position: 36%;
     background-size: contain;
-    display: inline-block;"></button>   <p class="mt-4"><a href="" class="text-left text-lg mt-4 mb-2 no-underline font-termina-md text-white capitalize"> <span  style="font-weight: 900;" class="linearicons-magnifier text-sm"></span> Search Directory </a> </p>
+                        display: inline-block;"></button>   <p class="mt-4"><a href="{{route('business.group')}}" class="text-left text-lg mt-4 mb-2 no-underline font-termina-md text-white capitalize"> <span  style="font-weight: 900;" class="linearicons-magnifier text-sm"></span> Search Directory </a> </p>
                         </div>
                     </div>
                 </div>
@@ -89,7 +89,7 @@
     background-position: 36%;
     background-size: contain;
     display: inline-block;"></button>
-                 <p class="mt-4"><a href="" class="text-left text-lg mt-4 mb-2 no-underline font-termina-md text-white capitalize"> <span  style="font-weight: 900;" class="linearicons-music-note2 text-sm"></span> Explore Profiles </a> </p>   </div>
+                 <p class="mt-4"><a href="{{route('artist.group')}}" class="text-left text-lg mt-4 mb-2 no-underline font-termina-md text-white capitalize"> <span  style="font-weight: 900;" class="linearicons-music-note2 text-sm"></span> Explore Profiles </a> </p>   </div>
                 </div>
             </div>
         </section>

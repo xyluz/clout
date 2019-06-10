@@ -31,4 +31,10 @@ class HomeController extends Controller
         $accounts = Account::where('type','business');
         return view('business-search',compact('accounts'));
     }
+
+    public function artistGroup(){
+        //fetch all businesses
+        $accounts = Account::where('type','artist');
+        return view('artist-search',compact('accounts'));
+    }
 }
