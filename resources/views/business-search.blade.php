@@ -77,7 +77,7 @@
                       
                     </div>
                 </div>
-                <a href="#" class="btn btn-3 btn-3a font-termina-m text-lg font-smooth text-center icon-cart-2">Learn more</a>
+            <a href="{{route('business',['id'=>$account->id,'name'=>$account->name])}}" class="btn btn-3 btn-3a font-termina-m text-lg font-smooth text-center icon-cart-2">Learn more</a>
 
             </div>
             @endforeach
