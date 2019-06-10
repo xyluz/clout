@@ -67,11 +67,12 @@
 
                     </div>
                     <div class="p-6 flex flex-col justify-between ">
-                        <p for="" class=" font-seg text-left text-baser leading-normal txt-blue  block font-smooth capitalize leading-zero mb-2"> {{$account->name}}
+                        <p for="" class=" font-seg text-left text-baser leading-normal txt-blue  block font-smooth capitalize leading-zero mb-2"> {{$account->genre}}
                             <a href=""> <span style="    margin-right: 2em;" class=" mdi-heart-outline heart text-xl text-red"></span> </a>
                             <a href=""> <span class="mdi-share-outline heart text-xl text-black"></span> </a>
                         </p>
-                        <h3 class="font-termina-m text-2xl  text-black  leading-normal capitalize font-termina-m text-left mb-2 word-cla">{{$account->description}}</h3>
+                        <h3 class="font-termina-m text-2xl  text-black  leading-normal capitalize font-termina-m text-left mb-2 word-cla">{{$account->name}}</h3>
+                        <p for="" class=" font-seg  text-m text-grey-darkest text-baser leading-normal  font-smooth  word-cla"> <span style="font-weight: 900;" class="text-sm"></span> {{$account->description}} </p> 
                         <p for="" class=" font-seg  text-m text-grey-darkest text-baser leading-normal  font-smooth  word-cla"> <span style="font-weight: 900;" class="text-sm  linearicons-map-marker"></span> {{$account->address}} </p>
                       
                     </div>
