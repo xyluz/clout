@@ -153,21 +153,21 @@
                                             </div><!-- media-body -->
                                           </div><!-- media -->
                                           <div class="media mg-t-25">
-                                                <div><i class="icon ion-social-twitter tx-18 lh-0"></i></div>
+                                                <div><i class="icon ion-social-instagram tx-18 lh-0"></i></div>
                                                 <div class="media-body mg-l-15 mg-t-2">
                                                   <h6 class="tx-14 tx-gray-700">Instagram  </h6>
                                                 <a href="#" class="d-block">{{ $details->instagram ?? 'undefined' }}</a>
                                                 </div><!-- media-body -->
                                               </div><!-- media -->
                                               <div class="media mg-t-25">
-                                                    <div><i class="icon ion-social-twitter tx-18 lh-0"></i></div>
+                                                    <div><i class="icon ion-social-linkedin tx-18 lh-0"></i></div>
                                                     <div class="media-body mg-l-15 mg-t-2">
                                                       <h6 class="tx-14 tx-gray-700">Linkedin </h6>
                                                     <a href="#" class="d-block">{{ $details->linkedin ?? 'undefined' }}</a>
                                                     </div><!-- media-body -->
                                                   </div><!-- media -->
                                                   <div class="media mg-t-25">
-                                                        <div><i class="icon ion-social-twitter tx-18 lh-0"></i></div>
+                                                        <div><i class="icon ion-social-youtube tx-18 lh-0"></i></div>
                                                         <div class="media-body mg-l-15 mg-t-2">
                                                           <h6 class="tx-14 tx-gray-700">Spotlight Video  </h6>
                                                         <a href="#" class="d-block">{{ $details->spotlight ?? 'undefined' }}</a>

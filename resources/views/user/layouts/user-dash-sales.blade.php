@@ -51,7 +51,7 @@
           <h6 class="slim-card-title">User Transaction History</h6>
         </div><!-- card-header -->
         <div class="table-responsive">
-          <table class="table mg-b-0 tx-13 display responsive nowrap" id="datatable1">
+          <table class="table mg-b-0 tx-13 display responsive nowrap" id="datatable2">
             <thead>
               <tr class="tx-10">
                 <th class="wd-10p pd-y-5">&nbsp;</th>

@@ -24,14 +24,17 @@ class CampaignService extends BaseService
     }
 
     public function create($data){
-        // return $data;
+      
+      
         $prep = [
             'user_id'=>Auth::user()->id,
             'account_id'=>$data['account_id'],
             'campaign_name'=>$data['campaign_name'],
             'start_date'=>$data['start_date'],
             'campaign_package'=>$data['campaign_package'],
-            'campaign_status'=> 'pending'
+            'campaign_status'=> 'pending',
+            'campaign_description'=>$data['campaign_description'],
+            'media'=>$data['media']
         ];
 
         return $this->repository->create($prep);

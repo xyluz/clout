@@ -18,7 +18,8 @@ class Campaign extends Model
         'campaign_package',
         'campaign_status',
         'start_date',
-        'plays'
+        'plays',
+        'media'
     ]; 
 
     public function account(){

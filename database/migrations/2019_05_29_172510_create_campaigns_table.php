@@ -13,7 +13,7 @@ class CreateCampaignsTable extends Migration
      * @return void
      */
     public function up()
-    { 
+    {  
         Schema::create('campaigns', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('campaign_name');
@@ -22,6 +22,7 @@ class CreateCampaignsTable extends Migration
             $table->integer('account_id')->nullable();           
             $table->integer('total_played')->nullable();
             $table->string('start_date')->nullable();
+            $table->string('media')->nullable();
             $table->text('campaign_description')->nullable();
             $table->string('campaign_package')->nullable();
             $table->string('campaign_status')->nullable();

@@ -74,9 +74,9 @@
                             @if(Auth::user()->campaigns()->count() > 0)
                                 @foreach(Auth::user()->campaigns()->get() as $campaign)
 
-                              <tr>
+                              <tr> 
                                 <td class="tx-center">
-                                  <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
+                                  <img src="{{ Avatar::create($campaign->campaign_name)->toBase64() ?? 'http://via.placeholder.com/800x533' }}" class="wd-55" alt="Image">
                                 </td>
                                 <td>
                                 <a href="" class="tx-inverse tx-right tx-medium d-block">{{$campaign->campaign_name}}</a>

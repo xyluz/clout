@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Account;
 
 class HomeController extends Controller
 {   
@@ -23,5 +24,11 @@ class HomeController extends Controller
 
     public function business($id = '', $name=''){
         return view('business-single');
+    }
+
+    public function businessGroup(){
+        //fetch all businesses
+        $accounts = Account::where('type','business');
+        return view('business-search',compact('accounts'));
     }
 }
