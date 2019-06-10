@@ -5,7 +5,7 @@
           <h6 class="slim-card-title">Product Purchases</h6>
         </div><!-- card-header -->
         <div class="table-responsive">
-          <table class="table mg-b-0 tx-13 table display responsive nowrap" id="datatable1">
+          <table class="table mg-b-0 tx-13 display responsive nowrap" id="datatable1">
             <thead>
               <tr class="tx-10">
                 <th class="wd-10p pd-y-5">&nbsp;</th>
@@ -42,9 +42,7 @@
             </tbody>
           </table>
         </div><!-- table-responsive -->
-        {{-- <div class="card-footer tx-12 pd-y-15 bg-transparent"> --}}
-          {{-- <a href="#"><i class="fa fa-angle-down mg-r-5"></i>View All Products</a> --}}
-        {{-- </div><!-- card-footer --> --}}
+       
       </div><!-- card -->
     </div><!-- col-6 -->
     <div class="col-lg-6 mg-t-20 mg-lg-t-0">
@@ -53,7 +51,7 @@
           <h6 class="slim-card-title">User Transaction History</h6>
         </div><!-- card-header -->
         <div class="table-responsive">
-          <table class="table mg-b-0 tx-13">
+          <table class="table mg-b-0 tx-13 display responsive nowrap" id="datatable2">
             <thead>
               <tr class="tx-10">
                 <th class="wd-10p pd-y-5">&nbsp;</th>
@@ -85,9 +83,7 @@
             </tbody>
           </table>
         </div><!-- table-responsive -->
-        <div class="card-footer tx-12 pd-y-15 bg-transparent">
-          <a href=""><i class="fa fa-angle-down mg-r-5"></i>View All Transaction History</a>
-        </div><!-- card-footer -->
+       
       </div><!-- card -->
     </div><!-- col-6 -->
   </div><!-- row -->

@@ -109,7 +109,7 @@
   
         $(function(){
           'use strict'
-  
+
           // Datepicker
           $('.fc-datepicker').datepicker({
             showOtherMonths: true,
@@ -123,6 +123,12 @@
           });
   
           $('#datatable1').DataTable({
+          bLengthChange: false,
+          searching: false,
+          responsive: true
+        });
+
+        $('#datatable2').DataTable({
           bLengthChange: false,
           searching: false,
           responsive: true
