@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Account;
 use App\Models\CloutPackagesItems;
+use App\Models\User;
 
 class Campaign extends Model
 {
@@ -26,6 +27,11 @@ class Campaign extends Model
 
     public function purchase(){
         return CloutPackagesItems::where('id',$this->campaign_package);
+    }
+
+    public function byUser(){
+        //user that created this campaign
+        return User::where('id',$this->user_id);
     }
     
 }

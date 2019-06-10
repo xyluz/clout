@@ -20,13 +20,13 @@
                 <th class="pd-y-5 tx-right">Actions</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody> 
             @if(Auth::user()->allCampaigns()->count() > 0)
                 @foreach(Auth::user()->allCampaigns()->get() as $campaign)
 
               <tr>
                 <td class="tx-center">
-                  <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
+                  <img src="{{ Avatar::create($campaign->byUser()->first()['name'])->toBase64() ?? 'http://via.placeholder.com/800x533' }}" class="wd-55" alt="Image">
                 </td>
                 <td>
                 <a href="" class="tx-inverse tx-right tx-medium d-block">{{$campaign->campaign_name}}</a>
