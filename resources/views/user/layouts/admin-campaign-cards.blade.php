@@ -9,7 +9,7 @@
         </div><!-- dash-content -->
       </div><!-- col-3 -->
       <div class="col-lg-3">
-        <i class="icon ion-ios-pie-outline"></i>
+        <i class="icon ion-ios-play"></i>
         <div class="dash-content">
           <label class="tx-success">Starting Today</label>
         <h2>{{ Auth::user()->allUsers()->count() }}</h2>
@@ -17,14 +17,14 @@
         </div><!-- dash-content -->
       </div><!-- col-3 -->
       <div class="col-lg-3">
-        <i class="icon ion-ios-stopwatch-outline"></i>
+        <i class="icon ion-ios-play-outline"></i>
         <div class="dash-content">
           <label class="tx-purple">Starting Tomorrow</label>
         <h2>{{ Auth::user()->allTransactions()->count() }}</h2>
         </div><!-- dash-content -->
       </div><!-- col-3 -->
       <div class="col-lg-3">
-        <i class="icon ion-ios-world-outline"></i>
+        <i class="icon ion-ios-analytics"></i>
         <div class="dash-content">
           <label class="tx-danger">Completed</label>
           <h2>0</h2>

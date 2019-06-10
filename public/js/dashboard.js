@@ -29,9 +29,9 @@ $(function(){
   });
 
   // resize chart when container changest it's width
-  new ResizeSensor($('.dash-chartist'), function(){
-    area1.update();
-  });
+  // new ResizeSensor($('.dash-chartist'), function(){
+  //   area1.update();
+  // });
 
 
   var multibar = new Rickshaw.Graph({

@@ -17,11 +17,10 @@
     
     <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet">
     <link href="{{ asset('css/ionicons.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/chartist.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/rickshaw.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/select.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/bootstrap-tagsinput.css') }}" rel="stylesheet">
     <link href="{{ asset('css/slim.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/datatables.css') }}" rel="stylesheet">
 
 
 
@@ -90,12 +89,9 @@
     <script src="{{ asset('js/popper.js') }}"></script>
     <script src="{{ asset('js/bootstrap.js') }}"></script>
     <script src="{{ asset('js/jquery.cookie.js') }}"></script>
-    <script src="{{ asset('js/chartist.js') }}"></script>
     <script src="{{ asset('js/d3.js') }}"></script>
-    <script src="{{ asset('js/rickshaw.min.js') }}"></script>
     <script src="{{ asset('js/jquery.sparkline.min.js') }}"></script>
     <script src="{{ asset('js/ResizeSensor.js') }}"></script>
-    <script src="{{ asset('js/dashboard.js') }}"></script>
     <script src="{{ asset('js/bootstrap-tagsinput.js') }}"></script>
     <script src="{{ asset('js/select.min.js') }}"></script>
     <script src="{{ asset('js/moment.js') }}"></script>
@@ -104,6 +100,7 @@
     <script src="{{ asset('js/jquery.maskedinput.js') }}"></script>
 
     <script src="{{ asset('js/slim.js') }}"></script>
+    <script src="{{ asset('js/datatables.js') }}"></script>
  
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
@@ -125,6 +122,17 @@
             numberOfMonths: 2
           });
   
+          $('#datatable1').DataTable({
+          bLengthChange: false,
+          searching: false,
+          responsive: true
+        });
+
+
+       
+        // Select2
+        $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
+
         });
       </script>
 </body>
