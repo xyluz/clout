@@ -131,7 +131,7 @@
                   'items': '{!!$items!!}',                  
                   'transaction': response, 
                   "_token": "{{ csrf_token() }}",
-                  'amount' : '{{$package->package_price}}' * 100,
+                  'amount' : '{{$package->package_price}}',
               },
               success: function(msg){
                 if(msg == "done"){

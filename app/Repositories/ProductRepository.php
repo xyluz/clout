@@ -2,16 +2,16 @@
 
 namespace App\Repositories;
 
-use App\Models\Media;
+use App\Models\Product;
 
-class MediaRepository extends Repository
+class ProductRepository extends Repository
 {
     /**
      * {@inheritdoc}
     */
     public function model()
     {
-        return Media::class;
+        return Product::class;
     }
 
   

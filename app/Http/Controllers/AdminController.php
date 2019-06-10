@@ -38,7 +38,7 @@ class AdminController extends Controller
             if($new >= $package->package_item_available_count){
                 //this means plays has finished
                 $new = $package->package_item_available_count;
-                $find->campaign_status = 'finished';
+                $find->campaign_status = 'completed';
 
             }
            

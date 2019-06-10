@@ -67,9 +67,9 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right">
               <nav class="nav">
-                <a href="{{route('profile',['user'=>Auth::user()])}}" class="nav-link"><i class="icon ion-person"></i> View Profile</a>
-                <a href="{{route('edit.profile',['user'=>Auth::user()])}}" class="nav-link"><i class="icon ion-compose"></i> Edit Profile</a>
-                <a href="{{route('settings')}}" class="nav-link"><i class="icon ion-ios-gear"></i> Account Settings</a>
+                @role('user')
+                <a href="{{route('account')}}" class="nav-link"><i class="icon ion-person"></i> View Profile</a>
+                @endrole
                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="nav-link"><i class="icon ion-forward"></i> Sign Out
                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                       @csrf

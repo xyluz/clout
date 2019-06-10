@@ -4,29 +4,29 @@
       <div class="col-lg-3">
         <i class="icon ion-ios-analytics-outline"></i>
         <div class="dash-content">
-          <label class="tx-primary">Campaigns</label>
-        <h2>{{ Auth::user()->campaigns()->count() ?? '0' }}</h2>
+          <label class="tx-primary">All Time</label>
+        <h2>0</h2>
         </div><!-- dash-content -->
       </div><!-- col-3 -->
       <div class="col-lg-3">
         <i class="icon ion-ios-pie-outline"></i>
         <div class="dash-content">
-          <label class="tx-success">Page Visits</label>
-        {{-- <h2>{{ Auth::user()->pageViews()->count() }}</h2> --}}
+          <label class="tx-success">This Month</label>
         <h2>0</h2>
+        
         </div><!-- dash-content -->
       </div><!-- col-3 -->
       <div class="col-lg-3">
         <i class="icon ion-ios-stopwatch-outline"></i>
         <div class="dash-content">
-          <label class="tx-purple">Plays</label>
+          <label class="tx-purple">Referrals</label>
         <h2>0</h2>
         </div><!-- dash-content -->
       </div><!-- col-3 -->
       <div class="col-lg-3">
         <i class="icon ion-ios-world-outline"></i>
         <div class="dash-content">
-          <label class="tx-danger">Pending Plays</label>
+          <label class="tx-danger">Links</label>
           <h2>0</h2>
         </div><!-- dash-content -->
       </div><!-- col-3 -->

@@ -25,6 +25,13 @@
                 </a>                
             </li>
 
+            <li class="nav-item">
+                <a class="nav-link" href="{{route('a.users')}}">
+                    <i class="icon ion-ios-filing-outline"></i>
+                    <span>Presenters</span>
+                </a>                
+            </li>
+
           @endrole
 
         
