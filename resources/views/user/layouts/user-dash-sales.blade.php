@@ -51,7 +51,7 @@
           <h6 class="slim-card-title">User Transaction History</h6>
         </div><!-- card-header -->
         <div class="table-responsive">
-          <table class="table mg-b-0 tx-13 display responsive nowrap" id="datatable2">
+          <table class="table mg-b-0 tx-13 display responsive nowrap" id="datatable1">
             <thead>
               <tr class="tx-10">
                 <th class="wd-10p pd-y-5">&nbsp;</th>
@@ -88,27 +88,4 @@
     </div><!-- col-6 -->
   </div><!-- row -->
 
-  <script>
-      $(function(){
-        'use strict';
-
-        $('#datatable1').DataTable({
-          responsive: true,
-          language: {
-            searchPlaceholder: 'Search...',
-            sSearch: '',
-            lengthMenu: '_MENU_ items/page',
-          }
-        });
-
-        $('#datatable2').DataTable({
-          bLengthChange: false,
-          searching: false,
-          responsive: true
-        });
-
-        // Select2
-        $('.dataTables_length select').select2({ minimumResultsForSearch: Infinity });
-
-      });
-    </script>
+  

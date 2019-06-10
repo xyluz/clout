@@ -43,7 +43,7 @@
                                       <h6 class="slim-card-title">Products</h6>
                                     </div><!-- card-header -->
                                     <div class="table-responsive">
-                                      <table class="table">
+                                      <table class="table display responsive nowrap" id="datatable1">
                                         <thead>
                                           <tr>
                                             <th>&nbsp;</th>
@@ -71,9 +71,7 @@
                                         </tbody>
                                       </table>
                                     </div><!-- table-responsive -->
-                                    <div class="card-footer tx-12 pd-y-15 bg-transparent">
-                                      <a href=""><i class="fa fa-angle-down mg-r-5"></i>View All Products</a>
-                                    </div><!-- card-footer -->
+                                   
                                   </div><!-- card -->
                                 </div><!-- col-6 -->
                                 <div class="col-lg-6 mg-t-20 mg-lg-t-0">
@@ -82,7 +80,7 @@
                                       <h6 class="slim-card-title">Gallery</h6>
                                     </div><!-- card-header -->
                                     <div class="table-responsive">
-                                      <table class="table">
+                                      <table class="table display responsive nowrap" id="datatable2">
                                         <thead>
                                           <tr>
                                             <th>&nbsp;</th>
@@ -112,9 +110,7 @@
                                         </tbody>
                                       </table>
                                     </div><!-- table-responsive -->
-                                    <div class="card-footer tx-12 pd-y-15 bg-transparent">
-                                      <a href=""><i class="fa fa-angle-down mg-r-5"></i>View All</a>
-                                    </div><!-- card-footer -->
+                                  
                                   </div><!-- card -->
                                 </div><!-- col-6 -->
                               </div><!-- row -->

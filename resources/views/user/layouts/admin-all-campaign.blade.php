@@ -6,7 +6,7 @@
         
         </div><!-- card-header -->
         <div class="table-responsive">
-          <table class="table mg-b-0 tx-13">
+          <table class="table mg-b-0 tx-13 display responsive nowrap" id="datatable1">
             <thead>
               <tr class="tx-10">
                 <th class="wd-10p pd-y-5 tx-center">#</th>
