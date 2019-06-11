@@ -39,10 +39,11 @@
                       </div><!-- dash-headline-two -->
                        <div class="card-footer">
                            <strong style="color:black; padding-left: 50%">Your referal URL :</strong>
-                       <a href="#" class="card-profile-direct">{{route('ref',['id'=>Auth::user()->id,'name'=>Auth::user()->name])}}</a>
-                            <a href="#" class="btn btn-sm btn-primary">Copy</a>                          
+                       <a href="#" id="reflink" class="card-profile-direct">{{route('ref',['id'=>Auth::user()->id,'name'=>Auth::user()->name])}}</a>
+                            {{-- <button onclick="copyToClipBoard()" class="btn btn-sm btn-primary">Copy</button>                           --}}
                         </div>
-
+                        <div class="row row-sm mg-t-20">
+                                <div class="col-lg-6">
                         <div class="card card-table">
                                 <div class="card-header">
                                   <h6 class="slim-card-title">Referal Usage</h6>
@@ -131,6 +132,8 @@
 
         </div>
     </div>
+</div>
+</div>
     
 
 @endrole
