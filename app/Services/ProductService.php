@@ -30,7 +30,8 @@ class ProductService extends BaseService
             'account_id'=>$data['brand_id'],
             'product_name'=>$data['product_name'],
             'product_price'=>$data['product_price'],
-            'product_image'=>$product_image
+            'product_image'=>$product_image,
+            'purchase_url'=>$data['url']
         ];
 
         return $this->repository->create($prep);

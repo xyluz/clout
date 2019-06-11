@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\CloutPackagesItems;
 
 class CloutProductTableSeeder extends Seeder
 {
@@ -11,6 +12,9 @@ class CloutProductTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        
+        CloutPackagesItems::create([
+
+        ]);
     }
 }

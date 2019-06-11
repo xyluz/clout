@@ -18,7 +18,7 @@
                                 Name:
                               </div><!-- col-4 -->
                               <div class="col-9 col-sm-8">
-                                <input class="form-control" type="text" name="product_name" placeholder="Product Name">
+                                <input class="form-control" type="text" name="product_name" placeholder="Name">
                               </div><!-- col-8 -->
                             </div><!-- row -->
                             <div class="row no-gutters">
@@ -26,13 +26,21 @@
                                 Price:
                               </div><!-- col-4 -->
                               <div class="col-7 col-sm-8">
-                                <input class="form-control" type="text" name="product_price" placeholder="Product Price">
+                                <input class="form-control" type="text" name="product_price" placeholder="Price">
                               </div><!-- col-8 -->
                             </div><!-- row -->
+                            <div class="row no-gutters">
+                                <div class="col-5 col-sm-4">
+                                  Link:
+                                </div><!-- col-4 -->
+                                <div class="col-7 col-sm-8">
+                                  <input class="form-control" type="text" name="product_price" placeholder="URL">
+                                </div><!-- col-8 -->
+                              </div><!-- row -->
                                                       
                             <div class="row no-gutters">
                                     <div class="col-5 col-sm-4">
-                                        Product Image:                                        
+                                        Image:                                        
                                     </div><!-- col-4 -->
                                     <div class="col-9 col-sm-8">
                                        

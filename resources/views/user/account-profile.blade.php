@@ -24,7 +24,13 @@
                               </div><!-- media -->
                             </div><!-- card-body -->
                             <div class="card-footer">
-                              <a href="" class="card-profile-direct">http://thmpxls.me/profile?id=katherine</a>
+                              <a href="" class="card-profile-direct">
+                                @if($details->type == 'business')
+                                {{route('business',['id'=>$details->id,'name'=>$details->name])}}
+                                @else
+                                {{route('artist',['id'=>$details->id,'name'=>$details->name])}}
+                                @endif
+                              </a>
                               <div>
                                 <a href="#modaldemo4" data-toggle="modal" data-effect="effect-super-scaled" title="edit profile"><i class="fa fa-edit"></i></a>
                               <a href="#"><img class="img-fluid" style="border-radius: 0% !important;" alt="Google Business Logo" src="{{asset('img/googlebusiness.png')}}" /></a>
@@ -32,7 +38,14 @@
                             </div><!-- card-footer -->
                           </div><!-- card --> 
                           <ul class="nav nav-activity-profile mg-t-20"> 
-                            <li class="nav-item"><a href="#modaldemo2" data-toggle="modal" data-effect="effect-super-scaled" class="nav-link"><i class="icon ios-basket tx-success"></i> Add Product</a></li>
+                            <li class="nav-item"><a href="#modaldemo2" data-toggle="modal" data-effect="effect-super-scaled" class="nav-link"><i class="icon ios-basket tx-success"></i> 
+                              @if($details->type == 'business')
+                              Add Product
+                              @else 
+                              Add Song
+                              @endif
+                            
+                            </a></li>
                             <li class="nav-item"><a href="#modaldemo5" data-toggle="modal" data-effect="effect-super-scaled" class="nav-link"><i class="icon ion-image tx-secondary"></i> Add Photo</a></li>
                         </ul><!-- nav -->
 
