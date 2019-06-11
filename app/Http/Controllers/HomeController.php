@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Account;
+use App\Models\User;
+use App\Models\Ref;
 
 class HomeController extends Controller
 {   
@@ -36,5 +38,26 @@ class HomeController extends Controller
         //fetch all businesses
         $accounts = Account::where('type','artist');
         return view('artist-search',compact('accounts'));
+    }
+
+    public function ref($id='',$name=''){
+      
+        $user = User::find($id);
+
+        if($user->name == $name) {
+
+            //add the ref to database for the user
+            Ref::create([
+                'user_id'=>Auth::user()->id,
+                'presenter_id'=>$user->id
+            ]);
+
+            //send them to register page    
+            return redirect()->route('register');       
+
+        }
+
+            alert()->error('There seems to be something wrong with the referal link, please try again','Error');
+        
     }
 }

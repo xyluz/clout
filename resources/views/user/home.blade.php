@@ -30,6 +30,6 @@
 @endrole
 
 @role('presenter')
-Presenter Dashboard specifics
+    @include('user.presenter.page');
 @endrole
 @endsection

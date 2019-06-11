@@ -74,11 +74,12 @@ Route::prefix('a')->group(function () {
 
 });
 
-Route::prefix('p')->group(function (){
+
 
 //presenter routes
 
-Route::get('/','PresenterController@index')->name('home');
+Route::get('/ref/{id}/{name}','HomeController@ref')->name('ref');
 
+Route::prefix('p')->group(function (){
 
 });

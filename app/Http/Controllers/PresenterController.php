@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Presenter;
+use App\Models\Presenter; 
 use Illuminate\Http\Request;
 
 class PresenterController extends Controller
@@ -14,8 +14,9 @@ class PresenterController extends Controller
      */
     public function index()
     {
-        //
-    }
+        return "i am here";
+        return view('user.presenter.page');
+    } 
 
     /**
      * Show the form for creating a new resource.
