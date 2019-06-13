@@ -35,7 +35,7 @@ class PurchaseRepository extends Repository
 
             Purchase::create([
                 'user_id'=>Auth::user()->id,
-                'package_item_id'=>$item['clout_package_id'],
+                'package_item_id'=>$item['id'],
             ]);
         }
         $amount = $data['amount'];
