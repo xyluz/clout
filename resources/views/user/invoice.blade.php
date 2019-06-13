@@ -102,7 +102,7 @@
   function payWithPaystack(){
     // console.dir('{!!$items!!}');
     var handler = PaystackPop.setup({
-      key: 'pk_test_40719ca06aa132f9c4ca687fd54f3e4332178240',
+      key: 'pk_test_e5b2f82bc75abecde0e0fe9c004b2eb8551c7549',
       email: '{{Auth::user()->email}}',
       amount: '{{$package->package_price}}' * 100,
       currency: "NGN",
