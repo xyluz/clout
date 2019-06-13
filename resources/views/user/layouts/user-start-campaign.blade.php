@@ -60,9 +60,16 @@
                                     <option label="Select Product">Select Product</option>
 
                                 @foreach(Auth::user()->purchases()->get() as $item)
-                               
-                            <option value="{{$item->details()->get()[0]['id']}}">{{$item->details()->get()[0]['package_item_name']}} | {{$item->details()->get()[0]['package_item_available_count']}} plays</option>
-                                   
+
+                               @if(Auth::user()->purchases()->count() > 1)
+
+                            <option value="{{$item->details()->get()[0]['id'] ?? '0'}}">{{$item->details()->get()[0]['package_item_name'] ?? '0'}} | {{$item->details()->get()[0]['package_item_available_count'] ?? '0'}} plays</option>
+
+                                  @else 
+
+                            <option value="{{$item->details()->first()['id'] ?? '0'}}">{{$item->details()->first()['package_item_name'] ?? '0'}} | {{$item->details()->first()['package_item_available_count'] ?? '0'}} plays</option>
+
+                                  @endif
 
                                 @endforeach
                             </select> 

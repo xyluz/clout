@@ -8,7 +8,7 @@
           <table class="table mg-b-0 tx-13 display responsive nowrap" id="datatable1">
             <thead>
               <tr class="tx-10">
-                <th class="wd-10p pd-y-5">&nbsp;</th>
+              
                 <th class="pd-y-5">Item Details</th>
                 <th class="pd-y-5 tx-right">Total</th>
                 <th class="pd-y-5">Plays</th>               
@@ -20,9 +20,7 @@
             
                 @foreach(Auth::user()->purchases()->get() as $item)
                 <tr>
-                  <td class="pd-l-20">
-                    <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
-                  </td>
+                
                   <td>
                   <a href="" class="tx-inverse tx-14 tx-medium d-block">{{$item->details()->get()[0]['package_item_name'] ?? 'not set'}}</a>
                     <span class="tx-11 d-block"><span class="square-8 bg-danger mg-r-5 rounded-circle"></span> {{$item->details()->get()[0]['package_item_available_count'] ?? '0'}} remaining</span>
