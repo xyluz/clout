@@ -72,7 +72,7 @@ class AdminController extends Controller
 
     public function agents(){
         //fetch all presenters
-        $presenters = Presenters::whereNotNull('id');
+        // $presenters = Presenters::whereNotNull('id');
         return view('user.superadmin.agent');
     }
 
