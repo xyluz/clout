@@ -26,7 +26,7 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="{{route('a.users')}}">
+                <a class="nav-link" href="{{route('a.agents')}}">
                     <i class="icon ion-ios-filing-outline"></i>
                     <span>Agents</span>
                 </a>                

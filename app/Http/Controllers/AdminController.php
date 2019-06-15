@@ -70,6 +70,12 @@ class AdminController extends Controller
         return view('user.superadmin.user',compact('users'));
     }
 
+    public function agents(){
+        //fetch all presenters
+        $presenters = Presenters::whereNotNull('id');
+        return view('user.superadmin.agent');
+    }
+
     public function campaign(){
         
         return view('user.superadmin.campaign');

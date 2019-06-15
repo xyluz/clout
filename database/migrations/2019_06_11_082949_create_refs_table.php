@@ -17,6 +17,8 @@ class CreateRefsTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id');
             $table->integer('presenter_id');
+            $table->string('amount')->nullable();
+            $table->string('commission')->nullable();
             $table->timestamps();
         });
     }

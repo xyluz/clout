@@ -15,6 +15,10 @@ class CreatePresentersTable extends Migration
     {
         Schema::create('presenters', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('email');
+            $table->string('referal_code');
+            $table->string('phone')->nullable();
             $table->timestamps();
         });
     }
