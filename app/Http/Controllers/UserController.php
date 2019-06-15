@@ -15,7 +15,7 @@ class UserController extends Controller
 
     public function invoice($package){
         return view('user.invoice');
-    }
+    } 
 
     public function test(){
         return dd(Auth::user()->purchases());

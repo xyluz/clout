@@ -48,6 +48,8 @@
     <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
     <meta name="author" content="ThemePixels">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/introjs.min.css" />
+
 </head>
 <body>
 <div class="slim-header">
@@ -102,6 +104,7 @@
     <script src="{{ asset('js/slim.js') }}"></script>
     <script src="{{ asset('js/datatables.js') }}"></script>
  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.9.3/intro.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     @include('sweet::alert')

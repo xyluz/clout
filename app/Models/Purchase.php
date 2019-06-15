@@ -12,7 +12,9 @@ class Purchase extends Model
         'package_item_id'      
     ];
 
-    public function details(){
-        return CloutPackagesItems::where('clout_package_id',$this->package_item_id);
+    public function details(){ 
+        
+        return CloutPackagesItems::where('id',$this->package_item_id);
+
     }
 }

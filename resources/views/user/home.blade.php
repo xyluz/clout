@@ -7,11 +7,20 @@
 
 @role('user')
 @include('user.layouts.user-menu')
-<div class="slim-mainpanel">
+<div class="slim-mainpanel"> 
     <div class="container">
 
         @include('user.layouts.user-dash-cards')
         @include('user.layouts.user-dash-sales')
+
+        {{-- //do the check here --}}
+        {{-- @if(Auth::user()->intro()) --}}
+
+        {{-- //put model here, and load it. --}}
+
+
+        {{-- @endif       --}}
+
 
     </div>
 </div>

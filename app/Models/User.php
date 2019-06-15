@@ -62,7 +62,7 @@ class User extends Authenticatable
     public function purchases(){
         return $this->hasMany(Purchase::class);
     }
-
+ 
     public function campaigns(){
         return $this->hasMany(Campaign::class);
     }
