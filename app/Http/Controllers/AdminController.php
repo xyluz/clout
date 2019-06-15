@@ -66,7 +66,7 @@ class AdminController extends Controller
     }
 
     public function users(){
-        $users = User::all();
+        $users = User::whereNotNull('id');
         return view('user.superadmin.user',compact('users'));
     }
 
