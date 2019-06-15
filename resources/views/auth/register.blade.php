@@ -69,7 +69,19 @@
                @enderror
            </div>
        </div><!-- row -->
+       <div class="row row-xs mg-b-10">
+           
+            <div class="col-sm mg-t-10 mg-sm-t-0">
+                <input type="text" class="form-control @error('referral_code') is-invalid @enderror" name="referral_code" placeholder="Referral Code">
 
+                @error('referral_code')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+           
+        </div><!-- row -->
         <button class="btn btn-primary btn-block btn-signin">{{ __('Register') }}</button>
     </form>
    

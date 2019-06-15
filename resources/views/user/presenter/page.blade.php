@@ -14,13 +14,13 @@
                             
                             @elseif(date('H') > 11 && date('H') < 18)
 
-                            Good Afternoon,
+                            Good Afternoon, 
                             @else
                             Good Evening,
                             @endif
 
                            {{ Auth::user()->name }}</h4>
-                          <p class="mg-b-0">Today is March 20, 2018</p>
+                        <p class="mg-b-0">Today is {{\Carbon\Carbon::today()}}</p>
                         </div>
                         <div class="d-h-t-right">
                           <div class="summary-item">
@@ -38,12 +38,12 @@
                         </div>
                       </div><!-- dash-headline-two -->
                        <div class="card-footer">
-                           <strong style="color:black; padding-left: 50%">Your referal URL :</strong>
-                       <a href="#" id="reflink" class="card-profile-direct">{{route('ref',['id'=>Auth::user()->id,'name'=>Auth::user()->name])}}</a>
+                           <strong style="color:black; padding-left: 50%">Your referal Code :</strong>
+                       <a href="#" id="reflink" class="card-profile-direct">67558</a>
                             {{-- <button onclick="copyToClipBoard()" class="btn btn-sm btn-primary">Copy</button>                           --}}
                         </div>
                         <div class="row row-sm mg-t-20">
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                         <div class="card card-table">
                                 <div class="card-header">
                                   <h6 class="slim-card-title">Referal Usage</h6>
@@ -78,8 +78,7 @@
                                         </tr>
                                       
                                       @endforeach
-                                    @else 
-                                        No records
+                                 
                                     @endif
                                      
                                       
@@ -89,46 +88,7 @@
                                
                               </div><!-- card -->
                             </div><!-- col-6 -->
-                            <div class="col-lg-6 mg-t-20 mg-lg-t-0">
-                              <div class="card card-table">
-                                <div class="card-header">
-                                  <h6 class="slim-card-title">User Transaction History</h6>
-                                </div><!-- card-header -->
-                                <div class="table-responsive">
-                                  <table class="table mg-b-0 tx-13 display responsive nowrap" id="datatable2">
-                                    <thead>
-                                      <tr class="tx-10">
-                                        <th class="wd-10p pd-y-5">&nbsp;</th>
-                                        <th class="pd-y-5">Method</th>
-                                        <th class="pd-y-5">Status</th> 
-                                        <th class="pd-y-5">Date</th>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      @if(Auth::user()->transactions()->count() > 0)
-                                        @foreach(Auth::user()->transactions()->get() as $trans)
-                                          <tr>
-                                            <td class="pd-l-20">
-                                            <img title="{{$trans->method}}" src="{{$trans->method == 'paystack' ? 'https://pbs.twimg.com/profile_images/810741743436124160/sfGjeR7F_400x400.jpg' : 'http://via.placeholder.com/800x533'}}" class="wd-36 rounded-circle" alt="Image">
-                                            </td>
-                                            <td>
-                                            <a href="#" class="tx-inverse tx-14 tx-medium d-block">NGN {{$trans->amount}}</a>
-                                            <span class="tx-11 d-block">Ref: {{$trans->ref}}</span>
-                                            </td>
-                                            <td class="tx-12">
-                                              <span class="square-8 @if($trans->status == 'success')bg-success @else bg-danger @endif mg-r-5 rounded-circle"></span> {{$trans->status}}
-                                              <span class="tx-11 d-block">{{$trans->description}}</span>
-                                            </td>
-                                            <td>{{\Carbon\Carbon::createFromTimeStamp(strtotime($trans->created_at))->diffForHumans() ?? 'null'}}</td>
-                                          </tr>
-                                        @endforeach
-                                     @endif
-                                      
-                                    </tbody>
-                                  </table>
-                                </div><!-- table-responsive -->
-                               
-                              </div><!-- card -->
+                           
 
         </div>
     </div>
