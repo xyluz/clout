@@ -19,14 +19,15 @@
               @if(Auth::user()->purchases()->count() > 0)
             
                 @foreach(Auth::user()->purchases()->get() as $item)
-                <tr>
-                
-                  <td>
-                  <a href="" class="tx-inverse tx-14 tx-medium d-block">{{$item->details()->get()[0]['package_item_name'] ?? 'not set'}}</a>
-                    <span class="tx-11 d-block"><span class="square-8 bg-danger mg-r-5 rounded-circle"></span> {{$item->details()->get()[0]['package_item_available_count'] ?? '0'}} remaining</span>
+                <tr>                
+                  <td> 
+                  <a href="" class="tx-inverse tx-14 tx-medium d-block">
+                    {{$item->details()->get()[0]['package_item_name'] ?? 'not set'}}
+                  </a>
+                    <span class="tx-11 d-block"><span class="square-8 @if($item->status()) bg-success @else bg-danger @endif mg-r-5 rounded-circle"></span> {{$item->remaining() ?? '0'}} remaining</span>
                   </td>
-                  <td class="valign-middle tx-right">0</td>
-                  <td class="valign-middle tx-right">0</td>
+                <td class="valign-middle tx-right">{{ $item->availablePlays() ?? '0' }}</td>
+                <td class="valign-middle tx-right">{{ $item->totalPlays() ?? '0' }}</td>
                 <td class="valign-middle"><span>{{\Carbon\Carbon::createFromTimeStamp(strtotime($item->created_at))->diffForHumans() ?? 'null'}}</span></td>
                   
                 </tr>

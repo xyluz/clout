@@ -103,7 +103,8 @@ class User extends Authenticatable
     }
 
     public function pendingPlays(){
-        return $this->totalAvailablePlays() - $this->plays();
+        $cal = $this->totalAvailablePlays() - $this->plays();
+        return $cal > 0 ? $cal : 0;
     }
 
     public function totalAvailablePlays(){
