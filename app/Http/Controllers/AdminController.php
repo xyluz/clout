@@ -8,6 +8,7 @@ use App\Models\Campaign;
 use App\Models\CloutPackagesItems;
 use App\Models\CampaignHistory;
 use Auth;
+use App\Models\User;
 
 
 class AdminController extends Controller
@@ -65,7 +66,8 @@ class AdminController extends Controller
     }
 
     public function users(){
-        return 'users dashboard';
+        $users = User::all();
+        return view('user.superadmin.user',compact('users'));
     }
 
     public function campaign(){
