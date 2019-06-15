@@ -87,9 +87,7 @@ class AdminController extends Controller
             'email' => $request->email,
             'account_type' => 'agent',
             'password' => Hash::make($request->password),
-        ]);
-
-        //TODO:send email
+        ]);       
        
         //assign role
         $user->assignRole('presenter');
@@ -100,6 +98,8 @@ class AdminController extends Controller
             'referral_code'=> substr($request->name,0,3) . $request->code . substr($request->phone,4,8),
             'phone' => $request->phone
         ]);
+
+             //TODO:send email
 
         alert()->success('New agent has been created','Success');
         return redirect()->back();

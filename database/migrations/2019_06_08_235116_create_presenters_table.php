@@ -16,7 +16,7 @@ class CreatePresentersTable extends Migration
         Schema::create('presenters', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('user_id');          
-            $table->string('referal_code');
+            $table->string('referral_code');
             $table->string('phone')->nullable();
             $table->timestamps();
         });

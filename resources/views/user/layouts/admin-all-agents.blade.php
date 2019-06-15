@@ -18,40 +18,40 @@
               </tr>
             </thead>
             <tbody> 
-            {{-- @if($users->count() > 0)
-                @foreach($users->get() as $user)
+            @if($agents->count() > 0)
+                @foreach($agents->get() as $agent)
                
               <tr>
                 <td class="tx-center">
-                  <img src="{{ Avatar::create($user->name)->toBase64() ?? 'http://via.placeholder.com/800x533' }}" class="wd-55" alt="Image">
+                  <img src="{{ Avatar::create($agent->name)->toBase64() ?? 'http://via.placeholder.com/800x533' }}" class="wd-55" alt="Image">
                 </td>
                 <td class="valign-middle tx-right">
-               {{$user->name}}
+               {{$agent->name}}
                  
                 </td>
                 <td class="valign-middle tx-right">
-                   {{$user->email}}
+                   {{$agent->email}}
                      
                 </td>
                 <td class="valign-middle tx-right">
-                    {{$user->account_type}}
+                    564
                 </td>            
                 <td class="valign-middle tx-right">
-                    {{ $user->getRoleNames()[0] ??  'undefined' }}
+                    1599
                 </td>
                 <td class="valign-middle tx-right">
-                        {{\Carbon\Carbon::createFromTimeStamp(strtotime($user->created_at))->diffForHumans() ?? 'null'}}
+                        {{\Carbon\Carbon::createFromTimeStamp(strtotime($agent->created_at))->diffForHumans() ?? 'null'}}
                 </td>
               
             
                 <td class="valign-middle tx-center">
                
-                    <a href="{{route('report',['id'=>$user->id])}}" title="View Details" class="tx-gray-600 tx-15"><i class="fa fa-eye"></i></a>
+                    <a href="{{route('report',['id'=>$agent->id])}}" title="View Details" class="tx-gray-600 tx-15"><i class="fa fa-eye"></i></a>
                 </td>
               </tr>
 
               @endforeach
-            @endif                                                       --}}
+            @endif                                                       
              
             </tbody>
           </table>
