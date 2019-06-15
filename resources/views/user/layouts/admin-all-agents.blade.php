@@ -1,5 +1,4 @@
 
-
 <div class="card card-table mg-t-20 mg-sm-t-30">
         <div class="card-header">
           <h6 class="slim-card-title">Users</h6>

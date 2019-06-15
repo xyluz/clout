@@ -73,6 +73,7 @@ Route::prefix('a')->group(function () {
     Route::get('camp','AdminController@campaign')->name('a.campaign');
     Route::post('camp/update','AdminController@campaignUpdate')->name('a.campaign.update');
     Route::get('agents','AdminController@agents')->name('a.agents');
+    Route::post('agents/create','AdminController@createAgent')->name('a.create.agent');
 });
 
 

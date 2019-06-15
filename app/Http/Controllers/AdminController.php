@@ -9,6 +9,9 @@ use App\Models\CloutPackagesItems;
 use App\Models\CampaignHistory;
 use Auth;
 use App\Models\User;
+use App\Models\Presenter;
+use Alert;
+use Illuminate\Support\Facades\Hash;
 
 
 class AdminController extends Controller
@@ -72,8 +75,35 @@ class AdminController extends Controller
 
     public function agents(){
         //fetch all presenters
-        // $presenters = Presenters::whereNotNull('id');
-        return view('user.superadmin.agent');
+        $agents = User::role('presenter');
+       
+        return view('user.superadmin.agent',compact('agents'));
+    }
+
+    public function createAgent(Request $request){
+              
+        $user = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'account_type' => 'agent',
+            'password' => Hash::make($request->password),
+        ]);
+
+        //TODO:send email
+       
+        //assign role
+        $user->assignRole('presenter');
+
+        //add details to presenters
+        Presenter::create([
+            'user_id'=>$user->id,
+            'referral_code'=> substr($request->name,0,3) . $request->code . substr($request->phone,4,8),
+            'phone' => $request->phone
+        ]);
+
+        alert()->success('New agent has been created','Success');
+        return redirect()->back();
+
     }
 
     public function campaign(){
