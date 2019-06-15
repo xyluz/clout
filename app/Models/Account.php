@@ -8,6 +8,7 @@ use App\Models\Media;
 use App\Models\Product;
 use App\Models\Transaction;
 use App\Models\Campaign;
+use App\Models\PageVisits;
 
 class Account extends Model
 {
@@ -44,6 +45,10 @@ class Account extends Model
 
     public function campaign(){
         return $this->hasMany(Campaign::class);
+    }
+
+    public function visits(){
+        return $this->hasMany(PageVisits::class);
     }
 
     

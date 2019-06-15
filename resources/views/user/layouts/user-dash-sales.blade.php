@@ -46,7 +46,7 @@
     <div class="col-lg-6 mg-t-20 mg-lg-t-0">
       <div class="card card-table">
         <div class="card-header">
-          <h6 class="slim-card-title">User Transaction History</h6>
+          <h6 class="slim-card-title">Transaction History</h6>
         </div><!-- card-header -->
         <div class="table-responsive">
           <table class="table mg-b-0 tx-13 display responsive nowrap" id="datatable2">

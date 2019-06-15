@@ -17,4 +17,5 @@ class Purchase extends Model
         return CloutPackagesItems::where('id',$this->package_item_id);
 
     }
+
 }

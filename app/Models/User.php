@@ -12,6 +12,7 @@ use App\Models\Profile;
 use App\Models\Transaction;
 use App\Models\Purchase;
 use App\Models\PageVisits;
+use App\Models\Campaign;
 
 
 
@@ -67,10 +68,6 @@ class User extends Authenticatable
         return $this->hasMany(Campaign::class);
     }
 
-    public function pageViews(){
-        return PageVisits::where('user_id',$this->id);
-    }
-
     public function allCampaigns(){
         return Campaign::whereNotNull('id');
     }
@@ -92,4 +89,32 @@ class User extends Authenticatable
         return Purchase::whereNotNull('id')->limit('5');
 
     }
+
+    public function pageVisits(){
+
+        return $this->hasMany(PageVisits::class);
+
+    }
+
+    public function plays(){
+
+        return $this->campaigns()->sum('total_played');
+
+    }
+
+    public function pendingPlays(){
+        return $this->totalAvailablePlays() - $this->plays();
+    }
+
+    public function totalAvailablePlays(){
+        $count = 0;
+        
+        foreach($this->purchases() as $item){
+            $count += (integer)$item->details()->first()->package_item_available_count;
+        }
+
+        return $count;
+    }
+
+
 }
