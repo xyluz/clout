@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use App\Models\Ref;
+use App\Models\Presenter;
 
 class RegisterController extends Controller
 {
@@ -70,6 +72,19 @@ class RegisterController extends Controller
             'account_type' => $data['account_type'],
             'password' => Hash::make($data['password']),
         ]);
+
+        //add referral if it exists
+
+        if($data['referral_code']){
+            
+            $presenter_id = Presenter::where('referral_code',$data['referral_code'])->first()['id'];
+            
+            Ref::create([
+                'user_id'=>$user->id,
+                'presenter_id'=>$presenter_id
+            ]);
+            
+        }
 
         //TODO:send email
        
