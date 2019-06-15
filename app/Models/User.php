@@ -30,6 +30,8 @@ class User extends Authenticatable
         'name', 'email', 'password', 'account_type','referral_code'
     ];
 
+    public $count = 0;
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -103,18 +105,18 @@ class User extends Authenticatable
     }
 
     public function pendingPlays(){
+        return $this->totalAvailablePlays();
         $cal = $this->totalAvailablePlays() - $this->plays();
         return $cal > 0 ? $cal : 0;
     }
 
     public function totalAvailablePlays(){
-        $count = 0;
-        
+                      
         foreach($this->purchases() as $item){
-            $count += (integer)$item->details()->first()->package_item_available_count;
+            $this->count =  2;
         }
 
-        return $count;
+        return $this->count;
     }
 
 

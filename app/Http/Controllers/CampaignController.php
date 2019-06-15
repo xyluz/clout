@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Campaign;
 use Illuminate\Http\Request;
 use App\Services\CampaignService; 
+use App\Models\CampaignHistory;
 
 use Alert;
 
@@ -37,6 +38,16 @@ class CampaignController extends Controller
     public function index()
     {
         return view('user.campaign');
+    }
+
+    public function report($id){
+       
+        $campaign = Campaign::where('id',$id)->first();
+       
+        $history = CampaignHistory::where('campaign_id',$id);
+     
+        return view('user.report',compact('campaign','history'));
+
     }
 
     /**

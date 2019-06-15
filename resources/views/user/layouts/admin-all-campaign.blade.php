@@ -61,8 +61,13 @@
                                       </button>
             
                             <div class="modal-body pd-25">
-                                Update play for campaign#{{$campaign->id}}
+                                Update play for campaign#{{$campaign->id}} <br />
                             <input type="text" placeholder="play count" id="count{{$campaign->id}}" class="form-control pd-y-12"  /> <br />
+                            <input type="text" placeholder="Title" id="title{{$campaign->id}}" class="form-control pd-y-12"  /> <br />
+                            <input type="text" placeholder="URL" id="url{{$campaign->id}}" class="form-control pd-y-12"  /> <br />
+                            <small>Description:</small>
+                            <textarea id="description{{$campaign->id}}" class="form-control"></textarea>
+                            <br />
                             <button onclick="updateCampaignPlay({{$campaign->id}})" type="button" class="btn btn-primary">Save</button>
                              
                             </div>
@@ -73,7 +78,7 @@
                   
 
 
-                  <a href="#" title="View Details" class="tx-gray-600 tx-15"><i class="fa fa-eye"></i></a>
+                    <a href="{{route('report',['id'=>$campaign->id])}}" title="View Details" class="tx-gray-600 tx-15"><i class="fa fa-eye"></i></a>
                 </td>
               </tr>
 
@@ -108,28 +113,46 @@
 
             function updateCampaignPlay(n){
 
-                let id = '#count'+n;
+                let count_id = '#count'+n;
+                let url_id = '#url'+n;
+                let desc_id = '#description'+n;
+                let title_id = '#title'+n;
+
                 let button = '#closeModal'+n;
-                let val = $(id).val();
-                               
+
+                let count = $(count_id).val();
+                let url = $(url_id).val();
+                let title = $(title_id).val();
+                let desc = $(desc_id).val();
+            
                 $.ajax({
                     type: 'POST',                  
                     url: '{{route("a.campaign.update")}}',
                     data: { 
                         'id': n, 
-                        'play': val ,
+                        'play': count ,
+                        'url':url,
+                        'description' : desc,
                         "_token": "{{ csrf_token() }}",
                     },
                     success: function(msg){
                         $(button).click();
-                       console.log(msg);
+                  
                        if(msg == 'success'){
+
                             Swal.fire({
                                     type: 'success',
                                     title: 'Update Done',
                                     text: 'Campaign has been updated, refresh to reload view',
-                                    footer: 'User has been notified'
-                                });
+                                    footer: 'User has been notified',
+                                    confirmButtonText: 'Yes, Refresh'
+                                }).then((result) => {
+                                    if (result.value) {
+                                      location.reload();
+                                    }
+                                  })
+                          
+
                             
                        }else{
                         Swal.fire({

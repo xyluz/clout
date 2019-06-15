@@ -21,7 +21,8 @@ Route::prefix('u')->group(function () {
     Route::get('p/{user}','UserController@profile')->name('profile');
     Route::get('e/p/{user}','UserController@edit')->name('edit.profile');
     Route::get('s/{user?}','UserController@settings')->name('settings');
-    Route::get('/i/{package}', 'PurchasesController@index')->name('invoice');   
+    Route::get('/i/{package}', 'PurchasesController@index')->name('invoice');  
+    Route::get('r/{id?}','CampaignController@report')->name('report'); 
 
     //User Purchase Register -- prefix -- pur
     Route::prefix('pur')->group(function(){

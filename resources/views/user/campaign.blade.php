@@ -100,7 +100,7 @@
                                         {{\Carbon\Carbon::createFromTimeStamp(strtotime($campaign->updated_at))->diffForHumans() ?? 'null'}}
                                 </td>
                                 <td class="valign-middle tx-center">
-                                  <a href="#" title="view full report" class="tx-gray-600 tx-15"><i class="fa fa-eye"></i></a>
+                                <a href="{{route('report',['id'=>$campaign->id])}}" title="view full report" class="tx-gray-600 tx-15"><i class="fa fa-eye"></i></a>
                                 </td>
                               </tr>
 

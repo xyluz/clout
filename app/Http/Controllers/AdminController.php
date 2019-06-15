@@ -6,6 +6,8 @@ use App\Models\Admin;
 use Illuminate\Http\Request;
 use App\Models\Campaign;
 use App\Models\CloutPackagesItems;
+use App\Models\CampaignHistory;
+use Auth;
 
 
 class AdminController extends Controller
@@ -41,6 +43,15 @@ class AdminController extends Controller
                 $find->campaign_status = 'completed';
 
             }
+
+            //update campaign history
+            CampaignHistory::create([
+                'user_id'=>Auth::user()->id,
+                'campaign_id'=>$find->id,
+                'account_id'=>$find->account_id,
+                'url'=>$request->url,
+                'description'=>$request->description
+            ]);
            
             $find->total_played = $new;
             $find->save();
