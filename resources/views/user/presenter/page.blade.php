@@ -25,15 +25,16 @@
                         </div>
                         <div class="d-h-t-right">
                           <div class="summary-item">
-                            <h1>	&#8358; 1,433</h1>
+                          <h1>	&#8358; {{Auth::user()->commission()->sum('amount')}}</h1>
                             <span>Earnings<br>All Time</span>
                           </div>
                           <div class="summary-item">
-                                <h1>	&#8358; 1,433</h1>
-                                <span>Revenue<br>This Month</span>
+                                <h1>	&#8358; {{Auth::user()->commission()->sum('commission')}}</h1>
+                                <span>Commission<br>All Time</span>
                               </div>
                           <div class="summary-item">
-                            <h1>	&#8358; 296</h1>
+                            <h1>	&#8358; {{Auth::user()->commission()->whereYear('created_at', \Carbon\Carbon::now()->year)
+                              ->whereMonth('created_at', \Carbon\Carbon::now()->month)->sum('commission')}}</h1>
                             <span>Commission<br>This Month</span>
                           </div>
                         </div>
