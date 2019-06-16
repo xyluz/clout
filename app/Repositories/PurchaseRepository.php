@@ -57,7 +57,7 @@ class PurchaseRepository extends Repository
 
         if($checkIfReferred){
             //user was referred
-            $checkIfReferred->amount = $amount,
+            $checkIfReferred->amount = $amount;
             $commission = (5/100) * $amount;
             $checkIfReferred->commission = $commission;
             $checkIfReferred->save();

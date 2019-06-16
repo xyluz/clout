@@ -127,4 +127,8 @@ class User extends Authenticatable
         return Ref::where('presenter_id',$this->id);
     }
 
+    public function isReferred(){
+        return Ref::where('user_id',$this->id)->count();
+    }
+
 }
