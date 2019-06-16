@@ -13,7 +13,7 @@ use App\Models\Transaction;
 use App\Models\Purchase;
 use App\Models\PageVisits;
 use App\Models\Campaign;
-
+use App\Models\Presenter;
 
 
 class User extends Authenticatable
@@ -119,5 +119,12 @@ class User extends Authenticatable
         return $this->count;
     }
 
+    public function refcode(){
+        return $this->hasMany(Presenter::class);       
+    }
+
+    public function commission(){
+        return Ref::where('presenter_id',$this->id);
+    }
 
 }

@@ -83,7 +83,7 @@ class RegisterController extends Controller
                 'user_id'=>$user->id,
                 'presenter_id'=>$presenter_id
             ]);
-            
+
         }
 
         //TODO:send email

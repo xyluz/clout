@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,6 +10,7 @@ class Ref extends Model
         'user_id',
         'presenter_id',
         'amount',
-        'commission'
+        'commission',
+        'package_item_id'
     ];
 }

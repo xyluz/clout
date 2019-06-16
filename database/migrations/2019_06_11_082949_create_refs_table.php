@@ -19,6 +19,7 @@ class CreateRefsTable extends Migration
             $table->integer('presenter_id');
             $table->string('amount')->nullable();
             $table->string('commission')->nullable();
+            $table->integer('package_item_id')->nullable();
             $table->timestamps();
         });
     }

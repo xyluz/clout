@@ -4,6 +4,7 @@
  
 @role('presenter')
 
+
 <div class="slim-mainpanel">
         <div class="container">
                 <div class="dash-headline-two" style="padding-top: 20px">
@@ -24,22 +25,22 @@
                         </div>
                         <div class="d-h-t-right">
                           <div class="summary-item">
-                            <h1>$1,433</h1>
-                            <span>Earnings<br>for today</span>
+                            <h1>	&#8358; 1,433</h1>
+                            <span>Earnings<br>All Time</span>
                           </div>
                           <div class="summary-item">
-                                <h1>$1,433</h1>
-                                <span>Earnings<br>for today</span>
+                                <h1>	&#8358; 1,433</h1>
+                                <span>Revenue<br>This Month</span>
                               </div>
                           <div class="summary-item">
-                            <h1>$296</h1>
-                            <span>Expenses<br>for today</span>
+                            <h1>	&#8358; 296</h1>
+                            <span>Commission<br>This Month</span>
                           </div>
                         </div>
                       </div><!-- dash-headline-two -->
                        <div class="card-footer">
                            <strong style="color:black; padding-left: 50%">Your referal Code :</strong>
-                       <a href="#" id="reflink" class="card-profile-direct">67558</a>
+                       <a href="#" id="reflink" class="card-profile-direct">{{Auth::user()->refcode()->first()['referral_code'] ?? 'undefined'}}</a>
                             {{-- <button onclick="copyToClipBoard()" class="btn btn-sm btn-primary">Copy</button>                           --}}
                         </div>
                         <div class="row row-sm mg-t-20">
@@ -51,28 +52,19 @@
                                 <div class="table-responsive">
                                   <table class="table mg-b-0 tx-13 display responsive nowrap" id="datatable1">
                                     <thead>
-                                      <tr class="tx-10">
-                                        <th class="wd-10p pd-y-5">&nbsp;</th>
-                                        <th class="pd-y-5">Item Details</th>
-                                        <th class="pd-y-5 tx-right">Total</th>
-                                        <th class="pd-y-5">Plays</th>               
+                                      <tr class="tx-10">                                                                             
+                                        <th class="pd-y-5 tx-right">Income</th>
+                                        <th class="pd-y-5">Commission</th>               
                                         <th class="pd-y-5">Date</th>               
                                       </tr>
                                     </thead>
                                     <tbody>
-                                      @if(Auth::user()->purchases()->count() > 0)
+                                      @if(Auth::user()->commission()->count() > 0)
                                     
-                                        @foreach(Auth::user()->purchases()->get() as $item)
-                                        <tr>
-                                          <td class="pd-l-20">
-                                            <img src="http://via.placeholder.com/800x533" class="wd-55" alt="Image">
-                                          </td>
-                                          <td>
-                                          <a href="" class="tx-inverse tx-14 tx-medium d-block">{{$item->details()->get()[0]['package_item_name'] ?? 'not set'}}</a>
-                                            <span class="tx-11 d-block"><span class="square-8 bg-danger mg-r-5 rounded-circle"></span> {{$item->details()->get()[0]['package_item_available_count'] ?? '0'}} remaining</span>
-                                          </td>
-                                          <td class="valign-middle tx-right">0</td>
-                                          <td class="valign-middle tx-right">0</td>
+                                        @foreach(Auth::user()->commission()->get() as $item)
+                                        <tr> 
+                                        <td class="valign-middle tx-right">{{$item->amount ?? '0'}}</td>
+                                        <td class="valign-middle">{{$item->commission ?? '0'}}</td>
                                         <td class="valign-middle"><span>{{\Carbon\Carbon::createFromTimeStamp(strtotime($item->created_at))->diffForHumans() ?? 'null'}}</span></td>
                                           
                                         </tr>

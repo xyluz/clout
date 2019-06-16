@@ -6,6 +6,8 @@ use App\Models\Purchase;
 use App\Models\CloutPackages;
 use App\Models\Transaction;
 use Auth;
+use App\Models\Ref;
+use App\Models\Presenter;
 
 class PurchaseRepository extends Repository
 {
@@ -49,6 +51,18 @@ class PurchaseRepository extends Repository
             'account_id'=>2,
             'method'=>'paystack'
         ]);
+
+        //check if user was referred by agent
+        $checkIfReferred = Presenter::where('user_id',Auth::user()->id)->first();
+
+        if($checkIfReferred){
+            //user was referred
+            $checkIfReferred->amount = $amount,
+            $commission = (5/100) * $amount;
+            $checkIfReferred->commission = $commission;
+            $checkIfReferred->save();
+            
+        }
       
         return "done";
 
