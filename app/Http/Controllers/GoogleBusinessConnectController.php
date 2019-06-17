@@ -39,7 +39,7 @@ class GoogleBusinessConnectController extends Controller
 
         $data = $this->googlePlaces->placeDetails($place_id);
 
-        if($data.status == "OK"){
+        if($data){
 
             $test = GoogleBusinessConnect::where('place_id',$place_id)->count();
 
