@@ -84,7 +84,7 @@
                     <td class="tx-right tx-uppercase tx-bold tx-inverse">Discount</td>
                     <td colspan="2" class="tx-left">
                       <h4 class="tx-primary tx-bold tx-lato">
-                      {{ Auth::user()->isReferred() > 0 ? $package->package_price * (5/100) : 0 }}
+                      {{ Auth::user()->isReferred() ? $package->package_price * (5/100) : 0 }}
                       </h4>
                     </td>
                   </tr>
@@ -92,7 +92,7 @@
 
                   <tr>
                     <td class="tx-right tx-uppercase tx-bold tx-inverse">Total Due</td>
-                    <td colspan="2" class="tx-left"><h4 class="tx-primary tx-bold tx-lato">{{Auth::user()->isReferred() > 0 ? $package->package_price - ($package->package_price * (5/100))  : $package->package_price}}</h4></td>
+                    <td colspan="2" class="tx-left"><h4 class="tx-primary tx-bold tx-lato">{{Auth::user()->isReferred() ? $package->package_price - ($package->package_price * (5/100))  : $package->package_price}}</h4></td>
                   </tr>
 
                  
@@ -118,7 +118,7 @@
     var handler = PaystackPop.setup({
       key: 'pk_test_e5b2f82bc75abecde0e0fe9c004b2eb8551c7549',
       email: '{{Auth::user()->email}}',
-      amount: '{{Auth::user()->isReferred() > 0 ? $package->package_price - ($package->package_price * (5/100))  : $package->package_price}}' * 100,
+      amount: '{{Auth::user()->isReferred() ? $package->package_price - ($package->package_price * (5/100))  : $package->package_price}}' * 100,
       currency: "NGN",
       ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
       metadata: {
@@ -145,7 +145,7 @@
                   'items': '{!!$items!!}',                  
                   'transaction': response, 
                   "_token": "{{ csrf_token() }}",
-                  'amount' : '{{$package->package_price}}',
+                  'amount' : '{{Auth::user()->isReferred() ? $package->package_price - ($package->package_price * (5/100))  : $package->package_price}}',
               },
               success: function(msg){
                 if(msg == "done"){

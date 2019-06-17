@@ -23,6 +23,11 @@ Route::prefix('u')->group(function () {
     Route::get('s/{user?}','UserController@settings')->name('settings');
     Route::get('/i/{package}', 'PurchasesController@index')->name('invoice');  
     Route::get('r/{id?}','CampaignController@report')->name('report'); 
+    
+    //Google Connection Thingy
+
+    Route::post('googleconnect','GoogleBusinessConnectController@index')->name('googleconnect.init'); 
+    Route::post('googleconnect/details','GoogleBusinessConnectController@details')->name('googleconnect.details'); 
 
     //User Purchase Register -- prefix -- pur
     Route::prefix('pur')->group(function(){

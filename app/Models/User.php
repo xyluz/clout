@@ -15,6 +15,8 @@ use App\Models\PageVisits;
 use App\Models\Campaign;
 use App\Models\Presenter;
 
+use Auth;
+
 
 class User extends Authenticatable
 {
@@ -128,7 +130,15 @@ class User extends Authenticatable
     }
 
     public function isReferred(){
-        return Ref::where('user_id',$this->id)->count();
+
+        $ref = Ref::where('user_id',$this->id);
+        $count = $ref->count();
+      
+
+        if($count == 1 && $ref->first()->amount == NULL && $ref->first()->commission == NULL){
+            return true;
+        }
+        return false;
     }
 
 }

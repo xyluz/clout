@@ -33,10 +33,39 @@
                               </a>
                               <div>
                                 <a href="#modaldemo4" data-toggle="modal" data-effect="effect-super-scaled" title="edit profile"><i class="fa fa-edit"></i></a>
-                              <a href="#"><img class="img-fluid" style="border-radius: 0% !important;" alt="Google Business Logo" src="{{asset('img/googlebusiness.png')}}" /></a>
+
+                                <a href="#modaldemo8" id="open_connection_modal" class="modal-effect" data-toggle="modal" data-effect="effect-slide-in-bottom" style="display:none"></a>
+
+                            <a href="#" onclick="connectToGoogle()"><img class="img-fluid" style="border-radius: 0% !important;" alt="Google Business Logo" src="{{asset('img/googlebusiness.png')}}" /></a>
+                            
+          
                               </div>
                             </div><!-- card-footer -->
                           </div><!-- card --> 
+
+                          <div id="modaldemo8" class="modal fade">
+                              <div class="modal-dialog modal-dialog-vertical-center" role="document">
+                                <div class="modal-content bd-0 tx-14">                                 
+                                  <div class="modal-body pd-25">
+                                    
+                                    <p class="mg-b-5" id="googleConnectBusinessList">
+                                      <div class="text-center" id="responseBusinessType">Establishing Connection</div> 
+                                    <img id="preloaderimage" src="{{asset('img/googleconnect.gif')}}" width="100%" />
+                                    <div class="col" id="itemsFound">
+                                       
+                            
+                                      </div><!-- col -->
+                                    </p>
+                                  </div>
+                                  {{-- <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  </div> --}}
+                                </div>
+                              </div><!-- modal-dialog -->
+                            </div><!-- modal -->
+                        
+
                           <ul class="nav nav-activity-profile mg-t-20"> 
                             <li class="nav-item"><a href="#modaldemo2" data-toggle="modal" data-effect="effect-super-scaled" class="nav-link"><i class="icon ios-basket tx-success"></i> 
                               @if($details->type == 'business')
@@ -215,6 +244,88 @@
             });
           });
         });
+        
+        function connectToGoogle(){
+
+          $('#open_connection_modal').click();
+
+          $.ajax({
+              type: 'POST',             
+              url: "{{route('googleconnect.init')}}",
+              data: {  
+                  'name': '{{$details->name}}' ,
+                  "_token": "{{ csrf_token() }}"                
+              },
+              success: function(msg){
+                
+                if(msg.status === 'ZERO_RESULTS'){
+
+                  $('#responseBusinessType').html('Business Name ' + {{$details->name}} + ' not found, make sure the name you used here is the same as what you used on Google. Reresh the page to try again');
+                  $('#preloaderimage').hide();
+
+                }else if(msg.status === 'OK'){
+                  
+                  let result = "";
+                  let data = msg.predictions;
+                  $('#preloaderimage').hide();
+
+                  data.forEach((a)=>{
+
+                    result += `<li style='cursor: select' onclick='getBusinessDetails("${a.place_id.toString()}")' class='list-group-item'><p class='mg-b-0'><strong class='tx-inverse tx-medium'>${ a.structured_formatting.main_text}</strong> <span class='text-muted'>${a.structured_formatting.secondary_text}</span></p></li></ul>`;
+
+                  });                 
+
+                  $('#responseBusinessType').html("<strong>Please select your business:</strong><br /><br />");
+                  $('#itemsFound').html("<ul class='list-group'>"+result+"</ul>");
+
+                }else{
+                  $('#responseBusinessType').html('Something went wrong, please try again later');
+                  $('#preloaderimage').hide();
+                }
+                
+               console.log(msg);
+                             
+                 
+              }
+          });
+
+        }
+
+        function getBusinessDetails(id){
+
+            $('#itemsFound').hide();
+            $('#responseBusinessType').html("<strong>Attempting Import</strong><br /><br />");
+            $('#preloaderimage').show();
+
+          $.ajax({
+              type: 'POST',             
+              url: "{{route('googleconnect.details')}}",
+              data: {  
+                  'place_id': id ,
+                  "_token": "{{ csrf_token() }}"                
+              },
+              success: function(msg){
+                $('#responseBusinessType').html("<strong>Importing Data</strong><br /><br />");
+                if(msg === 'OK'){
+
+                  Swal.fire({
+                    type: 'success',
+                    title: 'Success!',
+                    text: 'Your google business data has been imported'
+                  });
+                                   
+                }else{
+                  Swal.fire({
+                    type: 'error',
+                    title: 'Error!',
+                    text: 'Something went wrong, data import failed. Try again later.'
+                  });
+                }
+              }
+          });
+
+        }
+       
       </script>
 
 @endsection
