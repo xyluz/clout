@@ -6,7 +6,7 @@ Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/business/{id}/{name}', 'HomeController@business')->name('business');
-// Route::get('/artist/{id}/{name}', 'HomeController@artist')->name('artist');
+Route::get('/artist/{id}/{name}', 'HomeController@artist')->name('artist');
 Route::get('/packages', 'HomeController@packages')->name('package');
 Route::get('/businesssearch', 'HomeController@businessGroup')->name('business.group');
 Route::get('/artistsearch', 'HomeController@artistGroup')->name('artist.group');

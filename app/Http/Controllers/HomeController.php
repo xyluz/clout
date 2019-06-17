@@ -6,9 +6,12 @@ use Illuminate\Http\Request;
 use App\Models\Account;
 use App\Models\User;
 use App\Models\Ref;
+use App\Models\GoogleBusinessConnect;
+use App\Models\Product; 
+use App\Models\Media;
 
 class HomeController extends Controller
-{   
+{    
       
     /**
      * Show the application dashboard.
@@ -25,7 +28,25 @@ class HomeController extends Controller
     }
 
     public function business($id = '', $name=''){
-        return view('business-single');
+
+        $account = Account::where('id',$id)->first();
+        $place_id = GoogleBusinessConnect::where('account_id',$id)->first();
+        $products = Product::where('account_id',$id);
+        $media = Media::where('account_id',$id);
+
+        return view('business-single',compact('account','place_id','products','media'));
+
+    }
+
+    public function artist($id = '', $name=''){
+
+        $account = Account::where('id',$id)->first();
+        $place_id = GoogleBusinessConnect::where('account_id',$id)->first();
+        $products = Product::where('account_id',$id);
+        $media = Media::where('account_id',$id);
+
+        // return view('artist-single',compact('account','place_id','products','media'));
+
     }
 
     public function businessGroup(){

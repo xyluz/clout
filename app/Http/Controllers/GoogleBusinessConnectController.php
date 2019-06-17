@@ -40,19 +40,25 @@ class GoogleBusinessConnectController extends Controller
         $data = $this->googlePlaces->placeDetails($place_id);
 
         if($data.status == "OK"){
-           
-            try{
-                    GoogleBusinessConnect::create([
-                        'place_id'=>$place_id,
-                        'account_id'=>$account_id
-                    ]);
 
-                    return "OK";
+            $test = GoogleBusinessConnect::where('place_id',$place_id)->count();
 
-            }catch(Exception $e){
-                return $e;
+            if($test == 0){
+                    try{
+                        
+                        GoogleBusinessConnect::create([
+                            'place_id'=>$place_id,
+                            'account_id'=>$account_id
+                        ]);
+
+                        return "OK";
+
+                    }catch(Exception $e){
+                        return "NOTOK";
+                    }
+
             }
-
+            
         }
         
         return "NOTOK";
