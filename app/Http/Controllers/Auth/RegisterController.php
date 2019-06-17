@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use App\Models\Ref;
 use App\Models\Presenter;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\WelcomeMail;
 
 class RegisterController extends Controller
 {
@@ -87,7 +89,9 @@ class RegisterController extends Controller
         }
 
         //TODO:send email
-       
+
+        Mail::to($user)->send(new WelcomeMail($user));
+
         //assign role
         $user->assignRole('user');
 
