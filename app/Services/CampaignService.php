@@ -24,8 +24,7 @@ class CampaignService extends BaseService
     }
 
     public function create($data){
-      
-      
+            
         $prep = [
             'user_id'=>Auth::user()->id,
             'account_id'=>$data['account_id'],
@@ -36,6 +35,9 @@ class CampaignService extends BaseService
             'campaign_description'=>$data['campaign_description'],
             'media'=>$data['media']
         ];
+
+        Mail::to(Auth::user())->queue(new CampaignCreatedMail($prep));
+
 
         return $this->repository->create($prep);
 

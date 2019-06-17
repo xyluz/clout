@@ -1,5 +1,5 @@
 <?php
-
+ 
 namespace App\Repositories;
 
 use App\Models\Purchase;
@@ -11,6 +11,7 @@ use App\Models\Presenter;
 
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ReceiptMail;
+use App\Mail\ReferralUseMail;
 
 class PurchaseRepository extends Repository
 {

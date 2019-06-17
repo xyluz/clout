@@ -4,6 +4,9 @@ namespace App\Repositories;
 
 use App\Models\Account;
 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\NewBrandCreatedMail;
+
 class AccountRepository extends Repository
 {
     
@@ -18,7 +21,7 @@ class AccountRepository extends Repository
 
     public function create($request){
        
-       return Account::create([
+       $account = Account::create([
 
             'user_id'=>$request['user_id'],
             'genre'=>$request['genre'],
@@ -28,6 +31,7 @@ class AccountRepository extends Repository
             'description'=>$request['description']
         ]);
 
+        Mail::to(Auth::user())->queue(new NewBrandCreatedMail($account));
     }
 
     public function products($account){
