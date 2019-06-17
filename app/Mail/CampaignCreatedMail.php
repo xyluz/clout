@@ -7,26 +7,23 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use App\Models\User;
+use App\Models\Campaign;
 
-class WelcomeMail extends Mailable
-{  
+class CampaignCreatedMail extends Mailable
+{
     use Queueable, SerializesModels;
 
-    /**
-     * The order instance.
-     *
-     * @var User
-     */
+    public $campaign;
     public $user;
-
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(User $user)
+    public function __construct(Campaign $campaign, User $user)
     {
         $this->user = $user;
+        $this->campaign = $campaign;
     }
 
     /**
@@ -36,6 +33,6 @@ class WelcomeMail extends Mailable
      */
     public function build()
     {
-        return $this->view('email.referral-use');
+        return $this->view('email.create-campaign');
     }
 }

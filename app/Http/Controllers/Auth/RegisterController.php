@@ -90,8 +90,8 @@ class RegisterController extends Controller
 
         //TODO:send email
 
-        Mail::to($user)->send(new WelcomeMail($user));
-
+        Mail::to($user)->queue(new WelcomeMail($user));
+      
         //assign role
         $user->assignRole('user');
 

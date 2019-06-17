@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
-  <title>Ticket Type | Too Cool For The Summer</title>
+  <title>Clout | Purchase Receipt</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
@@ -90,7 +90,7 @@ body{border:0;margin:0}.container{width:576px}@media screen and (max-width:480px
 										<table cellspacing=0 cellpadding=0 style=font-size:18px;line-height:28px
 										       class=size-2>
 											<tr>
-												<td><strong>Welcome to Clout.ng</strong></td>
+												<td><strong>Purchase Receipt</strong></td>
 											</tr>
 											<tr class=space-3 height=24px></tr>
 										</table>
@@ -100,7 +100,7 @@ body{border:0;margin:0}.container{width:576px}@media screen and (max-width:480px
 											<tr>
 												<td class=size-1>
 												<p>Hello {{$user->name}},</p>
-												
+				 								
 													<p>The information shown above should be used exactly as
 													it appears when checking in. Some special characters may have been
 													removed or modified.</p>

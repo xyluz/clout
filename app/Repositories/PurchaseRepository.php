@@ -9,6 +9,9 @@ use Auth;
 use App\Models\Ref;
 use App\Models\Presenter;
 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ReceiptMail;
+
 class PurchaseRepository extends Repository
 {
     /**
@@ -29,7 +32,7 @@ class PurchaseRepository extends Repository
     }
 
     public function create($data){
-        // return $data;
+       
         $transaction = $data['transaction'];
         
         $items = json_decode($data['items'],true);   
@@ -42,7 +45,7 @@ class PurchaseRepository extends Repository
         }
         $amount = $data['amount'];
 
-        Transaction::create([
+        $transaction = Transaction::create([
             'user_id'=>Auth::user()->id,
             'amount'=> $amount,
             'ref'=>$transaction['reference'],
@@ -63,7 +66,10 @@ class PurchaseRepository extends Repository
             $checkIfReferred->save();
             
         }
-      
+
+        Mail::to(User::where('id',$checkIfReferred->presenter_id)->first())->queue(new ReferralUseMail($transaction));
+        Mail::to(Auth::user())->queue(new ReceiptMail($transaction));
+
         return "done";
 
     }
