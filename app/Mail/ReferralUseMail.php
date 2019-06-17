@@ -8,7 +8,7 @@ use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
 use App\Models\User;
-use App\Models\Presenter;
+use App\Models\Transaction;
 use App\Models\Ref;
 
 class ReferralUseMail extends Mailable
@@ -16,18 +16,18 @@ class ReferralUseMail extends Mailable
     use Queueable, SerializesModels;
 
     public $user;
-    public $presenter;
+    public $transaction;
     public $ref;
 
     /**
      * Create a new message instance.
      *
-     * @return void
+     * @return void 
      */
-    public function __construct(User $user, Presenter $presenter, Ref $ref)
+    public function __construct(User $user, Transaction $transaction, Ref $ref)
     {
         $this->user = $user;
-        $this->presenter = $presenter;
+        $this->transaction = $transaction;
         $this->ref = $ref;
     }
 

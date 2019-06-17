@@ -12,6 +12,7 @@ use App\Models\Presenter;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ReceiptMail;
 use App\Mail\ReferralUseMail;
+use App\Models\User;
 
 class PurchaseRepository extends Repository
 {
@@ -57,9 +58,9 @@ class PurchaseRepository extends Repository
         ]);
 
         //check if user was referred by agent
-        $checkIfReferred = Presenter::where('user_id',Auth::user()->id)->first();
+        $checkIfReferred = Ref::where('user_id',Auth::user()->id)->first();
 
-        if($checkIfReferred){
+        if($checkIfReferred && $checkIfReferred->amount == NULL && $checkIfReferred->commission == NULL){
             //user was referred
             $checkIfReferred->amount = $amount;
             $commission = (5/100) * $amount;
@@ -67,9 +68,10 @@ class PurchaseRepository extends Repository
             $checkIfReferred->save();
             
         }
+      
+        Mail::to(User::where('id',$checkIfReferred->presenter_id)->first())->queue(new ReferralUseMail(User::where('id',$checkIfReferred->presenter_id)->first(), $transaction, $checkIfReferred));
 
-        Mail::to(User::where('id',$checkIfReferred->presenter_id)->first())->queue(new ReferralUseMail($transaction));
-        Mail::to(Auth::user())->queue(new ReceiptMail($transaction));
+        Mail::to(Auth::user())->queue(new ReceiptMail($transaction,Auth::user()));
 
         return "done";
 

@@ -34,7 +34,7 @@ class PurchaseService extends BaseService
     public function registerPurchase($data){
 
         return $this->repository->create($data);
-       
+        
     }
 
 }

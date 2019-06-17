@@ -6,7 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use App\Models\Purchase;
+use App\Models\Transaction;
 use App\Models\User;
 
 class ReceiptMail extends Mailable
@@ -18,7 +18,7 @@ class ReceiptMail extends Mailable
      *
      * @var Purchase
      */
-    public $purchase;
+    public $transaction;
     public $user;
  
     /**
@@ -26,9 +26,9 @@ class ReceiptMail extends Mailable
      *
      * @return void
      */
-    public function __construct(Purchase $purchase, User $user)
+    public function __construct(Transaction $transaction, User $user)
     {
-        $this->purchase = $purchase;
+        $this->transaction = $transaction;
         $this->user = $user;
     }
 

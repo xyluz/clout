@@ -6,6 +6,7 @@ use App\Models\Account;
 
 use Illuminate\Support\Facades\Mail;
 use App\Mail\NewBrandCreatedMail;
+use Auth;
 
 class AccountRepository extends Repository
 {
@@ -31,7 +32,7 @@ class AccountRepository extends Repository
             'description'=>$request['description']
         ]);
 
-        Mail::to(Auth::user())->queue(new NewBrandCreatedMail($account));
+        Mail::to(Auth::user())->queue(new NewBrandCreatedMail($account, Auth::user()));
     }
 
     public function products($account){

@@ -3,10 +3,12 @@
 namespace App\Services;
 
 use App\Repositories\CampaignRepository;
-use Auth;
+use Auth; 
+use Illuminate\Support\Facades\Mail;
+use App\Mail\CampaignCreatedMail;
 
 
-class CampaignService extends BaseService
+class CampaignService extends BaseService 
 {
     /**
      * @var \App\Repositories\CampaignRepository
@@ -36,8 +38,7 @@ class CampaignService extends BaseService
             'media'=>$data['media']
         ];
 
-        Mail::to(Auth::user())->queue(new CampaignCreatedMail($prep));
-
+        Mail::to(Auth::user())->queue(new CampaignCreatedMail($prep,Auth::user()));
 
         return $this->repository->create($prep);
 

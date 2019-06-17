@@ -20,7 +20,7 @@ class CampaignCreatedMail extends Mailable
      *
      * @return void
      */
-    public function __construct(Campaign $campaign, User $user)
+    public function __construct(Array $campaign, User $user)
     {
         $this->user = $user;
         $this->campaign = $campaign;
