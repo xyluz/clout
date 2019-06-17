@@ -17,10 +17,7 @@ class UserController extends Controller
         return view('user.invoice');
     } 
 
-    public function test(){
-        return dd(Auth::user()->purchases());
-    }
-
+ 
     public function dashboard(){
         //TODO: Change this to point to a single dashboard with different hidden apects
       

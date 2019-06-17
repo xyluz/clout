@@ -11,7 +11,7 @@ Route::get('/packages', 'HomeController@packages')->name('package');
 Route::get('/businesssearch', 'HomeController@businessGroup')->name('business.group');
 Route::get('/artistsearch', 'HomeController@artistGroup')->name('artist.group');
 
-Route::get('test','UserController@test');
+Route::get('test','HomeController@test');
 
 Route::prefix('u')->group(function () { 
 

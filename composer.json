@@ -15,7 +15,8 @@
         "laravolt/avatar": "^2.2",
         "skagarwal/google-places-api": "^1.4",
         "spatie/laravel-permission": "^2.37",
-        "uxweb/sweet-alert": "^2.0"
+        "uxweb/sweet-alert": "^2.0",
+        "aws/aws-sdk-php": "~3.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
