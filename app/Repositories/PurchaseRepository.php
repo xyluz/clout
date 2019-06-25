@@ -32,7 +32,7 @@ class PurchaseRepository extends Repository
     public function package($package){
         return CloutPackages::where('id',$package)->first();
     }
-
+ 
     public function create($data){
        
         $transaction = $data['transaction'];
@@ -66,10 +66,11 @@ class PurchaseRepository extends Repository
             $commission = (5/100) * $amount;
             $checkIfReferred->commission = $commission;
             $checkIfReferred->save();
+
+            Mail::to(User::where('id',$checkIfReferred->presenter_id)->first())->queue(new ReferralUseMail(User::where('id',$checkIfReferred->presenter_id)->first(), $transaction, $checkIfReferred));
             
-        }
-      
-        Mail::to(User::where('id',$checkIfReferred->presenter_id)->first())->queue(new ReferralUseMail(User::where('id',$checkIfReferred->presenter_id)->first(), $transaction, $checkIfReferred));
+        }     
+        
 
         Mail::to(Auth::user())->queue(new ReceiptMail($transaction,Auth::user()));
 

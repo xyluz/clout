@@ -20,7 +20,11 @@
                 <a href="{{route('invoice',['package'=>'2'])}}" style="background:#0087fc; text-decoration:none;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                     Buy Now
                 </a>
-               
+                
+                <a href="{{route('invoice',['package'=>'2'])}}" style="background:#fc005e; text-decoration:none;" class="butn font-smooth btn-4 bg-transparent hover:bg-black text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+                    Buy Now
+                </a>
+
                 <p class="text-center text-grey-darker text-m mt-4 mb-2 font-termina-m"> Also Included : </p>
                 <p class="text-center text-m mt-2 mb-2 font-termina-m"> Network-Syndicated Radio Interview </p>
                 <p class="text-center text-m mt-2 mb-4 font-termina-m"> Digitally-Syndicated Spotlight feature </p>
