@@ -63,7 +63,7 @@
                                             
                                         </div><!-- col-4 -->
                                         <div class="col-9 col-sm-8">
-                                            <textarea required minlength="150" rows="3" name="description" class="form-control"></textarea>
+                                            <textarea required minlength="80" rows="3" name="description" class="form-control"></textarea>
                                         </div><!-- col-8 -->
                                     </div><!-- row -->                                   
 

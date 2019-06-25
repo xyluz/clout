@@ -19,7 +19,7 @@
             <strong>Well done!</strong> Your account is active. You are ready to enjoy the fullness of clout.ng. Get started by buying a package for your business <strong><a href="{{route('package')}}">Click here to see available packages</a></strong>, <strong>check out FAQs <a href="#">here</a></strong>
             </div><!-- alert -->
             
-            @elseif(Auth::user()->campaigns()->count() > 1)
+            @elseif(Auth::user()->campaigns()->count() < 1)
 
             <div style="margin-top: 10px" class="alert alert-outline alert-info" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">

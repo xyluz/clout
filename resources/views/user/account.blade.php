@@ -4,7 +4,29 @@
 @include('user.layouts.user-menu')
 
 <div class="slim-mainpanel">
-    <div class="container">  
+    <div class="container">   
+        @if(Auth::user()->accounts()->count() < 1 )
+
+        <div style="margin-top: 10px" class="alert alert-outline alert-info" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+      You can create multiple brand profiles, remember to complete the profile setup. The initial setup is not enough to give you maximum benefits of clout.ng. Find out more here: <strong><a href="#">FAQ</a></strong>.
+        </div><!-- alert -->
+            
+
+        @endif
+        @if(Auth::user()->accounts()->count() > 0 )
+
+        <div style="margin-top: 10px" class="alert alert-outline alert-info" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+      Don't forget to complete the brand profile setup. The initial setup is not enough to give you maximum benefits of clout.ng. Click on <i class="fa fa-eye"></i> to view details of the brand. Find out more here: <strong><a href="#">FAQ</a></strong>.
+        </div><!-- alert -->
+            
+
+        @endif
         <div class="row row-sm mg-t-20">
             <div class="col-lg-4">
             <div class="card card-info">

@@ -36,10 +36,10 @@
 
                         </div>
                       <div class="form-group">
-                        
+                        Select Brand: <br />
                         @if(Auth::user()->accounts()->count() > 0)
-                            <select name="account_id" required class="form-control select2" data-placeholder="Select Brand">
-                                <option label="Select Brand">Select Brand</option>
+                            <select required name="account_id" required class="form-control select2" data-placeholder="Select Brand">
+                               
                             @foreach(Auth::user()->accounts()->get() as $account)
                            
                             <option label="{{$account->name}}" value="{{$account->id}}">{{$account->name}}</option>
@@ -53,11 +53,11 @@
 
                       </div><!-- form-group -->
                       <div class="form-group mg-b-20">
-
+                          Select Product <br />
                         @if(Auth::user()->purchases()->count() > 0)
 
                             <select required name="campaign_package" class="form-control select2" data-placeholder="Select Product">
-                                    <option label="Select Product">Select Product</option>
+                                    
 
                                 @foreach(Auth::user()->purchases()->get() as $item)
 
