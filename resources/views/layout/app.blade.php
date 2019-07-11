@@ -20,8 +20,6 @@
   
     <link rel="stylesheet" href="{{asset('css/style_dis.css')}}">
 
-
-
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css">
     <link href="{{asset('css/materialdesignicons.css')}}" rel="stylesheet">
 
