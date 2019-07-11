@@ -1,13 +1,13 @@
 
   @font-face {
   font-family: "NeuzeitGro-Black";
-  src: url("fonts/NeuzeitGro-Black.otf") format("opentype");
+  src: url("./../fonts/NeuzeitGro-Black.otf") format("opentype");
   font-weight: 100;
   font-style: normal; }
 
     @font-face {
   font-family: "NeuzeitGro-Bold";
-  src: url("fonts/NeuzeitGro-Bold.otf") format("opentype");
+  src: url("./../fonts/NeuzeitGro-Bold.otf") format("opentype");
   font-weight: 100;
   font-style: normal; }
 
@@ -15,7 +15,7 @@
  
 @font-face {
 font-family: 'NeuzeitGro-Light';
-src: url("fonts/NeuzeitGro-Light.otf") format("opentype");
+src: url("./../fonts/NeuzeitGro-Light.otf") format("opentype");
 font-weight: 100;
   font-style: normal;
 }
@@ -23,7 +23,7 @@ font-weight: 100;
 
 @font-face {
 font-family: 'NeuzeitGro-Reg';
-src: url("fonts/NeuzeitGro-Reg.otf") format("opentype");
+src: url("./../fonts/NeuzeitGro-Reg.otf") format("opentype");
 font-weight: 100;
   font-style: normal;
 }
@@ -31,14 +31,14 @@ font-weight: 100;
 
 @font-face {
 font-family: 'SegoeUIRegular';
-src: url("fonts/SegoeUIRegular.otf") format("opentype");
+src: url("./../fonts/SegoeUIRegular.otf") format("opentype");
 font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
 font-family: 'SegoeUISemiBold';
-src: url("fonts/SegoeUISemiBold.otf") format("opentype");
+src: url("./../fonts/SegoeUISemiBold.otf") format("opentype");
 font-weight: 100;
   font-style: normal; 
 }
