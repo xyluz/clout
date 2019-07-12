@@ -10,7 +10,7 @@
 
     <link href="{{asset('css/stylenew.css')}}" rel="stylesheet">
     <link href="{{asset('css/menunew.css')}}" rel="stylesheet">
-    <link href="css/linearicons.css" rel="stylesheet">
+    <link href="{{asset('css/linearicons.css')}}" rel="stylesheet">
   
     <link href="{{asset('css/button.css')}}" rel="stylesheet">
     <link href="{{asset('css/search.css')}}" rel="stylesheet">
@@ -69,8 +69,8 @@
         </a> <!-- .nav-trigger -->
 
         <ul id="cd-navigation">
-            <li><a href="#0">Plans</a></li>
-            <li><a href="#0">Special Packages </a></li>
+        <li><a href="{{route('package')}}">Plans</a></li>
+            <li><a href="{{route('package')}}">Special Packages </a></li>
             <li><a href="#0">Legal</a></li>
 
             <li><a href="#0">Contact</a></li>
@@ -88,7 +88,7 @@
 
                     <p style="z-index: 1" class="font-termina-l text-2xl leading-tight pr-4 px-6 mb-4 antialiased w-h"> We offer packages that help artistes and small business get more value & trackable milage for their brand and business at the most affordable rates .</p>
                 </div>
-                <button style="width: 201px; margin-left: 1em;" class="p-4 font-termina-md rounded-full text-black bg-white">Get Started</button>
+            <a href="{{route('register')}}" style="width: 201px; margin-left: 1em; padding-left: 53px;" class="p-4 font-termina-md rounded-full text-black bg-white">Get Started</a>
 
             </div>
 
@@ -338,9 +338,9 @@
 
             
             </div>
-            <button style="background:#e80016;" class="butn font-smooth btn-4 bg-transparent hover:bg-black text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
-                Buy Now
-            </button>
+            <a href="{{route('invoice',['package'=>'1'])}}" style="background:#e80016;" class="butn font-smooth btn-4 bg-transparent hover:bg-black text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+                Buy Now 
+            </a>
             <p style="width: 50%" class="text-center m-auto  text-m mt-4 mb-2 font-termina-m"> Promotion Available in Lagos ONLY </p>
         </div>
         <div style="background:aliceblue;" class="w-full sm:w-1/3 lg:w-1/3 text-center bg-white  ">
@@ -358,9 +358,9 @@
             
             </div>
 
-            <button style="background:#0087fc;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+            <a href="{{route('invoice',['package'=>'2'])}}" style="background:#0087fc;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                 Buy Now
-            </button>
+            </a>
 
             <label style="color: #0087fc" for="" class="capitalize tracking-loose font-bold text-lg font-termina-m font-smooth block mt-4 mb-8">25% off for Gospel Artistes</label>
             <br>
@@ -463,7 +463,7 @@
     background-size: contain;
     display: inline-block;"></button>
                         <p class="mt-4">
-                            <a href="" class="text-left text-lg mt-4 mb-2 no-underline font-termina-md text-white capitalize"> <span style="font-weight: 900;" class="linearicons-magnifier text-sm"></span> Search Directory </a>
+                            <a href="{{route('business.group')}}" class="text-left text-lg mt-4 mb-2 no-underline font-termina-md text-white capitalize"> <span style="font-weight: 900;" class="linearicons-magnifier text-sm"></span> Search Directory </a>
                         </p>
                     </div>
                 </div>
@@ -515,7 +515,7 @@
     background-size: contain;
     display: inline-block;"></button>
                     <p class="mt-4">
-                        <a href="" class="text-left text-lg mt-4 mb-2 no-underline font-termina-md text-white capitalize"> <span style="font-weight: 900;" class="linearicons-music-note2 text-sm"></span> Explore Profiles </a>
+                        <a href="{{route('artist.group')}}" class="text-left text-lg mt-4 mb-2 no-underline font-termina-md text-white capitalize"> <span style="font-weight: 900;" class="linearicons-music-note2 text-sm"></span> Explore Profiles </a>
                     </p>
                 </div>
             </div>
@@ -881,7 +881,7 @@
     <!-- <script>
   if( !window.jQuery ) document.write('<script src="js/jquery-3.0.0.min.js"><\/script>');
 </script> -->
-    <script src="{{asset('js/mainnew.js')}}"></script>
+    <script src="{{asset('js/main.js')}}"></script>
     <script src="{{asset('js/faqnew.js')}}"></script>
 
 </body>
