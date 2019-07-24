@@ -1,6 +1,7 @@
 @each $key, $value in $mdi-icons {
     .#{$mdi-css-prefix}-#{$key}:before {
         content: char($value);
+        font-family: "Material Design Icons";
     }
 }
 
