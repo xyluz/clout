@@ -10,11 +10,11 @@
   font-weight: normal;
   font-style: normal;
 
-  src: url(../fonts/Linearicons.eot); /* For IE6-8 */
+  src: url('../fonts/Linearicons.eot'); /* For IE6-8 */
   src: local('Linearicons'),
   local('Linearicons'),
-  url(../fonts/Linearicons.woff) format('woff'),
-  url(../fonts/Linearicons.ttf) format('truetype');
+  url'(../fonts/Linearicons.woff') format('woff'),
+  url('../fonts/Linearicons.ttf') format('truetype');
 }
 
 .linearicons,

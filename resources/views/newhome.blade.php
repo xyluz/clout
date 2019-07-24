@@ -11,6 +11,7 @@
     <link href="{{asset('css/stylenew.css')}}" rel="stylesheet">
     <link href="{{asset('css/menunew.css')}}" rel="stylesheet">
     <link href="{{asset('css/linearicons.css')}}" rel="stylesheet">
+    <link href="{{asset('css/_icons.scss')}}" rel="stylesheet">
   
     <link href="{{asset('css/button.css')}}" rel="stylesheet">
     <link href="{{asset('css/search.css')}}" rel="stylesheet">
@@ -20,7 +21,7 @@
     <!-- 
     <link rel="stylesheet" href="css-2/owl.carousel.min.css">
     <link rel="stylesheet" href="css-2/owl.theme.default.min.css"> -->
-
+    
     <link rel="stylesheet" href="https://ionicons.com/css/ionicons.min.css">
     <link href="{{asset('css/materialdesignicons.css')}}" rel="stylesheet">
 

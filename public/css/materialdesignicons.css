@@ -3499,6 +3499,7 @@
 
 .mdi-check-circle:before {
   content: "\F5E0";
+  font-family: "Material Design Icons";
 }
 
 .mdi-check-circle-outline:before {
