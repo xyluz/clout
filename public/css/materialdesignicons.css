@@ -3499,11 +3499,12 @@
 
 .mdi-check-circle:before {
   content: "\F5E0";
-  font-family: "Material Design Icons";
+  font-family: "Material Design Icons"; 
 }
 
 .mdi-check-circle-outline:before {
   content: "\F5E1";
+  font-family: "Material Design Icons"; 
 }
 
 .mdi-check-decagram:before {
