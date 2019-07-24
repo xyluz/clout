@@ -21,7 +21,7 @@
 
     @include('layout.main')
     @include('layout.prices')
-    @include('newsletter')
+    @include('layout.newsletter')
     @include('layout.discover')
     @include('layout.specials')
     @include('layout.faq')
