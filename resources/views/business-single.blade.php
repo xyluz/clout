@@ -142,10 +142,10 @@
                  </a>
              </p>
          </div>
-
+         @include('layout.newsletter')
     </section>
 
-
+  
     @include('layout.discover')
        
 
