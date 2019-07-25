@@ -128,20 +128,20 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27868.733809835827!2d3.491316820936194!3d6.421916665636738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xdee374d35f88380d!2sFitness+Central+Lekki!5e0!3m2!1sen!2sng!4v1558920583339!5m2!1sen!2sng" width="300" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
 
-            <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5b bg-orang">
-            <a href="{{$account->facebook ?? '#'}}" class=" hi-icon-fix hi-icon mdi-facebook">fb</a>
-                <a href="{{$account->instagram ?? '#'}}" class=" hi-icon-fix hi-icon mdi-instagram">ig</a>
-                <a href="{{$account->twitter ?? '#'}}" class=" hi-icon-fix hi-icon mdi-twitter">tw</a>
-                <a href="{{$account->linkedin ?? '#'}}" class="hi-icon-fix hi-icon mdi-linkedin">li</a>
-                <a href="{{$account->phone ?? '#'}}" class=" hi-icon-fix hi-icon mdi-phone">ph</a>
+            <div class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5b bg-red-new">
+                @if($account->twitter) <a href="{{$account->twitter ?? '#'}}" class=" hi-icon-fix hi-icon mdi-twitter">tw</a>@endif
+                @if($account->facebook) <a href="{{$account->facebook ?? '#'}}" class=" hi-icon-fix hi-icon mdi-facebook">fb</a>@endif
+                @if($account->instagram) <a href="{{$account->instagram ?? '#'}}" class=" hi-icon-fix hi-icon mdi-instagram">ig</a>@endif
+               @if($account->spotify) <a href="{{$account->spotify ?? '#'}}" class=" hi-icon-fix hi-icon mdi-spotify">sp</a>@endif
+               @if($account->linkedin) <a href="{{$account->linkedin ?? '#'}}" class="hi-icon-fix hi-icon mdi-apple">li</a>@endif
+               @if($account->phone) <a href="{{$account->phone ?? '#'}}" class=" hi-icon-fix hi-icon mdi-phone">ph</a>@endif
 
-                <p class=" font-seg text-center mt-4   text-baser leading-normal text-grey-dark  block font-smooth  leading-zero ">
-                    <a class="text-white no-underline" href=""> <span style="font-weight: 900;" class="text-lg linearicons-envelope"></span> 
-                        {{$account->email ?? 'info@clout.ng'}}
+         <p class=" font-seg text-center mt-4   text-baser leading-normal text-grey-dark  block font-smooth  leading-zero ">
+             <a class="text-white no-underline" href=""> <span style="font-weight: 900;" class="text-lg linearicons-envelope"></span> {{$account->email ?? 'info@clout.ng'}}
 
-                    </a>
-                </p>
-            </div>
+             </a>
+         </p>
+     </div>
 
     </section>
 
