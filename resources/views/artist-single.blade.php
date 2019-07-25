@@ -145,6 +145,7 @@
      @include('layout.newsletter')
     </section>
 
+    @include('layout.recommended')
 
     @include('layout.discover')
        

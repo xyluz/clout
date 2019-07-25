@@ -146,6 +146,7 @@
     </section>
 
   
+    @include('layout.recommended')
     @include('layout.discover')
        
 
