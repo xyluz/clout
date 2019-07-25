@@ -63,13 +63,13 @@
         <a href="#cd-navigation" class="nav-trigger">
             <span>
                 <em aria-hidden="true"></em>
-             
+              
             </span>
         </a> <!-- .nav-trigger -->
 
         <ul id="cd-navigation">
         <li><a href="{{route('package')}}">Plans</a></li>
-            <li><a href="{{route('package')}}">Special Packages </a></li>
+            <li><a href="{{route('special-packages')}}">Special Packages </a></li>
             <li><a href="#0">Legal</a></li>
 
             <li><a href="#0">Contact</a></li>

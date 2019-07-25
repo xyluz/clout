@@ -18,11 +18,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    // public function index()
-    // {        
-    //     return view('home');
-    // }
-
+   
     public function index(){
         return view('home');
     }
@@ -33,6 +29,10 @@ class HomeController extends Controller
 
     public function packages(){
         return view('packages');
+    }
+
+    public function sp(){
+        return view('special-packages');
     }
 
     public function business($id = '', $name=''){
