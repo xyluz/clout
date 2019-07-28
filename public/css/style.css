@@ -1623,7 +1623,7 @@ font-family: 'NeuzeitGro-Reg';}
 }
 
 .font-extrabold {
-  font-weight: 800;
+  font-weight: 800; font-family: 'Material Design Icons';
 }
 
 .font-black {
@@ -1659,7 +1659,7 @@ font-family: 'NeuzeitGro-Reg';}
 }
 
 .hover\:font-extrabold:hover {
-  font-weight: 800;
+  font-weight: 800; font-family: 'Material Design Icons';
 }
 
 .hover\:font-black:hover {
@@ -3726,7 +3726,7 @@ button:focus {
   }
 
   .xs\:font-extrabold {
-    font-weight: 800;
+    font-weight: 800; font-family: 'Material Design Icons';
   }
 
   .xs\:font-black {
@@ -3762,7 +3762,7 @@ button:focus {
   }
 
   .xs\:hover\:font-extrabold:hover {
-    font-weight: 800;
+    font-weight: 800; font-family: 'Material Design Icons';
   }
 
   .xs\:hover\:font-black:hover {
@@ -5313,7 +5313,7 @@ button:focus {
   }
 
   .sm\:font-extrabold {
-    font-weight: 800;
+    font-weight: 800; font-family: 'Material Design Icons';
   }
 
   .sm\:font-black {
@@ -5349,7 +5349,7 @@ button:focus {
   }
 
   .sm\:hover\:font-extrabold:hover {
-    font-weight: 800;
+    font-weight: 800; font-family: 'Material Design Icons';
   }
 
   .sm\:hover\:font-black:hover {
@@ -6910,7 +6910,7 @@ button:focus {
   }
 
   .md\:font-extrabold {
-    font-weight: 800;
+    font-weight: 800; font-family: 'Material Design Icons';
   }
 
   .md\:font-black {
@@ -6946,7 +6946,7 @@ button:focus {
   }
 
   .md\:hover\:font-extrabold:hover {
-    font-weight: 800;
+    font-weight: 800; font-family: 'Material Design Icons';
   }
 
   .md\:hover\:font-black:hover {
@@ -8497,7 +8497,7 @@ button:focus {
   }
 
   .lg\:font-extrabold {
-    font-weight: 800;
+    font-weight: 800; font-family: 'Material Design Icons';
   }
 
   .lg\:font-black {
@@ -8533,7 +8533,7 @@ button:focus {
   }
 
   .lg\:hover\:font-extrabold:hover {
-    font-weight: 800;
+    font-weight: 800; font-family: 'Material Design Icons';
   }
 
   .lg\:hover\:font-black:hover {
@@ -10084,7 +10084,7 @@ button:focus {
   }
 
   .xl\:font-extrabold {
-    font-weight: 800;
+    font-weight: 800; font-family: 'Material Design Icons';
   }
 
   .xl\:font-black {
@@ -10120,7 +10120,7 @@ button:focus {
   }
 
   .xl\:hover\:font-extrabold:hover {
-    font-weight: 800;
+    font-weight: 800; font-family: 'Material Design Icons';
   }
 
   .xl\:hover\:font-black:hover {

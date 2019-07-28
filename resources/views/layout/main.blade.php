@@ -7,10 +7,10 @@
                    <h1 class=" w-4/5 font-termina-m py-2 w-h">Share your sound with millions of audiences around the world. </h1>
                 <p class="leading-tight mb-4 w-1/2 text-grey-darker font-termina-l text-xl w-3/4 leading-normal mt-2 w-h">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     
-                <div><span style="font-weight: 800" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
-                 <span style="font-weight: 800" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
-                  <span style="font-weight: 800" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
-                  <span style="font-weight: 800" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
+                <div><span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
+                 <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
+                  <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
+                  <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
     
                 
                 </div>
@@ -26,10 +26,10 @@
                    <h1 class=" w-3/5 font-termina-m py-2 w-h">Showcase your craft to our diverse crowd & earn. </h1>
                 <p class="leading-tight mb-4 w-1/2 text-grey-darker font-termina-l text-xl w-3/4 leading-normal mt-2 w-h">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     
-                <div><span style="font-weight: 800" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
-                 <span style="font-weight: 800" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
-                  <span style="font-weight: 800" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
-                  <span style="font-weight: 800" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
+                <div><span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
+                 <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
+                  <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
+                  <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
     
                 
                 </div>

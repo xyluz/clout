@@ -117,15 +117,15 @@
 }
 
 .icon-cart:before {
-	content: "\ea6a";  font-family: 'Linearicons'; font-weight: 800;
+	content: "\ea6a";  font-family: 'Linearicons'; font-weight: 800; font-family: 'Material Design Icons';
 }
 
 .icon-cart-2:before {
-	     content: "\ec54"; font-family: 'Linearicons'; font-weight: 800;
+	     content: "\ec54"; font-family: 'Linearicons'; font-weight: 800; font-family: 'Material Design Icons';
 }
 
 .icon-heart:before {
-	content: "\e915";font-family: 'Linearicons'; font-weight: 800;
+	content: "\e915";font-family: 'Linearicons'; font-weight: 800; font-family: 'Material Design Icons';
 }
 
 /* Filled heart */
