@@ -12526,7 +12526,7 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     float: right;
     position: relative;
     margin-top: -20em;}
-.bg-gc { color: #4ebf47 }
+.bg-gc { color: #4ebf47;font-family: 'Material Design Icons' }
 
 .points{ color: #404040;    }
 
