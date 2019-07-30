@@ -10,45 +10,14 @@
       <div class="container">
         <div class="slim-pageheader">
            <ol class="breadcrumb slim-breadcrumb">
-            <li class="breadcrumb-item">Clout Package Name</li>            
+            <li class="breadcrumb-item"></li>            
           </ol> 
-          <h6 class="slim-pagetitle right">Invoice</h6>
+          <h6 class="slim-pagetitle right">This package ( {{$package->package_name}} ) contains:</h6>
         </div><!-- slim-pageheader -->
 
         <div class="card card-invoice">
           <div class="card-body">
-            <div class="invoice-header">
-              <h1 class="invoice-title">Invoice</h1>
-              <div class="billed-from">
-                <h6>Clout.ng</h6>
-                <p>267A Etim Inyang Cres, Victoria Island, Lagos<br>
-                Tel No: 01 280 1375<br>
-                Email: accounts@clout.ng</p>
-              </div><!-- billed-from -->
-            </div><!-- invoice-header -->
-
-            <div class="row mg-t-20">
-              <div class="col-md">
-                <label class="section-label-sm tx-gray-500">Billed To</label>
-                <div class="billed-to">
-                  <h6 class="tx-gray-800">{{Auth::user()->name}}</h6>
-                
-                  Email: {{Auth::user()->email}}</p>
-                </div>
-              </div><!-- col -->
-              <div class="col-md">
-                <label class="section-label-sm tx-gray-500">Invoice Information</label>
-                <p class="invoice-info-row">
-                  <span>Invoice No</span>
-                  <span>{{ $package->package_name ?? 'Clout-Single' }} - {{$package->id ?? $items[0]->id}}</span>
-                </p> 
-                <p class="invoice-info-row">
-                  <span>Date:</span>
-                  <span>{{Carbon\Carbon::now()}}</span>
-                </p>
-              </div><!-- col -->
-            </div><!-- row -->
-
+           
             <div class="table-responsive mg-t-40">
               <table class="table table-invoice">
                 <thead>
@@ -81,18 +50,13 @@
                   </tr>                
                 
                   <tr>
-                    <td class="tx-right tx-uppercase tx-bold tx-inverse">Discount</td>
-                    <td colspan="2" class="tx-left">
-                      <h4 class="tx-primary tx-bold tx-lato">
-                      {{ Auth::user()->isReferred() ? $package->package_price * (5/100) : 0 }}
-                      </h4>
-                    </td>
+                 
                   </tr>
                 
 
                   <tr>
-                    <td class="tx-right tx-uppercase tx-bold tx-inverse">Total Due</td>
-                    <td colspan="2" class="tx-left"><h4 class="tx-primary tx-bold tx-lato">{{Auth::user()->isReferred() ? $package->package_price - ($package->package_price * (5/100))  : $package->package_price}}</h4></td>
+                    <td class="tx-right tx-uppercase tx-bold tx-inverse">Total</td>
+                    <td colspan="2" class="tx-left"><h4 class="tx-primary tx-bold tx-lato">{{$package->package_price}}</h4></td>
                   </tr>
 
                  
@@ -104,7 +68,7 @@
 
             <hr class="mg-b-60">
 
-            <button onclick="payWithPaystack()" class="btn btn-primary btn-block">Pay Now</button>
+            <button onclick="payWithPaystack()" class="btn btn-primary btn-block">Add to Cart</button>
 
           </div><!-- card-body -->
         </div><!-- card -->
