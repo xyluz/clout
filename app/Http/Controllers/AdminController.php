@@ -112,6 +112,7 @@ class AdminController extends Controller
     }
 
     public function packages(){
-        return view('user.superadmin.package');
+        $packages = CloutPackagesItems::whereNotNull('id');
+        return view('user.superadmin.package',compact('packages'));
     }
 }
