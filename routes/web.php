@@ -12,6 +12,11 @@ Route::get('/packages', 'HomeController@packages')->name('package');
 Route::get('/businesssearch', 'HomeController@businessGroup')->name('business.group');
 Route::get('/artistsearch', 'HomeController@artistGroup')->name('artist.group');
 
+Route::patch('update-cart', 'CartController@update'); 
+Route::delete('remove-from-cart', 'CartController@remove');
+Route::get('cart', 'CartController@cart');
+Route::get('add-to-cart/{id}', 'CartController@addToCart')->name('cart.add');
+
 Route::get('test','HomeController@test');
 
 Route::prefix('u')->group(function () { 

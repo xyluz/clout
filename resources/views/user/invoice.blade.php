@@ -1,7 +1,7 @@
 @extends('user.layouts.dashboard')
  
 @section('content')
-@include('user.layouts.user-menu')
+
 
 <script src="https://js.paystack.co/v1/inline.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
@@ -51,24 +51,20 @@
                 
                   <tr>
                  
-                  </tr>
-                
+                  </tr>                
 
                   <tr>
                     <td class="tx-right tx-uppercase tx-bold tx-inverse">Total</td>
                     <td colspan="2" class="tx-left"><h4 class="tx-primary tx-bold tx-lato">{{$package->package_price}}</h4></td>
                   </tr>
 
-                 
-
-                
                 </tbody>
               </table>
             </div><!-- table-responsive -->
 
             <hr class="mg-b-60">
 
-            <button onclick="payWithPaystack()" class="btn btn-primary btn-block">Add to Cart</button>
+            <a href="{{ route('cart.add',['id'=>$package->id]) }}"  class="btn btn-primary btn-block">Add to Cart</a>
 
           </div><!-- card-body -->
         </div><!-- card -->
@@ -76,80 +72,6 @@
       </div><!-- container -->
     </div><!-- slim-mainpanel -->
 
-    <script>
-  function payWithPaystack(){
-    // console.dir('{!!$items!!}');
-    var handler = PaystackPop.setup({
-      key: 'pk_test_e5b2f82bc75abecde0e0fe9c004b2eb8551c7549',
-      email: '{{Auth::user()->email}}',
-      amount: '{{Auth::user()->isReferred() ? $package->package_price - ($package->package_price * (5/100))  : $package->package_price}}' * 100,
-      currency: "NGN",
-      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
-      metadata: {
-         custom_fields: [
-            {
-                display_name: "Full Name",
-                variable_name: "full_name",
-                value: "{{Auth::user()->name}}"
-            },
-            {
-                display_name: "Clout Package Name",
-                variable_name: "clout_package_name",
-                value: "{{$package->package_name}}"
-            }
-         ]
-      },
-      callback: function(response){
-          //TODO:display preloader
-       
-          $.ajax({
-              type: 'POST',             
-              url: "{{route('register.purchase')}}",
-              data: {  
-                  'items': '{!!$items!!}',                  
-                  'transaction': response, 
-                  "_token": "{{ csrf_token() }}",
-                  'amount' : '{{Auth::user()->isReferred() ? $package->package_price - ($package->package_price * (5/100))  : $package->package_price}}',
-              },
-              success: function(msg){
-                if(msg == "done"){
-                  
-                  Swal.fire({
-                    type: 'success',
-                    title: 'Success!',
-                    text: 'Your purchase was successful',
-                    footer: '<a href="{{route('dashboard')}}">redirecting... click here if it takes too long</a>'
-                  });
-
-                  window.location = "{{route('dashboard')}}";
-
-                }else{
-
-                  Swal.fire({
-                    type: 'error',
-                    title: 'Oops!',
-                    text: 'Something went wrong with your purchase, try later or contact admin',
-                    footer: '<a href="{{route('dashboard')}}">go to dashboard</a>'
-                  });
-
-                }
-                 
-              }
-          });
-
-      },
-      onClose: function(){
-        Swal.fire({
-                    type: 'info',
-                    title: 'Transaction Stopped!',
-                    text: 'Your transaction has been stopped',
-                    footer: '<a href="{{route('dashboard')}}">go to dashboard</a>'
-                  });
-      }
-    });
-    handler.openIframe();
-  }
-</script>
 
 
 @endsection

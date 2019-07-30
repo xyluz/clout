@@ -93,11 +93,11 @@
 
         </div><!-- slim-header-left -->
         <div class="slim-header-right">
-         
+         @auth
           <div class="dropdown dropdown-c">
             <a href="#" class="logged-user" data-toggle="dropdown">
-              <img src="{{ Avatar::create(Auth::user()->name)->toBase64() }}" alt="">
-              <span>{{Auth::user()->name}}</span> 
+              <img src="{{ Auth::check() ? Avatar::create(Auth::user()->name)->toBase64() : Avatar::create('Guest')->toBase64()  }}" alt="">
+              <span>{{Auth::check() ? Auth::user()->name : "Guest"}}</span> 
               <i class="fa fa-angle-down"></i>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
@@ -113,6 +113,7 @@
               </nav>
             </div><!-- dropdown-menu -->
           </div><!-- dropdown -->
+          @endauth
         </div><!-- header-right -->
       </div><!-- container -->
     </div>
