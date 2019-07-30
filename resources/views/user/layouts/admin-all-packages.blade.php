@@ -8,7 +8,7 @@
           <table class="table mg-b-0 tx-13 display responsive nowrap" id="datatable1">
             <thead>
               <tr class="tx-10">
-                <th class="wd-10p pd-y-5 tx-center">#</th>
+              
                 <th class="pd-y-5 tx-right">Package Name</th>
                 <th class="pd-y-5 tx-right">Item Name</th>               
                 <th class="pd-y-5 tx-right">Item Description</th>               
@@ -36,7 +36,7 @@
                    {{$package->package_item_description}}                     
                 </td>
                 <td class="valign-middle tx-right">
-                    {{$package->package_item_unitprice}}
+                    {{$package->package_item_unitprice ?? 'NA'}}
                 </td>            
                 <td class="valign-middle tx-right">
                     {{$package->package_item_available_count }}
