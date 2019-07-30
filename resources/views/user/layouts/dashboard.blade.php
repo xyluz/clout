@@ -113,6 +113,7 @@
               </nav>
             </div><!-- dropdown-menu -->
           </div><!-- dropdown -->
+         
           @endauth
         </div><!-- header-right -->
       </div><!-- container -->

@@ -49,8 +49,7 @@ class CartController extends Controller
             alert()->success('Item added to cart','Success');  
             return redirect()->back();
 
-        }
- 
+        } 
 
         $cart[$id] = [
             "name" => $product->package_name,
@@ -61,8 +60,6 @@ class CartController extends Controller
         session()->put('cart', $cart);
         alert()->success('Item added to cart','Success');  
         return redirect()->back();
-
- 
         
     }
 

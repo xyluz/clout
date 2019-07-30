@@ -65,6 +65,7 @@
             <hr class="mg-b-60">
 
             <a href="{{ route('cart.add',['id'=>$package->id]) }}"  class="btn btn-primary btn-block">Add to Cart</a>
+            <a href="{{ route('cart.add',['id'=>$package->id]) }}"  class="btn btn-success btn-block">Checkout</a>
 
           </div><!-- card-body -->
         </div><!-- card -->
