@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Campaign;
 use App\Models\CloutPackagesItems;
 use App\Models\CampaignHistory;
+use App\Models\CloutPackages;
 use Auth;
 use App\Models\User;
 use App\Models\Presenter;
@@ -112,7 +113,8 @@ class AdminController extends Controller
     }
 
     public function packages(){
+        $mainpack = CloutPackages::whereNotNull('id');
         $packages = CloutPackagesItems::whereNotNull('id');
-        return view('user.superadmin.package',compact('packages'));
+        return view('user.superadmin.package',compact('packages','mainpack'));
     }
 }

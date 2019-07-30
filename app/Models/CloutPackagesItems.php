@@ -19,4 +19,9 @@ class CloutPackagesItems extends Model
     public function items(){
         return $this->belongsTo(CloutPackages::class);
     }
+
+    public function packageName(){
+        // return "name";
+        return CloutPackages::where('id',$this->clout_package_id)->first()['package_name'];
+    }
 }

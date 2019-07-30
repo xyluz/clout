@@ -26,7 +26,7 @@
               <tr>
                 <td class="tx-center">
                  
-                    {{$package->clout_package_id}}
+                    {{$package->packageName()}}
 
                 </td>
                 <td class="valign-middle tx-right">
