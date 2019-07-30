@@ -117,4 +117,19 @@ class AdminController extends Controller
         $packages = CloutPackagesItems::whereNotNull('id');
         return view('user.superadmin.package',compact('packages','mainpack'));
     }
+
+    public function createPackage(Request $request){        
+
+        CloutPackagesItems::create([
+            'clout_package_id'=>$request->package_id,
+            'package_item_name'=>$request->itemName,
+            'package_item_description'=>$request->itemDescription,
+            'package_item_unitprice'=>$request->unitPrice,
+            'package_item_available_count'=>$request->availableCount,
+        ]);
+
+        alert()->success('New Package Item has been created','Success');
+        return redirect()->back();
+
+    }
 }

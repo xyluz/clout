@@ -48,7 +48,7 @@
             
                 <td class="valign-middle tx-center">
                
-                    <a href="{{route('report',['id'=>$package->id])}}" title="View Details" class="tx-gray-600 tx-15"><i class="fa fa-eye"></i></a>
+                    <a href="{{route('report',['id'=>$package->id])}}" title="View Details" class="tx-danger tx-15"><i class="fa fa-trash"></i></a>
                 </td>
               </tr>
 

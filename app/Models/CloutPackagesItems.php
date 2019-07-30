@@ -20,8 +20,7 @@ class CloutPackagesItems extends Model
         return $this->belongsTo(CloutPackages::class);
     }
 
-    public function packageName(){
-        // return "name";
+    public function packageName(){       
         return CloutPackages::where('id',$this->clout_package_id)->first()['package_name'];
     }
 }

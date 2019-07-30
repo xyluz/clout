@@ -81,7 +81,7 @@ Route::prefix('a')->group(function () {
     Route::get('agents','AdminController@agents')->name('a.agents');
     Route::post('agents/create','AdminController@createAgent')->name('a.create.agent');
     Route::get('packages','AdminController@packages')->name('a.packages');
-    Route::post('packages/create','AdminController@createPackages')->name('a.create.packages');
+    Route::post('packages/create','AdminController@createPackage')->name('a.create.package');
 });
 
 
