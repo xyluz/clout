@@ -31,6 +31,12 @@
                     <span>Agents</span>
                 </a>                
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{route('a.packages')}}">
+                  <i class="icon ion-ios-filing-outline"></i>
+                  <span>Packages</span>
+              </a>                
+          </li>
 
           @endrole
 

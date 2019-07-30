@@ -80,6 +80,8 @@ Route::prefix('a')->group(function () {
     Route::post('camp/update','AdminController@campaignUpdate')->name('a.campaign.update');
     Route::get('agents','AdminController@agents')->name('a.agents');
     Route::post('agents/create','AdminController@createAgent')->name('a.create.agent');
+    Route::get('packages','AdminController@packages')->name('a.packages');
+    Route::post('packages/create','AdminController@createPackages')->name('a.create.packages');
 });
 
 
