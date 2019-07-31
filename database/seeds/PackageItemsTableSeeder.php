@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\CloutPackagesItems;
 
-class CloutProductTableSeeder extends Seeder
+class PackageItemsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,9 +11,6 @@ class CloutProductTableSeeder extends Seeder
      */
     public function run()
     {
-        
-        CloutPackagesItems::create([
-
-        ]);
+        //
     }
 }

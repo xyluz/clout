@@ -13,7 +13,11 @@
 
                     <p style="z-index: 1" class="font-termina-l text-2xl leading-tight pr-4 px-6 mb-4 antialiased w-h"> We offer packages that help artistes and small business get more value & trackable milage for their brand and business at the most affordable rates .</p>
                 </div>
+                @auth 
+            <a href="{{route('dashboard')}}" style="width: 201px; margin-left: 1em; padding-left: 53px;" class="p-4 font-termina-md rounded-full text-black bg-white">Dashboard</a>
+            @else 
             <a href="{{route('register')}}" style="width: 201px; margin-left: 1em; padding-left: 53px;" class="p-4 font-termina-md rounded-full text-black bg-white">Get Started</a>
+            @endauth
 
             </div>
 

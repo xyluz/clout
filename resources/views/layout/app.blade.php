@@ -68,14 +68,17 @@
         </a> <!-- .nav-trigger -->
 
         <ul id="cd-navigation">
+            @auth
+            <li><a href="{{route('dashboard')}}">Dashboard</a></li>
+            @endauth
             <li><a href="{{route('package')}}">Plans</a></li>
             <li><a href="{{route('special-packages')}}">Special Packages </a></li>
             <li><a href="#0">Legal</a></li>
             <li><a href="#0">Contact</a></li>
-            @if(count(session('cart')) > 0)  
+            @if(session('cart') && count(session('cart')) > 0)  
 
             <li>
-                
+               
                 <?php $quantity = count(session('cart')) > 0 ? count(session('cart')) : 0; ?>
               
                 <a href="{{route('cart')}}">Cart ({{$quantity}})</a>                
