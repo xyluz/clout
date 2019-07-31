@@ -118,9 +118,76 @@
     });
 
 
+    
+  function payWithPaystack(){
+   
+    var handler = PaystackPop.setup({
+      key: 'pk_test_e5b2f82bc75abecde0e0fe9c004b2eb8551c7549',
+      email: '{{Auth::user()->email}}',
+      amount: '{{Auth::user()->isReferred() ? $total - ($total * (5/100))  : $total}}' * 100,
+      currency: "NGN",
+      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+      metadata: {
+         custom_fields: [
+            {
+                display_name: "Full Name",
+                variable_name: "full_name",
+                value: "{{Auth::user()->name}}"
+            }
+         ]
+      },
+      callback: function(response){
+          //TODO:display preloader
+       
+          $.ajax({
+              type: 'POST',             
+              url: "{{route('register.purchase')}}",
+              data: {                    
+                  'transaction': response, 
+                  "_token": "{{ csrf_token() }}",
+                  'amount' : '{{Auth::user()->isReferred() ? $total - ($total * (5/100))  : $total}}',
+              },
+              success: function(msg){
+                if(msg == "done"){
+                  
+                  Swal.fire({
+                    type: 'success',
+                    title: 'Success!',
+                    text: 'Your purchase was successful',
+                    footer: '<a href="{{route('dashboard')}}">redirecting... click here if it takes too long</a>'
+                  });
 
+                  window.location = "{{route('dashboard')}}";
 
+                }else{
+
+                  Swal.fire({
+                    type: 'error',
+                    title: 'Oops!',
+                    text: 'Something went wrong with your purchase, try later or contact admin',
+                    footer: '<a href="{{route('dashboard')}}">go to dashboard</a>'
+                  });
+
+                }
+                 
+              }
+          });
+
+      },
+      onClose: function(){
+        Swal.fire({
+                    type: 'info',
+                    title: 'Transaction Stopped!',
+                    text: 'Your transaction has been stopped',
+                    footer: '<a href="{{route('dashboard')}}">go to dashboard</a>'
+                  });
+      }
+    });
+    handler.openIframe();
+  }
 </script>
+
+
 
 
 @endsection

@@ -8,7 +8,7 @@ use App\Models\Transaction;
 use Auth;
 use App\Models\Ref;
 use App\Models\Presenter;
-
+use App\Models\CloutPackagesItems;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\ReceiptMail;
 use App\Mail\ReferralUseMail;
@@ -35,9 +35,21 @@ class PurchaseRepository extends Repository
  
     public function create($data){
        
+       
+        $ids = [];
+        foreach(session('cart') as $id => $details){
+            
+            array_push($ids, $details['product_id']);
+
+        }
+
+        $items = CloutPackagesItems::where('clout_package_id',$ids)->get();
+
         $transaction = $data['transaction'];
         
-        $items = json_decode($data['items'],true);   
+        // $items = json_decode($data['items'],true); 
+        
+        
         foreach($items as $item){
 
             Purchase::create([
