@@ -12,7 +12,7 @@
     <link href="{{asset('css/menunew.css')}}" rel="stylesheet">
     <link href="{{asset('css/linearicons.css')}}" rel="stylesheet">
     <link href="{{asset('css/_icons.scss')}}" rel="stylesheet">
-  
+    <link href="{{ asset('css/font-awesome.css') }}" rel="stylesheet">
     <link href="{{asset('css/button.css')}}" rel="stylesheet">
     <link href="{{asset('css/search.css')}}" rel="stylesheet">
     <link href="{{asset('css/faq.css')}}" rel="stylesheet">
@@ -68,19 +68,27 @@
         </a> <!-- .nav-trigger -->
 
         <ul id="cd-navigation">
-        <li><a href="{{route('package')}}">Plans</a></li>
+            <li><a href="{{route('package')}}">Plans</a></li>
             <li><a href="{{route('special-packages')}}">Special Packages </a></li>
             <li><a href="#0">Legal</a></li>
-
             <li><a href="#0">Contact</a></li>
+            <li>
+                   
+                <?php $quantity = count(session('cart')) > 0 ? count(session('cart')) : 0; ?>
+              
+                <a href="{{route('cart')}}">Cart ({{$quantity}})</a>
+                    
+               
+            </li>
         </ul>
     </nav> <!-- .cd-primary-nav -->
+    
 </header> 
 
     <main>
         @yield('content')
     </main>
-
+    
     <br><br>
     <footer class="font-sans bg-grey-lightest text-black py-8 px-4 font-termina-l antialiased shadow">
                 <div class="mx-auto container overflow-hidden flex flex-col lg:flex-row justify-between">

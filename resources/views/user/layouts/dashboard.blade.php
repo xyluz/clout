@@ -142,7 +142,7 @@
           border-radius:999px;
           line-height:.75em;
           color: black;
-          color:#DF0000;
+          color:#FB704A;
           text-align:center;
           min-width:2em;
           font-weight:bold;
@@ -150,11 +150,11 @@
           border-style:solid;
         }
         .fa-circle {
-          color:#DF0000;
+          color:#FB704A;
         }
 
         .red-cart {
-          color: #DF0000; 
+          color: #FB704A; 
           background:white;
         }
         </style>
