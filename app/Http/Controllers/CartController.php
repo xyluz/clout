@@ -10,7 +10,7 @@ class CartController extends Controller
 {
     public function cart()
     {
-        return view('cart');
+        return view('user.cart');
     }
 
     public function addToCart($id)

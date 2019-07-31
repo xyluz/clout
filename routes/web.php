@@ -14,8 +14,9 @@ Route::get('/artistsearch', 'HomeController@artistGroup')->name('artist.group');
 
 Route::patch('update-cart', 'CartController@update'); 
 Route::delete('remove-from-cart', 'CartController@remove');
-Route::get('cart', 'CartController@cart');
+Route::get('cart', 'CartController@cart')->name('cart');
 Route::get('add-to-cart/{id}', 'CartController@addToCart')->name('cart.add');
+Route::get('/details/{package}', 'PurchasesController@index')->name('invoice');  
 
 Route::get('test','HomeController@test');
 
@@ -26,8 +27,7 @@ Route::prefix('u')->group(function () {
     Route::get('/','UserController@dashboard')->name('dashboard');
     Route::get('p/{user}','UserController@profile')->name('profile');
     Route::get('e/p/{user}','UserController@edit')->name('edit.profile');
-    Route::get('s/{user?}','UserController@settings')->name('settings');
-    Route::get('/i/{package}', 'PurchasesController@index')->name('invoice');  
+    Route::get('s/{user?}','UserController@settings')->name('settings');   
     Route::get('r/{id?}','CampaignController@report')->name('report'); 
     
     //Google Connection Thingy
