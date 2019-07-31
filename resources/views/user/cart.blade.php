@@ -126,7 +126,7 @@
       email: '{{Auth::user()->email}}',
       amount: '{{Auth::user()->isReferred() ? $total - ($total * (5/100))  : $total}}' * 100,
       currency: "NGN",
-      ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
+      ref: ''+Math.floor((Math.random() * 1000000000) + 1), 
       metadata: {
          custom_fields: [
             {
@@ -148,6 +148,7 @@
                   'amount' : '{{Auth::user()->isReferred() ? $total - ($total * (5/100))  : $total}}',
               },
               success: function(msg){
+                  console.log(msg);
                 if(msg == "done"){
                   
                   Swal.fire({

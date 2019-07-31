@@ -83,7 +83,7 @@ class PurchaseRepository extends Repository
             
         }     
         
-
+        session()->put('cart','');
         Mail::to(Auth::user())->queue(new ReceiptMail($transaction,Auth::user()));
 
         return "done";

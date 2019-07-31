@@ -49,7 +49,7 @@ class PurchasesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create(Array $data)
-    {
+    { 
         //called via ajax, after invoice is paid
         return $this->service->registerPurchase($data);
     }
@@ -61,7 +61,8 @@ class PurchasesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {        
+    { 
+        // return $request->all();        
        return  $this->service->registerPurchase($request->all());
         
     }
