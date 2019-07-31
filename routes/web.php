@@ -14,7 +14,7 @@ Route::get('/artistsearch', 'HomeController@artistGroup')->name('artist.group');
 
 Route::patch('update-cart', 'CartController@update'); 
 Route::delete('remove-from-cart', 'CartController@remove');
-Route::get('cart', 'CartController@cart')->name('cart');
+Route::get('cart', 'CartController@cart')->name('cart')->middleware(['auth']);;
 Route::get('add-to-cart/{id}', 'CartController@addToCart')->name('cart.add');
 Route::get('/details/{package}', 'PurchasesController@index')->name('invoice');  
 

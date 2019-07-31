@@ -58,13 +58,12 @@
 
                               
                   @endforeach
-                @endif
-           
+                @endif           
 
-                  <tr>
+                  {{-- <tr>
                     <td class="tx-right tx-uppercase tx-bold tx-inverse">Discount</td>
                     <td colspan="2" class="tx-left"><h4 class="tx-primary tx-bold tx-lato">&#8358; 7000</h4></td>
-                  </tr>
+                  </tr> --}}
                   <tr>
                     <td class="tx-right tx-uppercase tx-bold tx-inverse">Total</td>
                     <td colspan="2" class="tx-left"><h4 class="tx-primary tx-bold tx-lato">&#8358; {{$total}}</h4></td>
