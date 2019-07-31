@@ -177,6 +177,8 @@ return [
         Spatie\Permission\PermissionServiceProvider::class,
         UxWeb\SweetAlert\SweetAlertServiceProvider::class,
         Laravolt\Avatar\ServiceProvider::class,
+        PulkitJalan\Google\GoogleServiceProvider::class,
+        Scottybo\LaravelGoogleMyBusiness\GoogleMyBusinessServiceProvider::class,
 
     ],
 
@@ -230,6 +232,8 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Alert' => UxWeb\SweetAlert\SweetAlert::class,
         'Avatar'    => Laravolt\Avatar\Facade::class,
+        'Google' => PulkitJalan\Google\Facades\Google::class,
+        'GoogleMyBusiness' => Scottybo\LaravelGoogleMyBusiness\GoogleMyBusiness::class
 
     ],
 

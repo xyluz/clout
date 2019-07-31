@@ -7,15 +7,49 @@ use Illuminate\Http\Request;
 use App\Models\Account;
 
 use SKAgarwal\GoogleApi\PlacesApi;
+use Google; 
+use GoogleMyBusiness;
 
 class GoogleBusinessConnectController extends Controller
 {
-    public $googlePlaces;
+    // public $googlePlaces;
+    
+    // public function __construct()
+    // {
+    //     $this->googlePlaces = new PlacesApi('AIzaSyBBNjx6nv-hHqBNw2hkMqzxOhpmMeqRhDg');
+    // }
 
-    public function __construct()
-    {
-        $this->googlePlaces = new PlacesApi('AIzaSyBBNjx6nv-hHqBNw2hkMqzxOhpmMeqRhDg');
-    } 
+    function authRedirect() {
+
+        // Define the GMB scope
+        $scopes = [
+            'https://www.googleapis.com/auth/business.manage',
+            'https://www.googleapis.com/auth/plus.business.manage',
+            'https://www.googleapis.com/auth/plus.login',
+            'https://www.googleapis.com/auth/plus.profile.emails.read'
+            
+        ];
+
+        // Define any configs that overrride the /config/google.php defaults from pulkitjalan/google-apiclient
+        $googleConfig = array_merge(config('google'),[
+            'scopes' => 'https://www.googleapis.com/auth/business.manage',
+            'redirect_uri' => config('app.callback_url').'/callback/google/mybusiness'
+        ]);
+
+        // Generate an auth request URL
+        $googleClient = Google::getClient();
+        $loginUrl = $googleClient->createAuthUrl();
+        
+        
+
+        // Send user to Google for Authorisation
+        return redirect()->away($loginUrl);
+    }
+    
+    function getAccountName(Google $googleClient) {
+        $gmb = new GoogleMyBusiness($googleClient);
+        return $gmb->getAccountName();
+    }
 
     /**
      * Display a listing of the resource.
@@ -65,69 +99,5 @@ class GoogleBusinessConnectController extends Controller
 
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\GoogleBusinessConnect  $googleBusinessConnect
-     * @return \Illuminate\Http\Response
-     */
-    public function show(GoogleBusinessConnect $googleBusinessConnect)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\GoogleBusinessConnect  $googleBusinessConnect
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(GoogleBusinessConnect $googleBusinessConnect)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\GoogleBusinessConnect  $googleBusinessConnect
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, GoogleBusinessConnect $googleBusinessConnect)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\GoogleBusinessConnect  $googleBusinessConnect
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(GoogleBusinessConnect $googleBusinessConnect)
-    {
-        //
-    }
 }

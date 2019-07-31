@@ -17,6 +17,7 @@ Route::delete('remove-from-cart', 'CartController@remove');
 Route::get('cart', 'CartController@cart')->name('cart')->middleware(['auth']);;
 Route::get('add-to-cart/{id}', 'CartController@addToCart')->name('cart.add');
 Route::get('/details/{package}', 'PurchasesController@index')->name('invoice');  
+Route::get('authtest','GoogleBusinessConnectController@authRedirect'); 
 
 Route::get('test','HomeController@test');
 
