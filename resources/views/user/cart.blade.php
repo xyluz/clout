@@ -4,6 +4,10 @@
 
 <script src="https://js.paystack.co/v1/inline.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
 
 <div class="slim-mainpanel">
       <div class="container">
@@ -43,7 +47,7 @@
                             </td>
                             <td data-th="Price">&#8358; {{ $details['price'] }}</td>
                             <td data-th="Quantity">
-                                {{ $details['quantity'] }}
+                                <input type="number" value="{{ $details['quantity'] }}" class="form-control quantity" />
                             </td>
                             <td data-th="Subtotal" class="text-center">&#8358; {{ $details['price'] * $details['quantity'] }}</td>
                             <td class="actions" data-th="">
@@ -55,20 +59,16 @@
                               
                   @endforeach
                 @endif
-
-                             
+           
 
                   <tr>
                     <td class="tx-right tx-uppercase tx-bold tx-inverse">Discount</td>
-                    <td colspan="2" class="tx-left"><h4 class="tx-primary tx-bold tx-lato">&#8358; 6700</h4></td>
+                    <td colspan="2" class="tx-left"><h4 class="tx-primary tx-bold tx-lato">&#8358; 7000</h4></td>
                   </tr>
                   <tr>
-                        <td class="tx-right tx-uppercase tx-bold tx-inverse">Total</td>
-                        <td colspan="2" class="tx-left"><h4 class="tx-primary tx-bold tx-lato">&#8358; {{$total}}</h4></td>
-                      </tr>
-
-                 
-
+                    <td class="tx-right tx-uppercase tx-bold tx-inverse">Total</td>
+                    <td colspan="2" class="tx-left"><h4 class="tx-primary tx-bold tx-lato">&#8358; {{$total}}</h4></td>
+                    </tr>
                 
                 </tbody>
               </table>
