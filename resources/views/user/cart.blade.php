@@ -35,7 +35,7 @@
                 <tbody>
                 <?php $total = 0 ?>
 
-                @if(session('cart'))
+                @if(session('cart') && count(session('cart')) > 0)
                     @foreach(session('cart') as $id => $details)                
                         <?php $total += $details['price'] * $details['quantity'] ?>
 

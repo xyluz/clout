@@ -15,6 +15,7 @@ class CartController extends Controller
 
     public function addToCart($id)
     {
+        
         $product = CloutPackages::find($id);
  
         if(!$product) {
