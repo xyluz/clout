@@ -115,13 +115,49 @@
           </div><!-- dropdown -->
          
           @endauth
+                
+          @if(session('cart'))
+            <?php $quantity = count(session('cart')) > 0 ? count(session('cart')) : 0; ?>
+          @endif
+            <span class="fa-stack has-badge" style="font-size: 1.5em" data-count="{{$quantity}}">
+              <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+              <i style="" class="fa fa-shopping-cart fa-stack-2x red-cart"></i>
+            </span>
+
+        
         </div><!-- header-right -->
       </div><!-- container -->
     </div>
         <main>
             @yield('content')
         </main>
-        
+        <style>
+        .fa-stack[data-count]:after{
+          position:absolute;
+          right:0%;
+          top:0%;
+          content: attr(data-count);
+          font-size:40%;
+          padding:.6em;
+          border-radius:999px;
+          line-height:.75em;
+          color: black;
+          color:#DF0000;
+          text-align:center;
+          min-width:2em;
+          font-weight:bold;
+          background: white;
+          border-style:solid;
+        }
+        .fa-circle {
+          color:#DF0000;
+        }
+
+        .red-cart {
+          color: #DF0000; 
+          background:white;
+        }
+        </style>
 
     <script src="{{ asset('js/jquery.js') }}"></script>
     <script src="{{ asset('js/popper.js') }}"></script>
