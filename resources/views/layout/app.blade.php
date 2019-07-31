@@ -72,14 +72,16 @@
             <li><a href="{{route('special-packages')}}">Special Packages </a></li>
             <li><a href="#0">Legal</a></li>
             <li><a href="#0">Contact</a></li>
+            @if(count(session('cart')) > 0)  
+
             <li>
-                   
+                
                 <?php $quantity = count(session('cart')) > 0 ? count(session('cart')) : 0; ?>
               
-                <a href="{{route('cart')}}">Cart ({{$quantity}})</a>
-                    
+                <a href="{{route('cart')}}">Cart ({{$quantity}})</a>                
                
             </li>
+            @endif
         </ul>
     </nav> <!-- .cd-primary-nav -->
     
