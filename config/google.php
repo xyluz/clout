@@ -20,7 +20,7 @@ return [
     'client_id'       => env('GOOGLE_CLIENT_ID', '1045603582736-c24eumavk04bn4j8ehbjpr4pn19d84n8.apps.googleusercontent.com'),
     'client_secret'   => env('GOOGLE_CLIENT_SECRET', 'amKo6Qv_HPa5rrMw6sywOi7X'),
     'redirect_uri'    => env('GOOGLE_REDIRECT', 'https://clout.ng'),
-    'scopes'          => [],
+    'scopes'          => ['https://www.googleapis.com/auth/plus.business.manage'],
     'access_type'     => 'online',
     'approval_prompt' => 'auto',
 

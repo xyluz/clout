@@ -1,6 +1,6 @@
 <?php
 
-Route::get('/', 'HomeController@index');
+Route::get('/{code?}', 'HomeController@index');
 
 Auth::routes(['verify' => true]);
 
