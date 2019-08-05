@@ -8,11 +8,11 @@
                 <div class="toggle-title ">
                     <h3>
     <i></i>
-    <span class="que">Q </span><span class="title-name text-xl font-termina-md">What is the universe made of?</span>
+    <span class="que">Q </span><span class="title-name text-xl font-termina-md">How many songs can i promote on clout?</span>
     </h3>
                 </div>
                 <div class="toggle-inner  font-termina-l text-xl text-grey-darker">
-                    <p>Astronomers face an embarrassing conundrum: they don't know what 95% of the universe is made of. Atoms, which form everything we see around us, only account for a measly 5%. Over the past 80 years it has become clear that the substantial remainder is comprised of two shadowy entities – dark matter and dark energy. The former, first discovered in 1933, acts as an invisible glue, binding galaxies and galaxy clusters together. Unveiled in 1998, the latter is pushing the universe's expansion to ever greater speeds. Astronomers are closing in on the true identities of these unseen interlopers.</p>
+                    <p>You can promote as many songs as the package you purchased allows, you can also purchase multiple packages and use them for different songs / tracks</p>
                 </div>
             </div>
             <!-- END OF TOGGLE -->
@@ -21,12 +21,12 @@
                 <div class="toggle-title ">
                     <h3>
       <i></i>
-      <span class="que">Q </span><span class="title-name font-termina-md">How did life begin?</span>
+      <span class="que">Q </span><span class="title-name font-termina-md">Why should i trust Clout?</span>
       </h3>
                 </div>
 
                 <div class="toggle-inner font-termina-l text-xl text-grey-darker">
-                    <p>Four billion years ago, something started stirring in the primordial soup. A few simple chemicals got together and made biology – the first molecules capable of replicating themselves appeared. We humans are linked by evolution to those early biological molecules. But how did the basic chemicals present on early Earth spontaneously arrange themselves into something resembling life? How did we get DNA? What did the first cells look like? More than half a century after the chemist Stanley Miller proposed his "primordial soup" theory, we still can't agree about what happened. Some say life began in hot pools near volcanoes, others that it was kick-started by meteorites hitting the sea.</p>
+                    <p>We are associated and backed by the biggest brands in the industry, don't take our word for it, see what clients are saying about us.</p>
                 </div>
             </div>
             <!-- END OF TOGGLE -->
@@ -35,7 +35,7 @@
                 <div class="toggle-title  ">
                     <h3>
         <i></i>
-      <span class="que">Q </span> <span class="title-name font-termina-md"> Are we alone in the universe?</span>
+      <span class="que">Q </span> <span class="title-name font-termina-md"> Do you offer copyright protection?</span>
         </h3>
                 </div>
 
@@ -50,7 +50,7 @@
                 <div class="toggle-title  ">
                     <h3>
         <i></i>
-        <span class="que">Q </span><span class="title-name font-termina-md"> What makes us human?</span>
+        <span class="que">Q </span><span class="title-name font-termina-md"> Do you have technical support team, and how soon should i expect a response?</span>
         </h3>
                 </div>
 
@@ -65,12 +65,12 @@
                 <div class="toggle-title ">
                     <h3>
         <i></i>
-      <span class="que">Q </span> <span class="title-name font-termina-md">  What's at the bottom of a black hole?</span>
+      <span class="que">Q </span> <span class="title-name font-termina-md">  How do i buy a package?</span>
         </h3>
                 </div>
 
                 <div class="toggle-inner font-termina-l text-xl text-grey-darker">
-                    <p>It's a question we don't yet have the tools to answer. Einstein's general relativity says that when a black hole is created by a dying, collapsing massive star, it continues caving in until it forms an infinitely small, infinitely dense point called a singularity. But on such scales quantum physics probably has something to say too. Except that general relativity and quantum physics have never been the happiest of bedfellows – for decades they have withstood all attempts to unify them. However, a recent idea – called M-Theory – may one day explain the unseen centre of one of the universe's most extreme creations.</p>
+                    <p>You can buy a package by clicking on the package link, adding the package to your cart and checking out. You can also buy packages from your dashboard after sign up.</p>
                 </div>
 
             </div>
@@ -80,12 +80,12 @@
                 <div class="toggle-title ">
                     <h3>
         <i></i>
-      <span class="que">Q </span> <span class="title-name font-termina-md">Why do we dream?</span>
+      <span class="que">Q </span> <span class="title-name font-termina-md">How can i edit my profile?</span>
         </h3>
                 </div>
 
                 <div class="toggle-inner font-termina-l text-xl text-grey-darker">
-                    <p>We spend around a third of our lives sleeping. Considering how much time we spend doing it, you might think we'd know everything about it. But scientists are still searching for a complete explanation of why we sleep and dream. Subscribers to Sigmund Freud's views believed dreams were expressions of unfulfilled wishes – often sexual – while others wonder whether dreams are anything but the random firings of a sleeping brain. Animal studies and advances in brain imaging have led us to a more complex understanding that suggests dreaming could play a role in memory, learning and emotions. Rats, for example, have been shown to replay their waking experiences in dreams, apparently helping them to solve complex tasks such as navigating mazes.</p>
+                    <p>From your dashboard, you can add multiple brand identifies and you can also edit these brand identities from there.</p>
                 </div>
 
             </div>
@@ -95,12 +95,12 @@
                 <div class="toggle-title ">
                     <h3>
         <i></i>
-      <span class="que">Q </span> <span class="title-name font-termina-md">Why is there stuff?</span>
+      <span class="que">Q </span> <span class="title-name font-termina-md">How do i track my number of airplays?</span>
         </h3>
                 </div>
 
                 <div class="toggle-inner font-termina-l text-xl text-grey-darker">
-                    <p>You really shouldn't be here. The "stuff" you're made of is matter, which has a counterpart called antimatter differing only in electrical charge. When they meet, both disappear in a flash of energy. Our best theories suggest that the big bang created equal amounts of the two, meaning all matter should have since encountered its antimatter counterpart, scuppering them both and leaving the universe awash with only energy. Clearly nature has a subtle bias for matter otherwise you wouldn't exist. Researchers are sifting data from experiments like the Large Hadron Collider trying to understand why, with supersymmetry and neutrinos the two leading contenders.</p>
+                    <p>We have an elaborate report available on your dashboard, each play is recorded with details. You also get monthly report in your email.</p>
                 </div>
 
             </div>
