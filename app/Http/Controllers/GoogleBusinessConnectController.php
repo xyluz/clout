@@ -35,9 +35,18 @@ class GoogleBusinessConnectController extends Controller
         return redirect()->away($loginUrl);
     }
     
-    function getAccountName(Google $googleClient) {
+    function getAccountName() {
+        // return "here";
+        
+        $googleClient = Google::fetchAccessTokenWithAuthCode();
+        $googleClient->setAccessToken("4/lgFxq2Jkvf09Njdau_k9iyLrxCCGDeSbBYTm7y2m49IU1drMnUWKU_S9e95ESSxqxzq0h_jaMTdCrNQkasU2sWc");
+        $httpClient = $googleClient->authorize();
+        // return dd($httpClient);
+        // make an HTTP request
+        $response = $httpClient->get('https://mybusiness.googleapis.com/v4/accounts');
+        return dd($response);
         $gmb = new GoogleMyBusiness($googleClient);
-        return $gmb->getAccountName();
+        return dd($gmb);
     }
 
     /**

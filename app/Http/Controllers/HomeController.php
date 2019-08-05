@@ -19,15 +19,15 @@ class HomeController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
    
-    public function index(Request $request){
-        
-        if($request){
+    public function index(){
+
+        // if($request){
             
-            GoogleBusinessConnect::create([
-                'account_id'=>1,
-                'google_place_id'=>$request->code
-            ]);
-        }
+        //     GoogleBusinessConnect::create([
+        //         'account_id'=>1,
+        //         'google_place_id'=>$request->code
+        //     ]);
+        // }
         
         return view('home');
     }

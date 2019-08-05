@@ -9,34 +9,34 @@
     <br>
     <div style="margin-top: 5.5em;" class="    py-8 ">
         <div class=" ">
-            <h1 style="    margin-left: 4.3em;" class="capitalize text-4xl mb-8 container "> <span class="font-termina-md">Discover  businesses  &</span> <br> <span class="font-termina-md">services in <span id="nl-form" class="nl-form">
-      <input type="text" value="" placeholder="your city" data-subline="For example: <em>Abuja</em> or <em>Onitsha</em>"/>
-      <span class="nl-submit-wrap">
+            <h1 style="    margin-left: 4.3em;" class="capitalize text-4xl mb-8 container "> <span class="font-termina-md">Discover  businesses  &</span> <br> <span class="font-termina-md">Services Around you <span id="nl-form" class="nl-form">
+      {{-- <input type="text" value="" placeholder="your city" data-subline="For example: <em>Abuja</em> or <em>Onitsha</em>"/> --}}
+      {{-- <span class="nl-submit-wrap">
 
-      </span>
+      </span> --}}
      </span></h1></div>
 
         <form class="search-container">
             <input type="text" id="search-bar" placeholder="Discover Local Businesses">
             <a href="#"><span class="search-icon" > <span class=" ion-ios-search"></span> </span></a>
             <!-- Custom select structure -->
-            <div class="select_mate" data-mate-select="active">
-                <p class="font-termina-m smal-text-2">Category</p>
-                <select name="" onchange="" onclick="return false;" id="">
+            {{-- <div class="select_mate" data-mate-select="active"> --}}
+                {{-- <p class="font-termina-m smal-text-2">Category</p> --}}
+                {{-- <select name="" onchange="" onclick="return false;" id="">
                     <option value="">Fashion </option>
                     <option value="1">Food</option>
                     <option value="2">Beauty & Wellness</option>
                     <option value="3">Finance</option>
-                </select>
-                <p class="selecionado_opcion" onclick="open_select(this)"></p>
-                <span onclick="open_select(this)" class="icon_select_mate"><svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                </select> --}}
+                {{-- <p class="selecionado_opcion" onclick="open_select(this)"></p> --}}
+                {{-- <span onclick="open_select(this)" class="icon_select_mate"><svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
 <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
 <path d="M0-.75h24v24H0z" fill="none"/>
 </svg></span>
                 <div class="cont_list_select_mate">
                     <ul class="cont_select_int"> </ul>
                 </div>
-            </div>
+            </div> --}}
             <!-- Custom select structure -->
 
     </div>

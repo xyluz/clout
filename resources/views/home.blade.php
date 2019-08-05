@@ -22,7 +22,7 @@
             </div>
 
     </section>
-
+ 
     @include('layout.main')
     @include('layout.prices')
     @include('layout.newsletter')
