@@ -118,11 +118,12 @@
                 
           @if(session('cart'))
             <?php $quantity = count(session('cart')) > 0 ? count(session('cart')) : 0; ?>
-         
+          <a href="{{route('cart')}}">
             <span class="fa-stack has-badge" style="font-size: 1.5em" data-count="{{$quantity}}">
               <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
               <i style="" class="fa fa-shopping-cart fa-stack-2x red-cart"></i>
             </span>
+          </a>
             @endif
         
         </div><!-- header-right -->
