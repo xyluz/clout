@@ -12,31 +12,31 @@
     
      <h1 style="    margin-left: 4.3em;" class="capitalize text-4xl mb-8 container ">
     
-     <span class="font-termina-md">Discover  Musical Acts</span> <br> <span class="font-termina-md"> in <span id="nl-form" class="nl-form">
-              <input type="text" value="" placeholder="your city" data-subline="For example: Abuja</em> or Onitsha"/>
+     <span class="font-termina-md">Discover  Musical Acts</span> <br> <span class="font-termina-md"> Making Waves in the Industry <span id="nl-form" class="nl-form">
+              {{-- <input type="text" value="" placeholder="your city" data-subline="For example: Abuja</em> or Onitsha"/>
               <span class="nl-submit-wrap">
       
-              </span>
+              </span> --}}
              </span></h1></div>
     
         <form class="search-container">    
         <input type="text" id="search-bar" placeholder="Discover artistes">
         <a href="#"><span class="search-icon" > <span class=" ion-ios-search"></span> </span></a>   <!-- Custom select structure --> 
-    <div class="select_mate" data-mate-select="active" >  <p  class="font-termina-m smal-text-2">Genre</p>
+    {{-- <div class="select_mate" data-mate-select="active" >  <p  class="font-termina-m smal-text-2">Genre</p>
     <select name="" onchange="" onclick="return false;" id="">
     <option value=""  >Afrobeats </option>
     <option value="1">Hip-Hop</option>
     <option value="2" >Alternative</option>
     <option value="3">Fuji</option>
       </select>
-    <p class="selecionado_opcion"  onclick="open_select(this)" ></p>
-    <span onclick="open_select(this)" class="icon_select_mate" ><svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+    <p class="selecionado_opcion"  onclick="open_select(this)" ></p> --}}
+    {{-- <span onclick="open_select(this)" class="icon_select_mate" ><svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.41 7.84L12 12.42l4.59-4.58L18 9.25l-6 6-6-6z"/>
         <path d="M0-.75h24v24H0z" fill="none"/>
     </svg></span>
     <div class="cont_list_select_mate">
       <ul class="cont_select_int">  </ul> 
-    </div>
+    </div> --}}
       </div>
       <!-- Custom select structure --> 
     
@@ -67,7 +67,13 @@
             <div class="overflow-hidden bg-white h-84   hover:shadow-raised hover:translateY-2px transition">
          <div class="h-64" style=" background: url('https://images.unsplash.com/photo-1470309864661-68328b2cd0a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80'); background-size: cover; background-position: center; " > </div> 
          <div class="apr p-6 flex-col justify-between">
-            <h1 class="dec font-termina-md text-baser  block font-smooth lowercase tracking-wide text-black  leading-zero mb-2 text-center"><span style="font-weight: 900;" class="mdi-heart-outline text-baser"></span> <span class="font-termina-md text-baser"> 6k</span> <span style="color: #ffffffab;" class="font-regs font-termina-l "> likes </span></h1>
+
+           
+          {{-- <h1 class="dec font-termina-md text-baser  block font-smooth lowercase tracking-wide text-black  leading-zero mb-2 text-center">
+              
+              <span style="font-weight: 900;" class="mdi-heart-outline text-baser"></span> <span class="font-termina-md text-baser"> 6k</span> <span style="color: #ffffffab;" class="font-regs font-termina-l "> likes </span>
+            
+            </h1> --}}
            
           </div>
        
@@ -89,8 +95,8 @@
       
               </div>
             </div>
-           {{-- <a href="{{route('artist',['id'=>$account->id,'name'=>$account->name])}}" class="btn btn-3 btn-3a font-termina-m text-lg font-smooth text-center icon-cart-2">Learn more</a> --}}
-           <a href="#" class="btn btn-3 btn-3a font-termina-m text-lg font-smooth text-center icon-cart-2">Learn more</a>
+           <a href="{{route('artist',['id'=>$account->id,'name'=>$account->name])}}" class="btn btn-3 btn-3a font-termina-m text-lg font-smooth text-center icon-cart-2">Learn more</a>
+           {{-- <a href="#" class="btn btn-3 btn-3a font-termina-m text-lg font-smooth text-center icon-cart-2">Learn more</a> --}}
            
           </div>
         @endforeach
