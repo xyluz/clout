@@ -101,3 +101,5 @@ Route::get('/ref/{id}/{name}','HomeController@ref')->name('ref');
 Route::prefix('p')->group(function (){
 
 });
+
+

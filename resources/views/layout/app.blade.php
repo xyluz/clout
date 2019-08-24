@@ -70,6 +70,12 @@
         <ul id="cd-navigation">
             @auth
             <li><a href="{{route('dashboard')}}">Dashboard</a></li>
+
+            @else 
+
+            
+            <li><a href="{{route('login')}}">Login</a></li>
+
             @endauth
             <li><a href="{{route('package')}}">Plans</a></li>
             <li><a href="{{route('special-packages')}}">Special Packages </a></li>
