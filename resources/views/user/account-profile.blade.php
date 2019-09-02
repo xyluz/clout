@@ -34,7 +34,7 @@
                               <div>
                                 <a href="#modaldemo4" data-toggle="modal" data-effect="effect-super-scaled" title="edit profile"><i class="fa fa-edit"></i></a>
 
-                                <a href="#modaldemo8" id="open_connection_modal" class="modal-effect" data-toggle="modal" data-effect="effect-slide-in-bottom" style="display:none"></a>
+                                <a href="" id="" class="modal-effect" data-toggle="modal" data-effect="effect-slide-in-bottom" style="display:none"></a>
 
                             <a href="#" onclick="connectToGoogle()"><img class="img-fluid" style="border-radius: 0% !important;" alt="Google Business Logo" src="{{asset('img/googlebusiness.png')}}" /></a>
                             
@@ -43,29 +43,7 @@
                             </div><!-- card-footer -->
                           </div><!-- card --> 
 
-                          <div id="modaldemo8" class="modal fade">
-                              <div class="modal-dialog modal-dialog-vertical-center" role="document">
-                                <div class="modal-content bd-0 tx-14">                                 
-                                  <div class="modal-body pd-25">
-                                    
-                                    <p class="mg-b-5" id="googleConnectBusinessList">
-                                      <div class="text-center" id="responseBusinessType">Establishing Connection</div> 
-                                    <img id="preloaderimage" src="{{asset('img/googleconnect.gif')}}" width="100%" />
-                                    <div class="col" id="itemsFound">
-                                       
-                            
-                                      </div><!-- col -->
-                                    </p>
-                                  </div>
-                                  {{-- <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary">Save changes</button>
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                  </div> --}}
-                                </div>
-                              </div><!-- modal-dialog -->
-                            </div><!-- modal -->
-                        
-
+                    
                           <ul class="nav nav-activity-profile mg-t-20"> 
                             <li class="nav-item"><a href="#modaldemo2" data-toggle="modal" data-effect="effect-super-scaled" class="nav-link"><i class="icon ios-basket tx-success"></i> 
                               @if($details->type == 'business')
