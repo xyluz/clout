@@ -162,7 +162,7 @@
                 
                 </div>
             </div>
-            <div style="background:url('img/track.webp') ; background-size: cover;" class="w-full h-screen-oo lg:w-1/2"></div>
+            <div style="background:url('img/cb.webp') ; background-size: cover;" class="w-full h-screen-oo lg:w-1/2"></div>
         </section>
 
         <section style="background:#fbfdff; " class=" font-sans p-2 shadow">
