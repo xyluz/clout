@@ -19,6 +19,7 @@ Route::get('cart', 'CartController@cart')->name('cart')->middleware(['auth']);;
 Route::get('add-to-cart/{id}', 'CartController@addToCart')->name('cart.add');
 Route::get('/details/{package}', 'PurchasesController@index')->name('invoice');  
 Route::get('google-business-connect','GoogleBusinessConnectController@authRedirect')->name('authtest'); 
+Route::get('get-account-details','GoogleBusinessConnectController@getAccountName')->name('getAccountName'); 
 
 
 Route::get('test','HomeController@test');

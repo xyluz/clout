@@ -12,6 +12,12 @@ use GoogleMyBusiness;
 
 class GoogleBusinessConnectController extends Controller
 {
+    public $googleClient;
+    
+    public function __construct(CampaignService $service)
+    {
+        $this->googleClient = Google::getClient()  ;     
+    } 
 
     function authRedirect() {
         // Define the GMB scope
@@ -26,28 +32,33 @@ class GoogleBusinessConnectController extends Controller
         // ]);
           
         // Generate an auth request URL
-        $googleClient = Google::getClient();
+        // $this->googleClient = Google::getClient();
         
         
-        $loginUrl = $googleClient->createAuthUrl();
+        $loginUrl = $this->googleClient->createAuthUrl();
 
         // Send user to Google for Authorisation
         return redirect()->away($loginUrl);
     }
-    
+
     function getAccountName() {
-        // return "here";
-        
-        $googleClient = Google::fetchAccessTokenWithAuthCode();
-        $googleClient->setAccessToken("4/lgFxq2Jkvf09Njdau_k9iyLrxCCGDeSbBYTm7y2m49IU1drMnUWKU_S9e95ESSxqxzq0h_jaMTdCrNQkasU2sWc");
-        $httpClient = $googleClient->authorize();
-        // return dd($httpClient);
-        // make an HTTP request
-        $response = $httpClient->get('https://mybusiness.googleapis.com/v4/accounts');
-        return dd($response);
-        $gmb = new GoogleMyBusiness($googleClient);
-        return dd($gmb);
+        $gmb = new GoogleMyBusiness($this->googleClient);
+        return $gmb->getAccountName();
     }
+    
+    // function getAccountName() {
+    //     // return "here";
+        
+    //     $googleClient = Google::fetchAccessTokenWithAuthCode();
+    //     $googleClient->setAccessToken("4/lgFxq2Jkvf09Njdau_k9iyLrxCCGDeSbBYTm7y2m49IU1drMnUWKU_S9e95ESSxqxzq0h_jaMTdCrNQkasU2sWc");
+    //     $httpClient = $googleClient->authorize();
+    //     // return dd($httpClient);
+    //     // make an HTTP request
+    //     $response = $httpClient->get('https://mybusiness.googleapis.com/v4/accounts');
+    //     return dd($response);
+    //     $gmb = new GoogleMyBusiness($googleClient);
+    //     return dd($gmb);
+    // }
 
     /**
      * Display a listing of the resource.
