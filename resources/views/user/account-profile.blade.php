@@ -36,7 +36,7 @@
 
                                 <a href="" id="" class="modal-effect" data-toggle="modal" data-effect="effect-slide-in-bottom" style="display:none"></a>
 
-                            <a href="#" onclick="connectToGoogle()"><img class="img-fluid" style="border-radius: 0% !important;" alt="Google Business Logo" src="{{asset('img/googlebusiness.png')}}" /></a>
+                            <a href="{{route('authtest')}}"><img class="img-fluid" style="border-radius: 0% !important;" alt="Google Business Logo" src="{{asset('img/googlebusiness.png')}}" /></a>
                             
           
                               </div>

@@ -12,13 +12,13 @@ Route::get('/artist/{id}/{name}', 'HomeController@artist')->name('artist');
 Route::get('/packages', 'HomeController@packages')->name('package');
 Route::get('/b/search', 'HomeController@businessGroup')->name('business.group');
 Route::get('/a/search', 'HomeController@artistGroup')->name('artist.group');
-
+ 
 Route::patch('update-cart', 'CartController@update'); 
 Route::delete('remove-from-cart', 'CartController@remove');
 Route::get('cart', 'CartController@cart')->name('cart')->middleware(['auth']);;
 Route::get('add-to-cart/{id}', 'CartController@addToCart')->name('cart.add');
 Route::get('/details/{package}', 'PurchasesController@index')->name('invoice');  
-Route::get('authtest','GoogleBusinessConnectController@authRedirect'); 
+Route::get('google-business-connect','GoogleBusinessConnectController@authRedirect')->name('authtest'); 
 
 
 Route::get('test','HomeController@test');
