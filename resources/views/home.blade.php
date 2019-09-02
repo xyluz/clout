@@ -19,8 +19,8 @@
             <a href="{{route('register')}}" style="width: 201px; margin-left: 1em; padding-left: 53px;" class="p-4 font-termina-md rounded-full text-black bg-white">Get Started</a>
             @endauth --}}
 
-            <button class="bg-white p-4 text-center font-seg rounded-full w-2/4"> For Artistes</button><br>
-            <button class="bg-white p-4 text-center font-seg rounded-full w-2/4"> For Businesses</button>
+            <a href="{{route('artist.group')}}" class="bg-white p-4 text-center font-seg rounded-full w-2/4"> For Artistes</a><br>
+            <a href="{{route('business.group')}}" class="bg-white p-4 text-center font-seg rounded-full w-2/4"> For Businesses</a>
 
             </div>
             
