@@ -12,7 +12,7 @@
                 <div class="hi-icon-effect-8">
                     <h1 style="z-index: 1;" class="c-title__name font-termina-m mb-4 text-5xl px-6 w-h">More Clout </h1>
 
-                    <p style="z-index: 1" class="font-termina-l text-2xl leading-tight pr-4 px-6 mb-4 antialiased w-h"> Share your sound with millions of audiences around the world.</p>
+                    <p style="z-index: 1" class="font-termina-l text-2xl leading-tight pr-4 px-6 mb-4 antialiased w-h"> Showcase your craft to our diverse crowd & earn</p>
 
                 </div>
 

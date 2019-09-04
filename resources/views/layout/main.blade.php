@@ -82,7 +82,7 @@
                   <div class="bg-white  p-4 flex flex-col justify-between leading-normal h-auto bg-white">
                       <div class="text-grey-dark uppercase text-sm tracking-wide lg:w-2/3 leading-tight font-seg antialiased mb-1 ">Begin your Journey</div>
                     <div class="text-black font-medium text-2xl lg:w-2/3  mb-2 leading-tight font-seg ">Produce your next single, mixtape or album with us</div>
-                  <a href="{{route('package')}}"> <p style="color: #e80016;" class="text-grey-darker text-base font-seg antialiased">See Packages </p>
+                  <a href="{{route('package')}}"> <p style="color: #e80016;" class="text-grey-darker text-base font-seg antialiased">See Packages </p></a>
                   </div>
                 </div>
               </div>
