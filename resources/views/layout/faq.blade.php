@@ -8,11 +8,11 @@
                 <div class="toggle-title ">
                     <h3>
     <i></i>
-    <span class="que">Q </span><span class="title-name text-xl font-termina-md">How many songs can i promote on clout?</span>
+    <span class="que">Q </span><span class="title-name text-xl font-termina-md">Can i promote a song two months back to back?</span>
     </h3>
                 </div>
                 <div class="toggle-inner  font-termina-l text-xl text-grey-darker">
-                    <p>You can promote as many songs as the package you purchased allows, you can also purchase multiple packages and use them for different songs / tracks</p>
+                    <p>Yes, at a 200% surcharge</p>
                 </div>
             </div>
             <!-- END OF TOGGLE -->
@@ -21,12 +21,12 @@
                 <div class="toggle-title ">
                     <h3>
       <i></i>
-      <span class="que">Q </span><span class="title-name font-termina-md">Why should i trust Clout?</span>
+      <span class="que">Q </span><span class="title-name font-termina-md">Will my song go through a vetting process ?</span>
       </h3>
                 </div>
 
                 <div class="toggle-inner font-termina-l text-xl text-grey-darker">
-                    <p>We are associated and backed by the biggest brands in the industry, don't take our word for it, see what clients are saying about us.</p>
+                    <p>Yes, the Clout A&R Team will vett the songs for quality control and make sure they are ok to air, devoid or curse words. To hasten your vetting process please send the radio edit clean version of the song</p>
                 </div>
             </div>
             <!-- END OF TOGGLE -->
@@ -35,12 +35,12 @@
                 <div class="toggle-title  ">
                     <h3>
         <i></i>
-      <span class="que">Q </span> <span class="title-name font-termina-md"> Do you offer copyright protection?</span>
+      <span class="que">Q </span> <span class="title-name font-termina-md">Can my song get rejected ?</span>
         </h3>
                 </div>
 
                 <div class="toggle-inner font-termina-l text-xl text-grey-darker">
-                    <p>Perhaps not. Astronomers have been scouring the universe for places where water worlds might have given rise to life, from Europa and Mars in our solar system to planets many light years away. Radio telescopes have been eavesdropping on the heavens and in 1977 a signal bearing the potential hallmarks of an alien message was heard. Astronomers are now able to scan the atmospheres of alien worlds for oxygen and water. The next few decades will be an exciting time to be an alien hunter with up to 60bn potentially habitable planets in our Milky Way alone.</p>
+                    <p>Yes, incases where the song has so many profanities and or conflicts with NBC Codes or codes or states and countries where it is played</p>
                 </div>
 
             </div>
@@ -50,12 +50,12 @@
                 <div class="toggle-title  ">
                     <h3>
         <i></i>
-        <span class="que">Q </span><span class="title-name font-termina-md"> Do you have technical support team, and how soon should i expect a response?</span>
+        <span class="que">Q </span><span class="title-name font-termina-md"> If rejected, when do i get a refund ?</span>
         </h3>
                 </div>
 
                 <div class="toggle-inner font-termina-l text-xl text-grey-darker">
-                    <p>Just looking at your DNA won't tell you – the human genome is 99% identical to a chimpanzee's and, for that matter, 50% to a banana's. We do, however, have bigger brains than most animals – not the biggest, but packed with three times as many neurons as a gorilla (86bn to be exact). A lot of the things we once thought distinguishing about us – language, tool-use, recognising yourself in the mirror – are seen in other animals. Perhaps it's our culture – and its subsequent effect on our genes (and vice versa) – that makes the difference. Scientists think that cooking and our mastery of fire may have helped us gain big brains. But it's possible that our capacity for co-operation and skills trade is what really makes this a planet of humans and not apes.</p>
+                    <p>Yes, within 24hrs of being notified of rejection</p>
                 </div>
 
             </div>
@@ -65,12 +65,20 @@
                 <div class="toggle-title ">
                     <h3>
         <i></i>
-      <span class="que">Q </span> <span class="title-name font-termina-md">  How do i buy a package?</span>
+      <span class="que">Q </span> <span class="title-name font-termina-md">How do i know when my song is played ?</span>
         </h3>
                 </div>
 
                 <div class="toggle-inner font-termina-l text-xl text-grey-darker">
-                    <p>You can buy a package by clicking on the package link, adding the package to your cart and checking out. You can also buy packages from your dashboard after sign up.</p>
+                    <p>We have many ways of letting you know your song was genuinely played including
+                    <ol>
+<li>Informing you beforehand the time period the song will play</li>
+<li>Tweets when it plays</li>
+<li>Notification by mail when it has played</li>
+<li>Notification on your Clout Dashboard when it has been played</li>
+<li>Certificate of Transmission when your Campaign ends that has the playtime</li>
+</ol>
+</p>
                 </div>
 
             </div>
@@ -80,12 +88,12 @@
                 <div class="toggle-title ">
                     <h3>
         <i></i>
-      <span class="que">Q </span> <span class="title-name font-termina-md">How can i edit my profile?</span>
+      <span class="que">Q </span> <span class="title-name font-termina-md">How do i get my song on Billboards Other Clout Outdoor Outlets ?</span>
         </h3>
                 </div>
 
                 <div class="toggle-inner font-termina-l text-xl text-grey-darker">
-                    <p>From your dashboard, you can add multiple brand identifies and you can also edit these brand identities from there.</p>
+                    <p>This is available upon request and prices differ based on length of campaign and client needs</p>
                 </div>
 
             </div>
@@ -95,12 +103,12 @@
                 <div class="toggle-title ">
                     <h3>
         <i></i>
-      <span class="que">Q </span> <span class="title-name font-termina-md">How do i track my number of airplays?</span>
+      <span class="que">Q </span> <span class="title-name font-termina-md">Are there other services Clout Offers for artiste promotion ?</span>
         </h3>
                 </div>
 
                 <div class="toggle-inner font-termina-l text-xl text-grey-darker">
-                    <p>We have an elaborate report available on your dashboard, each play is recorded with details. You also get monthly report in your email.</p>
+                    <p>Yes, as we expand our reach and have new partners we expand our services. Visit clout.ng to stay informed or drop us a mail</p>
                 </div>
 
             </div>
