@@ -66,7 +66,7 @@
     <br />
                 <a href="{{route('invoice',['package'=>'1'])}}" style="background:#e80016; padding: 15px;
     padding-left: 33%; width: 75%;" class="butn font-smooth btn-4 bg-transparent hover:bg-black text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
-                    Buy Now 
+                    More Details 
                 </a>
     
             </div>
@@ -168,8 +168,8 @@
                 </div>
                 <br />
                 <a href="{{route('invoice',['package'=>'2'])}}" style="background:#0087fc; padding: 15px;
-    padding-left: 33%; width: 75%;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
-                    Buy Now
+    padding-left: 30%; width: 75%;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+                    More Details
                 </a>
             </div>
             <div style="background:url('img/cb.webp') ; background-size: cover;" class="w-full h-screen-oo lg:w-1/2"></div>
@@ -203,7 +203,7 @@
                     <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col mb-8 px-3">
                         <div><img style="margin-bottom: -1.5em;" src="img/sync.webp"> </div>
                         <div>
-                            <h1 class="mt-6  font-termina-m">Synchronized Promotion  </h1>
+                            <h1 class="mt-6  font-termina-m" style="margin-top: -10px;">Synchronized Promotion  </h1>
                             <p class="mt-2 font-termina-l antialiased text-xl text-grey-darker  leading-tight">Simultaneous and circuital radio and digital promotions to ensure maximum continual growth and placement for your brand elements across social media .</p>
                         </div>
         
