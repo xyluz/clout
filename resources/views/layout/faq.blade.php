@@ -8,7 +8,7 @@
                 <div class="toggle-title ">
                     <h3>
     <i></i>
-    <span class="que">Q </span><span class="title-name text-xl font-termina-md">Can i promote a song two months back to back?</span>
+    <span class="que">Q </span><span class="title-name text-xl font-termina-md">Can I promote a song two months back to back?</span>
     </h3>
                 </div>
                 <div class="toggle-inner  font-termina-l text-xl text-grey-darker">
@@ -21,7 +21,7 @@
                 <div class="toggle-title ">
                     <h3>
       <i></i>
-      <span class="que">Q </span><span class="title-name font-termina-md">Will my song go through a vetting process ?</span>
+      <span class="que">Q </span><span class="title-name font-termina-md">Will my song go through a vetting process?</span>
       </h3>
                 </div>
 
@@ -35,7 +35,7 @@
                 <div class="toggle-title  ">
                     <h3>
         <i></i>
-      <span class="que">Q </span> <span class="title-name font-termina-md">Can my song get rejected ?</span>
+      <span class="que">Q </span> <span class="title-name font-termina-md">Can my song get rejected?</span>
         </h3>
                 </div>
 
@@ -50,7 +50,7 @@
                 <div class="toggle-title  ">
                     <h3>
         <i></i>
-        <span class="que">Q </span><span class="title-name font-termina-md"> If rejected, when do i get a refund ?</span>
+        <span class="que">Q </span><span class="title-name font-termina-md"> If rejected, when do I get a refund ?</span>
         </h3>
                 </div>
 
@@ -65,7 +65,7 @@
                 <div class="toggle-title ">
                     <h3>
         <i></i>
-      <span class="que">Q </span> <span class="title-name font-termina-md">How do i know when my song is played ?</span>
+      <span class="que">Q </span> <span class="title-name font-termina-md">How do I know when my song is played ?</span>
         </h3>
                 </div>
 
@@ -88,7 +88,7 @@
                 <div class="toggle-title ">
                     <h3>
         <i></i>
-      <span class="que">Q </span> <span class="title-name font-termina-md">How do i get my song on Billboards Other Clout Outdoor Outlets ?</span>
+      <span class="que">Q </span> <span class="title-name font-termina-md">How do I get my song on Billboards Other Clout Outdoor Outlets ?</span>
         </h3>
                 </div>
 

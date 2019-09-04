@@ -40,6 +40,10 @@ class HomeController extends Controller
         return view('packages');
     }
 
+    public function faq(){
+        return view('faq');
+    }
+
     public function sp(){
         return view('special-packages');
     }
