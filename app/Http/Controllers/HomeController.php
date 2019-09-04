@@ -44,6 +44,14 @@ class HomeController extends Controller
         return view('faq');
     }
 
+    public function clout(){
+        return view('clout');
+    }
+
+    public function moreClout(){
+        return view('more-clout');
+    }
+
     public function sp(){
         return view('special-packages');
     }

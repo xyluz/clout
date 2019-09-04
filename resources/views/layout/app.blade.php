@@ -158,7 +158,7 @@
                             </li>
     
                              <li>
-                                <a href="#" class="inline-block py-2 px-3 text-grey-darker hover:text-grey-darkest no-underline">FAQ</a>
+                                <a href="{{route('faq')}}" class="inline-block py-2 px-3 text-grey-darker hover:text-grey-darkest no-underline">FAQ</a>
                             </li>
     
                         </ul>
