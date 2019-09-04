@@ -62,7 +62,10 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
-a { text-decoration: none; }
+a { 
+  text-decoration: none; 
+  color: black;
+}
 
 /* Sections
    ========================================================================== */

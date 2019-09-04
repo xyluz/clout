@@ -20,7 +20,7 @@
             @endauth --}}
 
             <a href="{{route('artist.group')}}" class="bg-white p-4 text-center font-seg rounded-full w-2/4"> For Artistes</a><br>
-            <a href="{{route('business.group')}}" class="bg-white p-4 text-center font-seg rounded-full w-2/4"> For Businesses</a>
+            <a href="{{route('business.group')}}" class="bg-white p-4 text-center font-seg rounded-full w-2/4"> For Business</a>
 
             </div>
             

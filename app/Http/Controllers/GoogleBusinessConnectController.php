@@ -14,7 +14,7 @@ class GoogleBusinessConnectController extends Controller
 {
     public $googleClient;
     
-    public function __construct(CampaignService $service)
+    public function __construct()
     {
         $this->googleClient = Google::getClient()  ;     
     } 
