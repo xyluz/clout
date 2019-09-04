@@ -5,7 +5,7 @@
             <div class="w-full lg:w-1/2 flex flex-col bg-white text-left p-8">
                 <h1 class=" w-4/5 font-seg capitalize text-lg antialiased mb-2 w-h">
                 <svg width="150px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 486 232" style="enable-background:new 0 0 486 232;fill: #e80016;" xml:space="preserve">
-                    <g>
+                    <g> 
                         <path d="M20.4,80.4c5.3-5.3,11.4-9.4,18.1-12c6.7-2.7,13.6-4,20.5-4c7,0,13.8,1.3,20.5,4c6.7,2.7,12.8,6.7,18.1,12l7.5,7.5
                             l-15.1,15.3l-7.8-7.5c-3.2-3.2-6.9-5.7-10.9-7.3C67.4,86.8,63.2,86,59,86c-4.2,0-8.3,0.8-12.4,2.4c-4.1,1.6-7.7,4.1-10.9,7.3
                             c-3.2,3.1-5.7,6.6-7.3,10.7c-1.6,4.1-2.4,8.2-2.4,12.4c0,4.2,0.8,8.4,2.4,12.4c1.6,4.1,4,7.7,7.3,10.9c6.5,6.5,14.3,9.7,23.3,9.7
@@ -63,6 +63,11 @@
     
                 
                 </div>
+    <br />
+                <a href="{{route('invoice',['package'=>'1'])}}" style="background:#e80016; padding: 15px;
+    padding-left: 33%; width: 75%;" class="butn font-smooth btn-4 bg-transparent hover:bg-black text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+                    Buy Now 
+                </a>
     
             </div>
     
@@ -161,6 +166,11 @@
     
                 
                 </div>
+                <br />
+                <a href="{{route('invoice',['package'=>'2'])}}" style="background:#0087fc; padding: 15px;
+    padding-left: 33%; width: 75%;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+                    Buy Now
+                </a>
             </div>
             <div style="background:url('img/cb.webp') ; background-size: cover;" class="w-full h-screen-oo lg:w-1/2"></div>
         </section>
