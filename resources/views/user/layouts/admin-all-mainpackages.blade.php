@@ -50,10 +50,10 @@
             
                 <td class="valign-middle tx-center">
                     @if($package->id != 1 && $package->id != 2)
-                        <a href="{{route('delete.mainpackages',['id'=>$package->id])}}" title="Delete Package" class="tx-danger tx-15"><i class="fa fa-trash"></i></a>
+                        <a href="{{route('delete.mainpackage',['id'=>$package->id])}}" title="Delete Package" class="tx-danger tx-15"><i class="fa fa-trash"></i></a>
                     @endif
                     <a href="{{route('a.packages',['id'=>$package->id])}}" title="View Details" class="tx-info tx-15"><i class="fa fa-eye"></i></a>
-                    <a href="{{route('edit.mainpackages',['id'=>$package->id])}}" title="Edit Package" class="tx-primary tx-15"><i class="fa fa-edit"></i></a>
+                    <a href="{{route('edit.mainpackage',['id'=>$package->id])}}" title="Edit Package" class="tx-primary tx-15"><i class="fa fa-edit"></i></a>
                 </td>
               </tr>
 

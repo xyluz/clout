@@ -165,4 +165,41 @@ class AdminController extends Controller
 
     }
 
+    public function edit($id){
+
+        $package = CloutPackages::where('id',$id)->get()[0];
+    
+        if($package){
+  
+            return view('user.superadmin.edit-main-package',compact('package'));
+
+        }else{
+            alert()->error('Package not found','Error');
+
+        }
+
+    }
+
+    public function editPackage(Request $request){
+
+        $find = CloutPackages::find($request->packageId);
+
+        if($find){
+
+            $find->package_name = $request->packageName;
+            $find->package_description = $request->packageDescription;
+            $find->package_price = $request->packagePrice;
+
+            $find->save();
+
+            alert()->success('Package Updated','Success');
+
+        }else{
+
+            alert()->error('Package not found','Error');
+
+        }
+        return redirect()->route('a.mainpackages');
+    }
+
 }

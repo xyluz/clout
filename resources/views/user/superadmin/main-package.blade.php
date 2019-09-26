@@ -17,6 +17,7 @@
 
         @include('user.layouts.admin-all-mainpackages')
         @include('user.admin-create-mainpackage-modal')
+        @include('user.admin-create-editpackage-modal')
 
     </div>
 </div>
