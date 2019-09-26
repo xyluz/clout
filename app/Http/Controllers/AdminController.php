@@ -150,4 +150,19 @@ class AdminController extends Controller
         return redirect()->back();
     }
 
+    public function destroy($id){
+
+        $find = CloutPackages::where('id',$id);
+
+        if($find){
+            $find->delete();
+            alert()->success('New Package created','Success');
+        }else{
+            alert()->error('Package was not deleted, something went wrong','Error');
+        }
+       
+        return redirect()->back();
+
+    }
+
 }

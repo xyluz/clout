@@ -96,8 +96,13 @@ Route::prefix('a')->group(function () {
     Route::post('agents/create','AdminController@createAgent')->name('a.create.agent');
     Route::get('packages/{packageId}','AdminController@packages')->name('a.packages');
     Route::get('packages','AdminController@mainpackages')->name('a.mainpackages');
+
+    Route::get('delete/packages/{id}','AdminController@destroy')->name('delete.mainpackages');
+    Route::get('edit/packages/{id}','AdminController@edit')->name('edit.mainpackages');
+
     Route::post('packages/create','AdminController@createPackage')->name('a.create.package');
     Route::post('mainpackages/create','AdminController@createMainPackage')->name('a.create.mainpackage');
+
 });
 
 

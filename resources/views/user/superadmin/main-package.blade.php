@@ -15,8 +15,8 @@
         <a class="btn btn-primary btn-sm modal-effect" href="#modaldemo8" data-toggle="modal" data-effect="effect-scale" style="margin-top: 25px;">Create Package</a>
       
 
-        @include('user.layouts.admin-all-mainpackages');
-        @include('user.admin-create-mainpackage-modal');
+        @include('user.layouts.admin-all-mainpackages')
+        @include('user.admin-create-mainpackage-modal')
 
     </div>
 </div>
