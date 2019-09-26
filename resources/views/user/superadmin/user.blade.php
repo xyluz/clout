@@ -2,11 +2,13 @@
  
 @section('content')
 
-@include('user.layouts.admin-menu');
+@include('user.layouts.admin-menu')
 <div class="slim-mainpanel">
-    <div class="container">
+    <div class="container">  
       
-        @include('user.layouts.admin-all-user');
+        @include('user.layouts.admin-all-user')
+        
+
     </div>
 </div>
 

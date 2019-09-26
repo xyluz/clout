@@ -63,7 +63,7 @@ class PurchasesController extends Controller
     public function store(Request $request)
     { 
         // return $request->all();        
-       return  $this->service->registerPurchase($request->all());
+       return  $this->service->registerPurchase($request->all()); 
         
     }
 

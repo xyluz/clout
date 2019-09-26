@@ -70,8 +70,12 @@ class AdminController extends Controller
     }
 
     public function users(){
+
         $users = User::whereNotNull('id');
-        return view('user.superadmin.user',compact('users'));
+        $packages = CloutPackages::whereNotNull('id');
+        
+        return view('user.superadmin.user',compact('users','packages'));
+
     }
 
     public function agents(){

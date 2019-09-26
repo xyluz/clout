@@ -74,11 +74,10 @@
                        
                           </div>
                         </div><!-- modal-dialog -->
-                      </div><!-- modal -->
-                  
-
+                      </div><!-- modal -->  
 
                     <a href="{{route('report',['id'=>$campaign->id])}}" title="View Details" class="tx-gray-600 tx-15"><i class="fa fa-eye"></i></a>
+
                 </td>
               </tr>
 

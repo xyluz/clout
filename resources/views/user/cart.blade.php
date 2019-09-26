@@ -141,7 +141,7 @@
        
           $.ajax({
               type: 'POST',             
-              url: "{{route('register.purchase')}}",
+              url: "{{route('register.purchase')}}", 
               data: {                    
                   'transaction': response, 
                   "_token": "{{ csrf_token() }}",

@@ -36,7 +36,7 @@ class PurchaseRepository extends Repository
     public function create($data){
        
        
-        $ids = [];
+        $ids = []; 
         foreach(session('cart') as $id => $details){
             
             array_push($ids, $details['product_id']);

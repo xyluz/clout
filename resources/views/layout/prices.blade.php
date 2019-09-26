@@ -130,7 +130,7 @@
 
             
             </div>
-            <a href="{{route('invoice',['package'=>'2'])}}" style="background:#e80016;" class="butn font-smooth btn-4 bg-transparent hover:bg-black text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+            <a href="{{route('invoice',['package'=>'1'])}}" style="background:#e80016;" class="butn font-smooth btn-4 bg-transparent hover:bg-black text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                 Get Started 
             </a>
             <p style="width: 50%" class="text-center m-auto  text-m mt-4 mb-2 font-termina-m"> Promotion Available in Lagos ONLY </p>
@@ -199,9 +199,9 @@
             
             </div>
 
-            <a href="{{route('invoice',['package'=>'2'])}}" style="background:#0087fc;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+            <a href=" href="{{route('invoice',['package'=>'2'])}}"" style="background:#0087fc;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                 Get Started 
-            </button>
+            </a>
 <br><br>
    
         </div>
@@ -282,9 +282,9 @@
             
             </div>
 
-            <button style="background-color: #f06c46;" class="butn btn-4 bg-transparent hover:bg-black text-black-dark font-smooth font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+        <a href="{{route('special-packages')}}" style="background-color: #f06c46;" class="butn btn-4 bg-transparent hover:bg-black text-black-dark font-smooth font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                 Get Started
-            </button>
+            </a>
         </div>
 
     </section>
