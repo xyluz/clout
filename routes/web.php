@@ -94,8 +94,10 @@ Route::prefix('a')->group(function () {
     Route::post('camp/update','AdminController@campaignUpdate')->name('a.campaign.update');
     Route::get('agents','AdminController@agents')->name('a.agents');
     Route::post('agents/create','AdminController@createAgent')->name('a.create.agent');
-    Route::get('packages','AdminController@packages')->name('a.packages');
+    Route::get('packages/{packageId}','AdminController@packages')->name('a.packages');
+    Route::get('packages','AdminController@mainpackages')->name('a.mainpackages');
     Route::post('packages/create','AdminController@createPackage')->name('a.create.package');
+    Route::post('mainpackages/create','AdminController@createMainPackage')->name('a.create.mainpackage');
 });
 
 

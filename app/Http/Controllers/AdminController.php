@@ -112,10 +112,15 @@ class AdminController extends Controller
         return view('user.superadmin.campaign');
     }
 
-    public function packages(){
+    public function packages($packageId){
         $mainpack = CloutPackages::whereNotNull('id');
-        $packages = CloutPackagesItems::whereNotNull('id');
+        $packages = CloutPackagesItems::where('clout_package_id',$packageId);
         return view('user.superadmin.package',compact('packages','mainpack'));
+    }
+
+    public function mainpackages(){
+        $packages = CloutPackages::whereNotNull('id');     
+        return view('user.superadmin.main-package',compact('packages'));
     }
 
     public function createPackage(Request $request){        
@@ -132,4 +137,17 @@ class AdminController extends Controller
         return redirect()->back();
 
     }
+
+    public function createMainPackage(Request $request){
+
+        CloutPackages::create([          
+            'package_name'=>$request->packageName,
+            'package_description'=>$request->packageDescription,
+            'package_price'=>$request->packagePrice         
+        ]);
+
+        alert()->success('New Package created','Success');
+        return redirect()->back();
+    }
+
 }

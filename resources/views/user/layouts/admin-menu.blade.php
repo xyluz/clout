@@ -32,7 +32,7 @@
                 </a>                
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{route('a.packages')}}">
+              <a class="nav-link" href="{{route('a.mainpackages')}}">
                   <i class="icon ion-ios-filing-outline"></i>
                   <span>Packages</span>
               </a>                

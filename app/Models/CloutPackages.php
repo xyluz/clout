@@ -23,4 +23,8 @@ class CloutPackages extends Model
     public function items($id){
         return Items::where('clout_package_id',$id)->get();
     }
+
+    public function itemsCount($id){
+        return Items::where('clout_package_id',$id)->count();
+    }
 }
