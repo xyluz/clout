@@ -9,6 +9,7 @@
             <thead>
               <tr class="tx-10">
               
+                <th class="pd-y-5 tx-right">id</th>
                 <th class="pd-y-5 tx-right">Package Name</th>
                 <th class="pd-y-5 tx-right">Items Count</th>               
                 <th class="pd-y-5 tx-right">Package Description</th>               
@@ -22,6 +23,11 @@
                 @foreach($packages->get() as $package)
        
               <tr>
+                <td class="tx-center">
+                 
+                            {{$package->id}}
+        
+                        </td>
                 <td class="tx-center">
                  
                     {{$package->package_name}}
