@@ -10,11 +10,10 @@
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                    From this page you can create new packages. You can generate a purchase URL for each package by visiting https://clout.ng/details/{packageid}. Replace {packageid} with the id of the package (on the table below)
+                   You can edit the details of a package here
             </div><!-- alert -->
 
-        <a class="btn btn-primary btn-sm modal-effect" href="#modaldemo8" data-toggle="modal" data-effect="effect-scale" style="margin-top: 25px;">Create Package</a>
-
+       
         <form action="{{route('a.edit.package')}}" method="POST">
                 @csrf
                 <div class="modal-body pd-25">
