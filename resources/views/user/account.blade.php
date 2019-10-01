@@ -2,7 +2,7 @@
  
 @section('content')
 @include('user.layouts.user-menu')
-
+ 
 <div class="slim-mainpanel">
     <div class="container">   
         @if(Auth::user()->accounts()->count() < 1 )

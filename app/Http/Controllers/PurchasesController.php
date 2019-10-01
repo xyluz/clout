@@ -38,6 +38,8 @@ class PurchasesController extends Controller
         $items = $this->service->packageItems($package);
         $package = $this->service->package($package);
 
+        // return dd($package);
+
         // $totalprice = $this->service->total($package); for when we start adding more products
 
         return view('user.invoice',compact('items','package'));

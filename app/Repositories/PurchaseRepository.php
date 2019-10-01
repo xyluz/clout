@@ -30,6 +30,7 @@ class PurchaseRepository extends Repository
     }
 
     public function package($package){
+        // return $package;
         return CloutPackages::where('id',$package)->first();
     }
  

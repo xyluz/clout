@@ -22,7 +22,7 @@ Route::patch('update-cart', 'CartController@update');
 Route::delete('remove-from-cart', 'CartController@remove');
 Route::get('cart', 'CartController@cart')->name('cart')->middleware(['auth']);;
 Route::get('add-to-cart/{id}', 'CartController@addToCart')->name('cart.add');
-Route::get('/{slug}/{package}', 'PurchasesController@index')->name('invoice');  
+Route::get('/p/{slug}/{package}', 'PurchasesController@index')->name('invoice');  
 Route::get('google-business-connect','GoogleBusinessConnectController@authRedirect')->name('authtest'); 
 Route::get('get-account-details','GoogleBusinessConnectController@getAccountName')->name('getAccountName'); 
 
