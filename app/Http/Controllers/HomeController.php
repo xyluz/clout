@@ -56,6 +56,10 @@ class HomeController extends Controller
         return view('special-packages');
     }
 
+    public function emailWelcome(){
+        return view('email.welcome');
+    }
+
     public function business($id = '', $name=''){
 
         $account = Account::where('id',$id)->first();

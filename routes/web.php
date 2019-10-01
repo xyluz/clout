@@ -1,6 +1,7 @@
 <?php
 
 Route::get('/', 'HomeController@index');
+Route::get('/welcome', 'HomeController@emailWelcome');
 
 
 Route::get('getacc','GoogleBusinessConnectController@getAccountName'); 
