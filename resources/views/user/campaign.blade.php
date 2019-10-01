@@ -10,10 +10,10 @@
             <div class="row">
                     <div class="col-lg-6">
                     <h3 class="tx-inverse mg-b-15">Welcome back, {{Auth::user()->name}}</h3>
-                      <p class="mg-b-40">Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p>
+                      {{-- <p class="mg-b-40">Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.</p> --}}
           
-                      <h6 class="slim-card-title mg-b-15">More reason to start a campaign now:</h6>
-                      <div class="row no-gutters">
+                      {{-- <h6 class="slim-card-title mg-b-15">More reason to start a campaign now:</h6> --}}
+                      {{-- <div class="row no-gutters">
                         <div class="col-sm-6">
                           <div class="card card-earning-summary">
                             <h6>You can Reach</h6>
@@ -28,7 +28,7 @@
                             <span>Per day</span>
                           </div><!-- card -->
                         </div><!-- col-6 -->
-                      </div><!-- row -->
+                      </div><!-- row --> --}}
                     </div><!-- col-6 -->
                     <div class="col-lg-6 mg-t-20 mg-sm-t-30 mg-lg-t-0">
                       <div class="card card-dash-headline">

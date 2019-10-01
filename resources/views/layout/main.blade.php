@@ -56,7 +56,8 @@
                    <h1 class=" w-4/5 font-termina-m py-2 w-h">Share your sound with millions of audiences around the world. </h1>
                 <p class="leading-tight mb-4 w-1/2 text-grey-darker font-termina-l text-xl w-3/4 leading-normal mt-2 w-h">Clout seamlessly unites all modern forms of music distribution, promotion and circulation, strategically positioning itself as the ultimate music discovery and promotion space.</p>
                     
-                <div><span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">30+ nation wide radio plays for 30 days</span></span>
+                <div>
+                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">30+ nation wide radio plays for 30 days</span></span>
                  <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">10 or more Radio interviews</span></span>
                   <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Editorial features on published articles</span></span>
                   <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
@@ -159,7 +160,8 @@
                    <h1 class=" w-3/5 font-termina-m py-2 w-h" style="color:black">Showcase your craft to our diverse crowd & earn. </h1>
                 <p class="leading-tight mb-4 w-1/2 text-grey-darker font-termina-l text-xl w-3/4 leading-normal mt-2 w-h">Clout provides for its various demographic via specifically and carefully tailored packages developed by paying attention to market demands and customer feedback.</p>
     
-                <div><span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Radio interviews across the Cool, Wazobia & Nigeria info FM</span></span>
+                <div>
+                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Radio interviews across the Cool, Wazobia & Nigeria info FM</span></span>
                  <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Radio play-listing on the biggest show segments</span></span>
                   <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Short url codes for new music and personal web profile</span></span>
                   <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Spotlight documentary on 3 radio stations</span></span>
