@@ -121,7 +121,7 @@
 </svg>
   </h1>
             <label for="" class="uppercase tracking-loose font-bold text-lg font-smooth font-termina-m ">Clout</label>
-            <h1 style="color: #e80016" for="" class="uppercase tracking-loose font-smooth font-bold text-5xl my-2 font-termina-m">N250,000</h1>
+            <h1 style="color: #e80016" for="" class="uppercase tracking-loose font-smooth font-bold text-5xl my-2 font-termina-m">N350,000</h1>
             <p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4  m-auto text-lg leading-tight">Ideal for music artistes that want to promote their music with the Lagos crowd specifically. </p>
 
               <div class="mb-4">
@@ -191,7 +191,7 @@
 </svg>
   </h1>
             <label for="" class="uppercase tracking-loose font-bold text-lg font-termina-m font-smooth">More Clout</label>
-            <h1 style="color: #0087fc" for="" class="uppercase tracking-loose font-bold text-5xl my-2 font-smooth font-termina-m ">   N350,000 </h1>
+            <h1 style="color: #0087fc" for="" class="uppercase tracking-loose font-bold text-5xl my-2 font-smooth font-termina-m ">   N500,000 </h1>
             <p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4  m-auto text-lg leading-tight"> If you are looking to gain clout with your music with audiences from Lagos, Port-harcourt, Onitsha, Abuja &amp; Kano</p>
 
              <div class="mb-4">
