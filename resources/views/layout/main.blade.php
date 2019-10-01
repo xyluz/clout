@@ -65,7 +65,7 @@
                 
                 </div>
     <br />
-                <a href="{{route('invoice',['package'=>'1'])}}" style="background:#e80016; padding: 15px;
+            <a href="{{route('invoice',['slug'=>Str::slug('clout'),'package'=>'1'])}}" style="background:#e80016; padding: 15px;
     padding-left: 33%; width: 75%;" class="butn font-smooth btn-4 bg-transparent hover:bg-black text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                     More Details 
                 </a>
@@ -169,7 +169,7 @@
                 
                 </div>
                 <br />
-                <a href="{{route('invoice',['package'=>'2'])}}" style="background:#0087fc; padding: 15px;
+                <a href="{{route('invoice',['slug'=>Str::slug('clout'),'package'=>'2'])}}" style="background:#0087fc; padding: 15px;
     padding-left: 30%; width: 75%;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                     More Details
                 </a>

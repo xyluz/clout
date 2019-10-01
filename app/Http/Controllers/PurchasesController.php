@@ -33,7 +33,7 @@ class PurchasesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($package)
+    public function index($slug,$package)
     {
         $items = $this->service->packageItems($package);
         $package = $this->service->package($package);

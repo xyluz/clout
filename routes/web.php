@@ -8,8 +8,8 @@ Route::get('getacc','GoogleBusinessConnectController@getAccountName');
 Auth::routes(['verify' => true]);
 
 Route::get('/faq', 'HomeController@faq')->name('faq');
-Route::get('/clout', 'HomeController@clout')->name('clout');
-Route::get('/more-clout', 'HomeController@moreClout')->name('more-clout');
+// Route::get('/clout', 'HomeController@clout')->name('clout');
+// Route::get('/more-clout', 'HomeController@moreClout')->name('more-clout');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/special-packages', 'HomeController@sp')->name('special-packages');
 Route::get('/business/{id}/{name}', 'HomeController@business')->name('business');
@@ -22,7 +22,7 @@ Route::patch('update-cart', 'CartController@update');
 Route::delete('remove-from-cart', 'CartController@remove');
 Route::get('cart', 'CartController@cart')->name('cart')->middleware(['auth']);;
 Route::get('add-to-cart/{id}', 'CartController@addToCart')->name('cart.add');
-Route::get('/details/{package}', 'PurchasesController@index')->name('invoice');  
+Route::get('/{slug}/{package}', 'PurchasesController@index')->name('invoice');  
 Route::get('google-business-connect','GoogleBusinessConnectController@authRedirect')->name('authtest'); 
 Route::get('get-account-details','GoogleBusinessConnectController@getAccountName')->name('getAccountName'); 
 
