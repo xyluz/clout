@@ -57,7 +57,7 @@ class HomeController extends Controller
     }
 
     public function emailWelcome(){
-        return view('email.welcome');
+        return view('email.receipt');
     }
 
     public function business($id = '', $name=''){
