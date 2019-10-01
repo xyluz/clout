@@ -56,6 +56,7 @@
       <div class="container">
         <div class="slim-header-left">
           <h1 class=" w-4/5 font-seg capitalize text-lg antialiased mb-2 w-h">
+            <a href="/">
             <svg width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 486 232" style="enable-background:new 0 0 486 232;fill: #e80016;" xml:space="preserve">
                 <g> 
                     <path d="M20.4,80.4c5.3-5.3,11.4-9.4,18.1-12c6.7-2.7,13.6-4,20.5-4c7,0,13.8,1.3,20.5,4c6.7,2.7,12.8,6.7,18.1,12l7.5,7.5
@@ -103,6 +104,7 @@
                 </g>
                 <rect x="33" y="185" width="334.4" height="19"></rect>
                 </svg>
+              </a>
                   </h1>
 
         </div><!-- slim-header-left -->

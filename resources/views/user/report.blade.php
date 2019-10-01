@@ -5,12 +5,12 @@
 
 <div class="slim-mainpanel">
     <div class="container">
-       
+        @if($campaign)  
             <div class="slim-pageheader">
             <ol class="breadcrumb slim-breadcrumb">
                
             </ol>
-                      
+                   
         <h6 class="slim-pagetitle">Report for Campaign#{{$campaign->id}} | {{$campaign->campaign_name}}</h6>
             </div>
            
@@ -29,7 +29,7 @@
                 </div>
            
             </div>
-          
+          @endif
             @role('superadmin')
             <div class="row row-sm row-timeline">
                 <div class="col-lg-12">
