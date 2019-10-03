@@ -140,7 +140,7 @@
             <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">10 Music Video Plays</span></span>
             <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Radio Playlist</span></span>
 
-            <a href="{{route('invoice',['slug'=>Str::slug('clout extra'),'package'=>'1'])}}" style="color:#e80016;">
+            <a href="{{route('invoice',['slug'=>Str::slug('clout extra'),'package'=>'12'])}}" style="color:#e80016;">
                 Get Extra for 	&#8358; 400 000 
             </a>
 
@@ -215,7 +215,7 @@
             
             </div>
 
-            <a href="{{route('invoice',['slug'=>Str::slug('more-clout'),'package'=>'2'])}}" style="background:#0087fc;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+            <a href="{{route('invoice',['slug'=>Str::slug('more clout'),'package'=>'2'])}}" style="background:#0087fc;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                 Get Started 
             </a>
 
@@ -316,7 +316,7 @@
 
 </div>
 
-        <a href="{{route('special-packages')}}" style="background-color: #f06c46; z-index:1" class="butn btn-4 bg-transparent hover:bg-black text-black-dark font-smooth font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+        <a href="{{route('invoice',['slug'=>Str::slug('premium clout'),'package'=>'11'])}}" style="background-color: #f06c46; z-index:1" class="butn btn-4 bg-transparent hover:bg-black text-black-dark font-smooth font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                 Get Started
             </a>
 
