@@ -160,13 +160,27 @@ class AdminController extends Controller
 
         if($find){
             $find->delete();
-            alert()->success('New Package created','Success');
+            alert()->success('New Package Deleted','Success');
         }else{
             alert()->error('Package was not deleted, something went wrong','Error');
         }
        
         return redirect()->back();
 
+    }
+
+    public function destroyPackageItem($id){
+
+        $find = CloutPackagesItems::where('id',$id);
+
+        if($find){
+            $find->delete();
+            alert()->success('New Package Item Deleted','Success');
+        }else{
+            alert()->error('Package Item was not deleted, something went wrong','Error');
+        }
+       
+        return redirect()->back();
     }
 
     public function edit($id){

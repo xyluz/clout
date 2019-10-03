@@ -121,22 +121,28 @@
 </svg>
   </h1>
             <label for="" class="uppercase tracking-loose font-bold text-lg font-smooth font-termina-m ">Clout</label>
-            <h1 style="color: #e80016" for="" class="uppercase tracking-loose font-smooth font-bold text-5xl my-2 font-termina-m">N350,000</h1>
+            <h1 style="color: #e80016" for="" class="uppercase tracking-loose font-smooth font-bold text-5xl my-2 font-termina-m">&#8358; 250 000</h1>
             <p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4  m-auto text-lg leading-tight">Ideal for music artistes that want to promote their music with the Lagos crowd specifically. </p>
 
               <div class="mb-4">
                   
-                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">30+ nation wide radio plays for 30 days</span></span>
-                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">10 or more Radio interviews</span></span>
-                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Editorial features on published articles</span></span>
-                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Nationwide-Syndicated Radio Plays</span></span>
+                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">40 Airplays</span></span>
+                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">1 Radio News Mention</span></span>
+                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Social Media</span></span>
+                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">TV News Mention</span></span>
 
             
             </div>
             <a href="{{route('invoice',['slug'=>Str::slug('clout'),'package'=>'1'])}}" style="background:#e80016;" class="butn font-smooth btn-4 bg-transparent hover:bg-black text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                 Get Started 
             </a>
-            <p style="width: 50%" class="text-center m-auto  text-m mt-4 mb-2 font-termina-m"> Promotion Available in Lagos ONLY </p>
+            <p style="width: 50%" class="text-center m-auto  text-m mt-4 mb-2 font-termina-m"> Extras </p>
+            <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">10 Music Video Plays</span></span>
+            <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Radio Playlist</span></span>
+
+            <a href="{{route('invoice',['slug'=>Str::slug('clout extra'),'package'=>'1'])}}" style="color:#e80016;">
+                Get Extra for 	&#8358; 400 000 
+            </a>
 
         </div>
         <div style="background:aliceblue;" class="w-full sm:w-1/3 lg:w-1/3 text-center bg-white  ">
@@ -191,15 +197,20 @@
 </svg>
   </h1>
             <label for="" class="uppercase tracking-loose font-bold text-lg font-termina-m font-smooth">More Clout</label>
-            <h1 style="color: #0087fc" for="" class="uppercase tracking-loose font-bold text-5xl my-2 font-smooth font-termina-m ">   N500,000 </h1>
+            <h1 style="color: #0087fc" for="" class="uppercase tracking-loose font-bold text-5xl my-2 font-smooth font-termina-m ">  &#8358;500 000 </h1>
             <p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4  m-auto text-lg leading-tight"> If you are looking to gain clout with your music with audiences from Lagos, Port-harcourt, Onitsha, Abuja &amp; Kano</p>
 
              <div class="mb-4">
                  
-                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Radio interviews across the Cool, Wazobia & Nigeria info FM</span></span>
-                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Radio play-listing on the biggest show segments</span></span>
-                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Short url codes for new music and personal web profile</span></span>
-                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Spotlight documentary on 3 radio stations</span></span>
+                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">100 Airplays</span></span>
+                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">2 Radio News Mention</span></span>
+                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Social Media</span></span>
+                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">2 TV News Mention</span></span>
+                   
+                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">AUX</span></span>
+                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">1 Radio Interview</span></span>
+                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">1 TV Interview</span></span>
+                   
 
             
             </div>
@@ -207,6 +218,16 @@
             <a href="{{route('invoice',['slug'=>Str::slug('more-clout'),'package'=>'2'])}}" style="background:#0087fc;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                 Get Started 
             </a>
+
+            <p style="width: 50%" class="text-center m-auto  text-m mt-4 mb-2 font-termina-m"> Extras </p>
+            <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">10 Music Video Plays</span></span>
+            <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Radio Playlist</span></span>
+
+            <a href="{{route('invoice',['slug'=>Str::slug('clout extra'),'package'=>'1'])}}" style="color:#0087fc">
+                Get Extra for 	&#8358; 650 000 
+            </a>
+
+
 <br><br>
    
         </div>
@@ -272,25 +293,39 @@
 </g>
 </svg>
   </h1>
-            <label for="" class="uppercase tracking-loose text-lg font-termina-m font-smooth p-2">For Growing Businesses</label>
+            <label for="" class="uppercase tracking-loose text-lg font-termina-m font-smooth p-2">Clout Premium</label>
 
-            <h1 style="color:#f06c46" for="" class="uppercase tracking-loose font-bold text-5xl my-2 font-smooth font-termina-m">Business</h1>
+            <h1 style="color:#f06c46" for="" class="uppercase tracking-loose font-bold text-5xl my-2 font-smooth font-termina-m">&#8358; 1 500 000</h1>
             <p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4 m-auto text-lg leading-tight">Let us know your brand needs and expectations and let us get you there.</p>
 
 <br>
          
-             <div class="mb-4">
+<div class="mb-4">
                  
-                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Deliberate & directional A&R process </span></span>
-                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Unlimited Music production </span></span>
-                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Full-blown artiste image branding </span></span>
-                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">300+  nation-wide radio plays </span></span>
+    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">200 Airplays</span></span>
+    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">4 Radio News Mention</span></span>
+     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Social Media</span></span>
+     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">4 TV News Mention</span></span>
+     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Billboard</span></span>
+     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">AUX</span></span>
+     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">2 Radio Interview</span></span>
+     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">2 TV Interview</span></span>
+     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Music Distribution</span></span>
+     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Music Video Distribution</span></span>
 
-            
-            </div>
+
+</div>
 
         <a href="{{route('special-packages')}}" style="background-color: #f06c46; z-index:1" class="butn btn-4 bg-transparent hover:bg-black text-black-dark font-smooth font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                 Get Started
+            </a>
+
+            <p style="width: 50%" class="text-center m-auto  text-m mt-4 mb-2 font-termina-m"> Extras </p>
+            <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">10 Music Video Plays</span></span>
+            <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Radio Playlist</span></span>
+
+            <a href="{{route('invoice',['slug'=>Str::slug('premium extra'),'package'=>'1'])}}" style="color:#f06c46">
+                Get Extra for 	&#8358; 2 000 000 
             </a>
         </div>
 

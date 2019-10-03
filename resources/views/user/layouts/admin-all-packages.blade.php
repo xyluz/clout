@@ -43,12 +43,11 @@
                 </td>
                 <td class="valign-middle tx-right">
                     {{\Carbon\Carbon::createFromTimeStamp(strtotime($package->created_at))->diffForHumans() ?? 'null'}}
-                </td>
-              
+                </td>              
             
                 <td class="valign-middle tx-center">
                
-                    <a href="{{route('report',['id'=>$package->id])}}" title="View Details" class="tx-danger tx-15"><i class="fa fa-trash"></i></a>
+                    <a href="{{route('delete.package',['id'=>$package->id])}}" title="View Details" class="tx-danger tx-15"><i class="fa fa-trash"></i></a>
                 </td>
               </tr>
 
