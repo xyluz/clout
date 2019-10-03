@@ -215,7 +215,7 @@
             
             </div>
 
-            <a href="{{route('invoice',['slug'=>Str::slug('more clout extra'),'package'=>'13'])}}" style="background:#0087fc;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+            <a href="{{route('invoice',['slug'=>Str::slug('more clout'),'package'=>'11'])}}" style="background:#0087fc;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                 Get Started 
             </a>
 
@@ -223,7 +223,7 @@
             <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">10 Music Video Plays</span></span>
             <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Radio Playlist</span></span>
 
-            <a href="{{route('invoice',['slug'=>Str::slug('clout extra'),'package'=>'1'])}}" style="color:#0087fc">
+            <a href="{{route('invoice',['slug'=>Str::slug('more clout extra'),'package'=>'13'])}}" style="color:#0087fc">
                 Get Extra for 	&#8358; 650 000 
             </a>
 
