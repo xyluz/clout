@@ -27,7 +27,7 @@
                               </div><!-- col-4 -->
                               <div class="col-7 col-sm-8">
                                 <textarea name="packageDescription" class="form-control"></textarea>
-                              </div><!-- col-8 -->
+                               </div><!-- col-8 -->
                             </div><!-- row -->
 
                             <div class="row no-gutters">
@@ -38,8 +38,76 @@
                                     <input class="form-control" type="integer" name="packagePrice" placeholder="9800">
                                 </div><!-- col-8 -->
                             </div><!-- row -->
+
+                           <div class="row no-gutters">
+                                    <div class="col-5 col-sm-4">
+                                        Large Icon:                                        
+                                    </div><!-- col-4 -->
+                                    <div class="col-9 col-sm-8">
+                                       
+                                        <div class="custom-file">
+                                            <input type="file" class="custom-file-input" name="photo" id="customFile3">
+                                            <label class="custom-file-label custom-file-label-inverse" for="customFile">Choose file</label>
+                                         </div><!-- custom-file -->
+                                    
+
+                                    </div><!-- col-8 -->
+                                </div><!-- row -->  
+                                <div class="row no-gutters">
+                                  <div class="col-5 col-sm-4">
+                                      Small Icon:                                        
+                                  </div><!-- col-4 -->
+                                  <div class="col-9 col-sm-8">
+                                     
+                                      <div class="custom-file">
+                                          <input type="file" class="custom-file-input" name="photo" id="customFile3">
+                                          <label class="custom-file-label custom-file-label-inverse" for="customFile">Choose file</label>
+                                       </div><!-- custom-file -->
+                                  
+
+                                  </div><!-- col-8 -->
+                              </div><!-- row -->  
+
+                              <div class="row no-gutters">
+                                <div class="col-5 col-sm-4">
+                                  Display As:
+                                </div><!-- col-4 -->
+                                <div class="col-9 col-sm-8">
+                                    <select name="brand_type" required class="form-control select2" data-placeholder="Choose one">
+                                        <option label="choose one">Select</option>
+                                        <option value="mainhome">Main Home Page Product</option>
+                                        <option value="business">Special Packages</option>
+                                        <option value="artist">Hidden</option>
+                                    </select>
+                                <input type="hidden" name="user_id" value="{{Auth::user()->id}}" />
+                                </div><!-- col-8 -->
+                              </div><!-- row -->
+
+                              <div class="row no-gutters">
+                                  <div class="col-5 col-sm-4">
+                                    Position: 
+                                  </div><!-- col-4 -->
+                                  <div class="col-9 col-sm-8">
+                                      <small>For Main Home Page Product</small>
+                                      <select name="brand_type" required class="form-control select2" data-placeholder="Choose one">
+                                          <option label="choose one">Select</option>
+                                          <option value="left">Left</option>
+                                          <option value="center">Center</option>
+                                          <option value="right">Right</option>
+                                      </select>
+                                  <input type="hidden" name="user_id" value="{{Auth::user()->id}}" />
+                                  </div><!-- col-8 -->
+                                </div><!-- row -->
                                  
-                       
+                                <div class="row no-gutters">
+                                    <div class="col-5 col-sm-4">
+                                      More Details:
+                                    </div><!-- col-4 -->
+                                    <div class="col-7 col-sm-8">
+                                      <small>For single product page</small>
+                                      <textarea name="packageDescription" class="form-control"></textarea>
+                                     </div><!-- col-8 -->
+                                  </div><!-- row -->
 
                           </div><!-- form-layout -->
                 

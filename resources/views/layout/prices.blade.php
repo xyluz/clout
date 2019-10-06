@@ -210,9 +210,7 @@
                      <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">AUX</span></span>
                      <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">1 Radio Interview</span></span>
                      <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">1 TV Interview</span></span>
-                   
-
-            
+      
             </div>
 
             <a href="{{route('invoice',['slug'=>Str::slug('more clout'),'package'=>'11'])}}" style="background:#0087fc;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">

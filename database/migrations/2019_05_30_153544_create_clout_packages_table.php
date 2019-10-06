@@ -12,7 +12,7 @@ class CreateCloutPackagesTable extends Migration
      * @return void
      */
     public function up()
-    {
+    { 
         Schema::create('clout_packages', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('package_name');
