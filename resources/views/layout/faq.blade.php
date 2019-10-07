@@ -114,5 +114,45 @@
             </div>
             <!-- END OF TOGGLE -->
 
+
+            <div class="toggle">
+                    <div class="toggle-title ">
+                        <h3>
+          <i></i>
+          <span class="que">Q </span><span class="title-name font-termina-md">What forms of payment do you accept?</span>
+          </h3>
+                    </div>
+    
+                    <div class="toggle-inner font-termina-l text-xl text-grey-darker">
+                        <p>We accept all major card payments  (visa and master card)</p>
+                    </div>
+                </div>
+
+                <div class="toggle">
+                        <div class="toggle-title ">
+                            <h3>
+              <i></i>
+              <span class="que">Q </span><span class="title-name font-termina-md">How do I upload my track?</span>
+              </h3>
+                        </div>
+        
+                        <div class="toggle-inner font-termina-l text-xl text-grey-darker">
+                            <p>Sign up on the clout website, copy your URL from any music platform and paste in the required box under brand/campaign</p>
+                        </div>
+                    </div>
+
+                    <div class="toggle">
+                            <div class="toggle-title ">
+                                <h3>
+                  <i></i>
+                  <span class="que">Q </span><span class="title-name font-termina-md">Can I record overnight in the clout studio?</span>
+                  </h3>
+                            </div>
+            
+                            <div class="toggle-inner font-termina-l text-xl text-grey-darker">
+                                <p>Yes, book a studio rental and include the period and duration your session and recording</p>
+                            </div>
+                        </div>
+
         </div>
     </section> 

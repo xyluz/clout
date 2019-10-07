@@ -42,6 +42,10 @@ class HomeController extends Controller
         return view('home',compact('homeproduct_left','homeproduct_right','homeproduct_center','homeproduct_specials','homeproduct_center_items','homeproduct_left_items','homeproduct_right_items'));
     }
 
+    public function specialPackageSingle($slug){
+        return view($slug);
+    }
+
     public function test(){
         return view('email.welcome');
     }

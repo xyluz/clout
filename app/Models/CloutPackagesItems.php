@@ -7,7 +7,7 @@ use App\Models\CloutPackages;
 
 class CloutPackagesItems extends Model
 {
-    protected $fillable = [
+    protected $fillable = [ 
         'clout_package_id',
         'package_item_name',
         'package_item_description',

@@ -13,6 +13,7 @@ Route::get('/faq', 'HomeController@faq')->name('faq');
 // Route::get('/more-clout', 'HomeController@moreClout')->name('more-clout');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/special-packages', 'HomeController@sp')->name('special-packages');
+Route::get('/special-packages/{slug}', 'HomeController@specialPackageSingle')->name('special-packages-single');
 Route::get('/business/{id}/{name}', 'HomeController@business')->name('business');
 Route::get('/artist/{id}/{name}', 'HomeController@artist')->name('artist');
 Route::get('/packages', 'HomeController@packages')->name('package');
