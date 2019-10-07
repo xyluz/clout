@@ -7,7 +7,7 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-          <form action="{{route('a.create.mainpackage')}}" method="POST">
+          <form action="{{route('a.create.mainpackage')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="modal-body pd-25">
                     <div class="form-layout form-layout-6">
@@ -36,6 +36,16 @@
                                 </div><!-- col-4 -->
                                 <div class="col-9 col-sm-8">
                                     <input class="form-control" type="integer" name="packagePrice" placeholder="9800">
+                                </div><!-- col-8 -->
+                            </div><!-- row -->
+
+                            <div class="row no-gutters">
+                                <div class="col-5 col-sm-4">
+                                    Color:
+                                </div><!-- col-4 -->
+                                <div class="col-9 col-sm-8">
+                                  <small class="text-info text">hex color, default is 000000. Do not add the '#'</small>
+                                    <input class="form-control" type="integer" name="color" placeholder="000000">
                                 </div><!-- col-8 -->
                             </div><!-- row -->
 

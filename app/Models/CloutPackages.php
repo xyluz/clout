@@ -8,7 +8,7 @@ use App\Models\CloutPackagesItems as Items;
 
 class CloutPackages extends Model
 {
-    protected $fillable = [
+    protected $fillable = [ 
         'package_name',
         'package_description',
         'package_catch_phrase',
@@ -16,7 +16,13 @@ class CloutPackages extends Model
         'package_price',
         'package_sales_price',
         'package_duration',
-        'package_autorenew'
+        'package_autorenew',
+        'single_page_content',
+        'large_icon',
+        'small_icon',
+        'position',
+        'display_as',
+        'color'
     ];
 
 

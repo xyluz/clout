@@ -97,13 +97,14 @@ Route::prefix('a')->group(function () {
     Route::get('packages/{packageId}','AdminController@packages')->name('a.packages');
     Route::get('packages','AdminController@mainpackages')->name('a.mainpackages');
     Route::get('delete/packages/{id}','AdminController@destroy')->name('delete.mainpackage');
+    Route::get('delete/user/{id}','AdminController@destroyUser')->name('delete.user');
     Route::get('delete/packageitem/{id}','AdminController@destroyPackageItem')->name('delete.package');
     Route::get('edit/packages/{id}','AdminController@edit')->name('edit.mainpackage');
     Route::post('packages/create','AdminController@createPackage')->name('a.create.package');
     Route::post('packages/edit','AdminController@editPackage')->name('a.edit.package');
     Route::post('mainpackages/create','AdminController@createMainPackage')->name('a.create.mainpackage');
 
-});
+}); 
 
 //presenter routes
 

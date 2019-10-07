@@ -18,8 +18,7 @@ class UpdateMainPackageTableWithMoreDataForCMS extends Migration
             $table->string('large_icon');
             $table->string('small_icon');
             $table->string('position');
-            $table->string('homepage_main');
-            $table->string('special_package')->default('0');
+            $table->string('display_as');
             $table->string('color')->default('000000');
         });
     }

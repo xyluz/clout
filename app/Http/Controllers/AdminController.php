@@ -161,9 +161,10 @@ class AdminController extends Controller
             'package_price'=>$request->packagePrice,
             'large_icon'=> $largeIcon,
             'small_icon'=>$smallIcon,
-            'homepage_main'=>$request->displayAs,
+            'display_as'=>$request->displayAs,
             'position'=>$request->productPosition ,
-            'single_page_content'=>$request->moreDetails
+            'single_page_content'=>$request->moreDetails,
+            'color'=>$request->color
         ]);
 
         alert()->success('New Package created','Success');
@@ -183,6 +184,20 @@ class AdminController extends Controller
        
         return redirect()->back();
 
+    }
+
+    public function destroyUser($id){
+        
+        $find = User::where('id',$id);
+
+        if($find){
+            $find->delete();
+            alert()->success('User Deleted','Success');
+        }else{
+            alert()->error('User was not deleted, something went wrong','Error');
+        }
+       
+        return redirect()->back();
     }
 
     public function destroyPackageItem($id){

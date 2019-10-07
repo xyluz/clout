@@ -48,6 +48,7 @@
                 <td class="valign-middle tx-center">
                
                     <a href="{{route('report',['id'=>$user->id])}}" title="View Details" class="tx-gray-600 tx-15"><i class="fa fa-eye"></i></a>
+                    <a href="{{route('delete.user',['id'=>$user->id])}}" title="Delete Details" class="tx-red-600 tx-15"><i class="fa fa-trash"></i></a>
                     &nbsp;
                     <a href="#modaldemo{{$user->id}}" data-toggle="modal" data-effect="effect-slide-in-bottom" title="Add Transaction for user" class="tx-gray-600 tx-15"><i class="fa fa-money"></i></a>
 
