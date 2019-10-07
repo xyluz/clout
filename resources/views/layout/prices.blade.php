@@ -264,7 +264,7 @@
 
 </div>
 
-        <a href="{{route('invoice',['slug'=>Str::slug($homeproduct_right['package_name']),'package'=>$homeproduct_right['id']])}}" style="background-color: #{{$homeproduct_right_items['color']}}; z-index:1" class="butn btn-4 bg-transparent hover:bg-black text-black-dark font-smooth font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+        <a href="{{route('invoice',['slug'=>Str::slug($homeproduct_right['package_name']),'package'=>$homeproduct_right['id']])}}" style="background-color: #{{$homeproduct_right['color']}}; z-index:1" class="butn btn-4 bg-transparent hover:bg-black text-black-dark font-smooth font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                 Get Started
             </a>
 
