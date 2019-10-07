@@ -46,7 +46,7 @@
                                     <div class="col-9 col-sm-8">
                                        
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" name="photo" id="customFile3">
+                                            <input type="file" class="custom-file-input" name="largeIcon" id="customFile3">
                                             <label class="custom-file-label custom-file-label-inverse" for="customFile">Choose file</label>
                                          </div><!-- custom-file -->
                                     
@@ -60,7 +60,7 @@
                                   <div class="col-9 col-sm-8">
                                      
                                       <div class="custom-file">
-                                          <input type="file" class="custom-file-input" name="photo" id="customFile3">
+                                          <input type="file" class="custom-file-input" name="smallIcon" id="customFile3">
                                           <label class="custom-file-label custom-file-label-inverse" for="customFile">Choose file</label>
                                        </div><!-- custom-file -->
                                   
@@ -73,13 +73,14 @@
                                   Display As:
                                 </div><!-- col-4 -->
                                 <div class="col-9 col-sm-8">
-                                    <select name="brand_type" required class="form-control select2" data-placeholder="Choose one">
+
+                                    <select name="displayAs" required class="form-control select2" data-placeholder="Choose one">
                                         <option label="choose one">Select</option>
                                         <option value="mainhome">Main Home Page Product</option>
-                                        <option value="business">Special Packages</option>
-                                        <option value="artist">Hidden</option>
+                                        <option value="special">Special Packages</option>
+                                        <option value="hidden">Hidden</option>
                                     </select>
-                                <input type="hidden" name="user_id" value="{{Auth::user()->id}}" />
+                              
                                 </div><!-- col-8 -->
                               </div><!-- row -->
 
@@ -89,13 +90,13 @@
                                   </div><!-- col-4 -->
                                   <div class="col-9 col-sm-8">
                                       <small>For Main Home Page Product</small>
-                                      <select name="brand_type" required class="form-control select2" data-placeholder="Choose one">
+                                      <select name="productPosition" required class="form-control select2" data-placeholder="Choose one">
                                           <option label="choose one">Select</option>
                                           <option value="left">Left</option>
                                           <option value="center">Center</option>
                                           <option value="right">Right</option>
                                       </select>
-                                  <input type="hidden" name="user_id" value="{{Auth::user()->id}}" />
+                                  
                                   </div><!-- col-8 -->
                                 </div><!-- row -->
                                  
@@ -105,7 +106,7 @@
                                     </div><!-- col-4 -->
                                     <div class="col-7 col-sm-8">
                                       <small>For single product page</small>
-                                      <textarea name="packageDescription" class="form-control"></textarea>
+                                      <textarea name="moreDetails" class="form-control"></textarea>
                                      </div><!-- col-8 -->
                                   </div><!-- row -->
 

@@ -144,16 +144,32 @@ class AdminController extends Controller
 
     public function createMainPackage(Request $request){
 
-        CloutPackages::create([          
+    $smallIcon = '';
+    $largeIcon = '';
+
+    if($request->smallIcon){            
+        $smallIcon = $request->file('smallIcon')->store('public');
+    }   
+    if($request->largeIcon){            
+        $largeIcon = $request->file('largeIcon')->store('public');
+    }       
+
+        CloutPackages::create([ 
+
             'package_name'=>$request->packageName,
             'package_description'=>$request->packageDescription,
-            'package_price'=>$request->packagePrice         
+            'package_price'=>$request->packagePrice,
+            'large_icon'=> $largeIcon,
+            'small_icon'=>$smallIcon,
+            'homepage_main'=>$request->displayAs,
+            'position'=>$request->productPosition ,
+            'single_page_content'=>$request->moreDetails
         ]);
 
         alert()->success('New Package created','Success');
         return redirect()->back();
     }
-
+ 
     public function destroy($id){
 
         $find = CloutPackages::where('id',$id);

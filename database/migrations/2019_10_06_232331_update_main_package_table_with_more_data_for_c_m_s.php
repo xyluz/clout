@@ -11,7 +11,7 @@ class UpdateMainPackageTableWithMoreDataForCMS extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up() 
     {
         Schema::table('clout_packages', function (Blueprint $table) {
             $table->text('single_page_content');
