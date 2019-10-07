@@ -51,7 +51,17 @@ class HomeController extends Controller
     }
 
     public function packages(){
-        return view('packages');
+        $homeproduct_left = CloutPackages::where('position','left')->where('display_as','mainhome')->first();
+        $homeproduct_right = CloutPackages::where('position','right')->where('display_as','mainhome')->first();
+        $homeproduct_center = CloutPackages::where('position','center')->where('display_as','mainhome')->first();
+        $homeproduct_specials = CloutPackages::where('position','center')->where('display_as','special')->first();
+
+       $homeproduct_left_items = CloutPackagesItems::where('clout_package_id',$homeproduct_left['id']);
+       $homeproduct_right_items = CloutPackagesItems::where('clout_package_id',$homeproduct_right['id']);
+       $homeproduct_center_items = CloutPackagesItems::where('clout_package_id',$homeproduct_center['id']);
+
+        return view('packages',compact('homeproduct_left','homeproduct_right','homeproduct_center','homeproduct_specials','homeproduct_center_items','homeproduct_left_items','homeproduct_right_items'));
+     
     }
 
     public function faq(){
