@@ -79,8 +79,7 @@ class AccountController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function view($account)
-    {
-       
+    {       
         $products = $this->service->products($account);
         
         $media = $this->service->media($account);        

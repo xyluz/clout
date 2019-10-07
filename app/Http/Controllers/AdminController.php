@@ -144,15 +144,15 @@ class AdminController extends Controller
 
     public function createMainPackage(Request $request){
 
-    $smallIcon = '';
-    $largeIcon = '';
+        $smallIcon = '';
+        $largeIcon = '';
 
-    if($request->smallIcon){            
-        $smallIcon = $request->file('smallIcon')->store('public');
-    }   
-    if($request->largeIcon){            
-        $largeIcon = $request->file('largeIcon')->store('public');
-    }       
+        if($request->smallIcon){            
+            $smallIcon = $request->file('smallIcon')->store('public'); 
+        }   
+        if($request->largeIcon){            
+            $largeIcon = $request->file('largeIcon')->store('public');
+        }       
 
         CloutPackages::create([ 
 

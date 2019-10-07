@@ -1,78 +1,20 @@
-{{-- 
-    <section class="font-sans container m-auto max-w-xl flex flex-col flex-wrap sm:flex-row justify-center  ">
-            <h1 style="line-height: 2" class="text-lg text-black items-center mt-2 text-black font-termina-m text-center container tracking-wide font-smooth   mb-2 text-2xl uppercase">Plans </h1>
-            <div class="w-full sm:w-1/3 lg:w-1/3 text-center py-8 bg-white  ">
-                <p class="text-center mb-7"><img width="180px" src="img/dance_the_music.svg"></p>
-                <label for="" class="uppercase tracking-loose font-bold text-lg font-smooth font-termina-m ">Clout</label>
-                <h1 style="color: #e80016" for="" class="uppercase tracking-loose font-smooth font-bold text-5xl my-2 font-termina-m">N200,000</h1>
-                <p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4  m-auto text-lg leading-tight">Ideal for music artistes that want to promote their music with the Lagos crowd specifically. </p>
-    
-                  <div class="mb-4"><span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 Radio Plays</span></span>
-                 <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Radio interviews across 3 stations</span></span>
-                  <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Radio play-listing on the biggest shows</span></span>
-                  <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Editorial features on published articles</span></span>
-    
-                
-                </div>
-                <a href="{{route('invoice',['package'=>'1'])}}" style="background:#e80016;" class="butn font-smooth btn-4 bg-transparent hover:bg-black text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
-                    Buy Now 
-                </a>
-                <p style="width: 50%" class="text-center m-auto  text-m mt-4 mb-2 font-termina-m"> Promotion Available in Lagos ONLY </p>
-            </div>
-            <div style="background:aliceblue;" class="w-full sm:w-1/3 lg:w-1/3 text-center bg-white  ">
-                <p class="text-white bg-orang  mb-6 font-smooth font-termina-m p-2 uppercase"> Best Value</p>
-                <p class="text-center mb-4"><img width="200px" src="img/balloon.svg"></p>
-                <label for="" class="uppercase tracking-loose font-bold text-lg font-termina-m font-smooth">More Clout</label>
-                <h1 style="color: #0087fc" for="" class="uppercase tracking-loose font-bold text-5xl my-2 font-smooth font-termina-m ">   N250,000 </h1>
-                <p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4  m-auto text-lg leading-tight"> If you are looking to gain clout with your music with audiences from Lagos, Port-harcourt, Onitsha, Abuja &amp; Kano</p>
-    
-                 <div class="mb-4"><span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">103 nation wide radio plays for 30 days</span></span>
-                 <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Short url codes for profile</span></span>
-                  <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Spotlight documentary aired on 3 stations</span></span>
-                  <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Editorial features on published articles</span></span>
-    
-                
-                </div>
-    
-                <a href="{{route('invoice',['package'=>'2'])}}" style="background:#0087fc;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
-                    Buy Now
-                </a>
-    
-                <label style="color: #0087fc" for="" class="capitalize tracking-loose font-bold text-lg font-termina-m font-smooth block mt-4 mb-8">25% off for Gospel Artistes</label>
-                <br>
-                <br>
-            </div>
-            <div class="w-full sm:w-1/3 lg:w-1/3 text-center py-8 bg-white ">
-                <p class="text-center mb-9"><img width="227px" src="img/watering_plant.svg"></p>
-                <label for="" class="uppercase tracking-loose text-lg font-termina-m font-smooth p-2">For Growing Businesses</label>
-                <h1 style="color:#f06c46" for="" class="uppercase tracking-loose font-bold text-5xl my-2 font-smooth font-termina-m">Business</h1>
-                <p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4 m-auto text-lg leading-tight">Let us know your brand needs and expectations and let us get you there.</p>
-    
-    <br>
-             
-                 <div class="mb-4">
-                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Deliberate & directional A&R process </span></span>
-                 <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Unlimited Music production </span></span>
-                  <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Full-blown artiste image branding </span></span>
-                  <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">300+  nation-wide radio plays </span></span>
-    
-                
-                </div>
-    
-                <button style="background-color: #f06c46;" class="butn btn-4 bg-transparent hover:bg-black text-black-dark font-smooth font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
-                    Get Started
-                </button>
-            </div>
-    
-        </section>
-       
-     --}}
+
 
      <section class="font-sans container m-auto max-w-xl flex flex-col flex-wrap sm:flex-row justify-center  ">
         <h1 style="line-height: 2" class="text-lg text-black items-center mt-2 text-black font-termina-m text-center container tracking-wide font-smooth   mb-2 text-2xl uppercase">Plans </h1>
         <div class="w-full sm:w-1/3 lg:w-1/3 text-center py-8 bg-white  ">
-            <p class="text-center mb-7"><img src="img/clouta.webp"></p><h1 class=" w-full font-seg capitalize text-lg antialiased mb-2 w-h" style="
-"><svg width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 486 232" style="enable-background:new 0 0 486 232;fill: #b5b4b4;" xml:space="preserve">
+        <p class="text-center mb-7"><img src="{{'/storage/'. substr($homeproduct_left['large_icon'],7) ?? 'http://via.placeholder.com/500x500' }}"></p>
+        
+        <h1 class=" w-full font-seg capitalize text-lg antialiased mb-2 w-h" style="
+">
+
+@if($homeproduct_left['small_icon'] != '')
+
+    <img src="{{'/storage/'. substr($homeproduct_left['small_icon'],7) ?? 'http://via.placeholder.com/500x500' }}" /> 
+
+@else 
+
+<svg width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 486 232" style="enable-background:new 0 0 486 232;fill: #b5b4b4;" xml:space="preserve">
 <g>
     <path d="M20.4,80.4c5.3-5.3,11.4-9.4,18.1-12c6.7-2.7,13.6-4,20.5-4c7,0,13.8,1.3,20.5,4c6.7,2.7,12.8,6.7,18.1,12l7.5,7.5
         l-15.1,15.3l-7.8-7.5c-3.2-3.2-6.9-5.7-10.9-7.3C67.4,86.8,63.2,86,59,86c-4.2,0-8.3,0.8-12.4,2.4c-4.1,1.6-7.7,4.1-10.9,7.3
@@ -119,36 +61,41 @@
 </g>
 <rect x="33" y="185" width="334.4" height="19"></rect>
 </svg>
+
+@endif
   </h1>
-            <label for="" class="uppercase tracking-loose font-bold text-lg font-smooth font-termina-m ">Clout</label>
-            <h1 style="color: #e80016" for="" class="uppercase tracking-loose font-smooth font-bold text-5xl my-2 font-termina-m">&#8358; 250 000</h1>
-            <p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4  m-auto text-lg leading-tight">Ideal for music artistes that want to promote their music with the Lagos crowd specifically. </p>
+<label for="" class="uppercase tracking-loose font-bold text-lg font-smooth font-termina-m ">{{$homeproduct_left['package_name'] ?? ''}}</label>
+<h1 style="color: #{{$homeproduct_left['color'] ?? '000000'}}" for="" class="uppercase tracking-loose font-smooth font-bold tex t-5xl my-2 font-termina-m">&#8358; {{$homeproduct_left['package_price']}}</h1>
+<p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4  m-auto text-lg leading-tight">{{$homeproduct_left['package_description'] ?? ''}}</p>
 
               <div class="mb-4">
-                  
-                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">40 Airplays</span></span>
-                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">1 Radio News Mention</span></span>
-                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Social Media</span></span>
-                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">TV News Mention</span></span>
+                @if($homeproduct_left_items->count() > 0)
+                    @foreach($homeproduct_left_items->get() as $item)
+                        <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc">
+                        <span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">{{$item->package_item_available_count}} {{$item->package_item_name}}</span>
+                        </span>
+                    @endforeach
 
+                @endif
+                  
             
             </div>
-            <a href="{{route('invoice',['slug'=>Str::slug('clout'),'package'=>'1'])}}" style="background:#e80016;" class="butn font-smooth btn-4 bg-transparent hover:bg-black text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+        <a href="{{route('invoice',['slug'=>Str::slug($homeproduct_left['package_name']),'package'=>$homeproduct_left['id']])}}" style="background:#{{$homeproduct_left['color']}}" class="butn font-smooth btn-4 bg-transparent hover:bg-black text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                 Get Started 
             </a>
-            <p style="width: 50%" class="text-center m-auto  text-m mt-4 mb-2 font-termina-m"> Extras </p>
-            <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">10 Music Video Plays</span></span>
-            <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Radio Playlist</span></span>
-
-            <a href="{{route('invoice',['slug'=>Str::slug('clout extra'),'package'=>'12'])}}" style="color:#e80016;">
-                Get Extra for 	&#8358; 400 000 
-            </a>
+         
 
         </div>
         <div style="background:aliceblue;" class="w-full sm:w-1/3 lg:w-1/3 text-center bg-white  ">
             <p class="text-white bg-orang  mb-6 font-smooth font-termina-m p-2 uppercase"> Best Value</p>
-            <p style="    margin-bottom: 0em;" class="text-center mb-4"><img  src="img/bal.webp"></p><h1 class=" w-full font-seg capitalize text-lg antialiased mb-2 w-h" style="
-"><svg width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 486 232" style="enable-background:new 0 0 486 232;fill: #b5b4b4;" xml:space="preserve">
+            <p style="    margin-bottom: 0em;" class="text-center mb-4"><img  src="{{'/storage/'. substr($homeproduct_center['large_icon'],7) ?? 'http://via.placeholder.com/500x500' }}"></p>
+            <h1 class=" w-full font-seg capitalize text-lg antialiased mb-2 w-h" style="
+">
+@if($homeproduct_center['small_icon'] != '')
+<img  src="{{'/storage/'. substr($homeproduct_center['small_icon'],7) ?? 'http://via.placeholder.com/500x500' }}">
+
+@else 
+<svg width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 486 232" style="enable-background:new 0 0 486 232;fill: #b5b4b4;" xml:space="preserve">
 <g>
     <path d="M20.4,80.4c5.3-5.3,11.4-9.4,18.1-12c6.7-2.7,13.6-4,20.5-4c7,0,13.8,1.3,20.5,4c6.7,2.7,12.8,6.7,18.1,12l7.5,7.5
         l-15.1,15.3l-7.8-7.5c-3.2-3.2-6.9-5.7-10.9-7.3C67.4,86.8,63.2,86,59,86c-4.2,0-8.3,0.8-12.4,2.4c-4.1,1.6-7.7,4.1-10.9,7.3
@@ -195,43 +142,46 @@
 </g>
 <rect x="33" y="185" width="334.4" height="19"></rect>
 </svg>
+
+@endif
   </h1>
-            <label for="" class="uppercase tracking-loose font-bold text-lg font-termina-m font-smooth">More Clout</label>
-            <h1 style="color: #0087fc" for="" class="uppercase tracking-loose font-bold text-5xl my-2 font-smooth font-termina-m ">  &#8358;500 000 </h1>
-            <p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4  m-auto text-lg leading-tight"> If you are looking to gain clout with your music with audiences from Lagos, Port-harcourt, Onitsha, Abuja &amp; Kano</p>
+<label for="" class="uppercase tracking-loose font-bold text-lg font-termina-m font-smooth">{{$homeproduct_center['package_name'] ?? ''}}</label>
+            <h1 style="color: #{{$homeproduct_center['color'] ?? '000000'}}" for="" class="uppercase tracking-loose font-bold text-5xl my-2 font-smooth font-termina-m ">  &#8358; {{$homeproduct_center['package_price'] ?? ''}} </h1>
+            <p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4  m-auto text-lg leading-tight">{{$homeproduct_center['package_description']}}</p>
 
              <div class="mb-4">
-                 
-                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">100 Airplays</span></span>
-                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">2 Radio News Mention</span></span>
-                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Social Media</span></span>
-                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">2 TV News Mention</span></span>
-                   
-                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">AUX</span></span>
-                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">1 Radio Interview</span></span>
-                     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">1 TV Interview</span></span>
+                    @if($homeproduct_center_items->count() > 0)
+                        @foreach($homeproduct_center_items->get() as $item)
+                            <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc">
+                            <span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">{{$item->package_item_available_count}} {{$item->package_item_name}}</span>
+                            </span>
+                        @endforeach
+
+                    @endif             
       
             </div>
 
-            <a href="{{route('invoice',['slug'=>Str::slug('more clout'),'package'=>'11'])}}" style="background:#0087fc;" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+        <a href="{{route('invoice',['slug'=>Str::slug($homeproduct_center['package_name']),'package'=>$homeproduct_center['id']])}}" style="background:#{{$homeproduct_center['color']}}" class="butn btn-4 bg-transparent hover:bg-black font-smooth text-black-dark font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                 Get Started 
             </a>
 
-            <p style="width: 50%" class="text-center m-auto  text-m mt-4 mb-2 font-termina-m"> Extras </p>
-            <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">10 Music Video Plays</span></span>
-            <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Radio Playlist</span></span>
-
-            <a href="{{route('invoice',['slug'=>Str::slug('more clout extra'),'package'=>'13'])}}" style="color:#0087fc">
-                Get Extra for 	&#8358; 650 000 
-            </a>
+     
 
 
 <br><br>
    
         </div>
         <div class="w-full sm:w-1/3 lg:w-1/3 text-center py-8 bg-white ">
-            <p style="    margin-bottom: 1.6em;" class="text-center mb-9 "><img  src="img/tree.webp"></p>
-               <h1 class=" w-full font-seg capitalize text-lg antialiased mb-2 w-h"><svg width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 462 192" style="enable-background:new 0 0 462 192;fill: #b5b4b4;" xml:space="preserve">
+            <p style="    margin-bottom: 1.6em;" class="text-center mb-9 "><img  src="{{'/storage/'. substr($homeproduct_right['large_icon'],7) ?? 'http://via.placeholder.com/500x500' }}"></p>
+               <h1 class=" w-full font-seg capitalize text-lg antialiased mb-2 w-h">
+                   
+                @if($homeproduct_right['small_icon'] != '')
+
+                    <img  src="{{'/storage/'. substr($homeproduct_right['small_icon'],7) ?? 'http://via.placeholder.com/500x500' }}"> 
+
+                @else 
+
+                <svg width="100px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 462 192" style="enable-background:new 0 0 462 192;fill: #b5b4b4;" xml:space="preserve">
 <style type="text/css">
     .st0{fill:none;}
 </style>
@@ -290,41 +240,35 @@
     <path d="M175.2,80.4l-16.9-9.2c-3.5,6.6-11.8,26.3-0.1,47l16.5-10.1c-2-4-3.1-8.5-3.1-13.3C171.5,89.5,172.9,84.7,175.2,80.4z"></path>
 </g>
 </svg>
-  </h1>
-            <label for="" class="uppercase tracking-loose text-lg font-termina-m font-smooth p-2">Clout Premium</label>
 
-            <h1 style="color:#f06c46" for="" class="uppercase tracking-loose font-bold text-5xl my-2 font-smooth font-termina-m">&#8358; 1 500 000</h1>
-            <p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4 m-auto text-lg leading-tight">Let us know your brand needs and expectations and let us get you there.</p>
+@endif
+  </h1>
+<label for="" class="uppercase tracking-loose text-lg font-termina-m font-smooth p-2">{{$homeproduct_right['package_name'] ?? ''}}</label>
+
+<h1 style="color:#{{$homeproduct_right['color']}}" for="" class="uppercase tracking-loose font-bold text-5xl my-2 font-smooth font-termina-m">&#8358; {{$homeproduct_right['package_price'] ?? ''}}</h1>
+            <p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4 m-auto text-lg leading-tight">{{$homeproduct_right['package_description'] ?? ''}}</p>
 
 <br>
          
 <div class="mb-4">
                  
-    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">200 Airplays</span></span>
-    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">4 Radio News Mention</span></span>
-     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Social Media</span></span>
-     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">4 TV News Mention</span></span>
-     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Billboard & AUX</span></span>
-     {{-- <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">AUX</span></span> --}}
-     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">2 Radio Interview</span></span>
-     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">2 TV Interview</span></span>
-     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Music Distribution</span></span>
-     <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Music Video Distribution</span></span>
+        @if($homeproduct_right_items->count() > 0)
+            @foreach($homeproduct_right_items->get() as $item)
+                <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc">
+                <span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">{{$item->package_item_available_count}} {{$item->package_item_name}}</span>
+                </span>
+            @endforeach
 
+        @endif 
+   
 
 </div>
 
-        <a href="{{route('invoice',['slug'=>Str::slug('premium clout'),'package'=>'11'])}}" style="background-color: #f06c46; z-index:1" class="butn btn-4 bg-transparent hover:bg-black text-black-dark font-smooth font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
+        <a href="{{route('invoice',['slug'=>Str::slug($homeproduct_right['package_name']),'package'=>$homeproduct_right['id']])}}" style="background-color: #f06c46; z-index:1" class="butn btn-4 bg-transparent hover:bg-black text-black-dark font-smooth font-termina-m uppercase hover:text-white py-2 px-4 border border-black hover:border-transparent">
                 Get Started
             </a>
 
-            <p style="width: 50%" class="text-center m-auto  text-m mt-4 mb-2 font-termina-m"> Extras </p>
-            <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">10 Music Video Plays</span></span>
-            <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Radio Playlist</span></span>
-
-            <a href="{{route('invoice',['slug'=>Str::slug('premium extra'),'package'=>'14'])}}" style="color:#f06c46; z-index: 200">
-                Get Extra for 	&#8358; 2 000 000 
-            </a>
+         
         </div>
 
     </section>
