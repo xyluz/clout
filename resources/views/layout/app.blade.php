@@ -80,6 +80,7 @@
 
             
             <li><a href="{{route('login')}}">Login</a></li>
+            <li><a href="{{route('register')}}">Register</a></li>
 
             @endauth
             <li><a href="{{route('package')}}">Plans</a></li>
