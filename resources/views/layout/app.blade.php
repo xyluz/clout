@@ -218,17 +218,18 @@
                             <li class="inline-block py-2 px-3 text-grey-darkest  no-underline font-seg antialiased mb-4">Special Packages</li>
                             <li>
     
-                                </li><li>
-                                    <a href="#" class="inline-block py-2 px-3 text-grey-darker hover:text-grey-darkest no-underline">Production</a>
                                 </li>
+                                {{-- <li>
+                                    <a href="#" class="inline-block py-2 px-3 text-grey-darker hover:text-grey-darkest no-underline">Production</a>
+                                </li> --}}
     
                                 <a href="#" class="inline-block py-2 px-3 text-grey-darker hover:text-grey-darkest no-underline">Branding</a>
                             
                             <li>
-                                <a href="#" class="inline-block py-2 px-3 text-grey-darker hover:text-grey-darkest no-underline">Video Production</a>
+                                <a href="#" class="inline-block py-2 px-3 text-grey-darker hover:text-grey-darkest no-underline">Studio Sessions</a>
                             </li>
                             <li>
-                                <a href="#" class="inline-block py-2 px-3 text-grey-darker hover:text-grey-darkest no-underline">Digital Monetization</a>
+                                <a href="#" class="inline-block py-2 px-3 text-grey-darker hover:text-grey-darkest no-underline">Studio Rental</a>
                             </li>
     
                             <li>

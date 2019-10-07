@@ -29,7 +29,7 @@
                 <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col mb-8 px-3">
                     <div class="h-64" style=" background: url('https://images.unsplash.com/photo-1490971588422-52f6262a237a?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'); box-shadow: rgba(20, 20, 20,.1) 625px 10px 108px 6px inset; background-size: cover; background-position: center; ">
                         <p style="opacity: .9" class="font-seg text-m text-white font-smooth mt-2 serv-title"> <a class="no-underline text-white tag-tag" href=""> Starting from ---  </a></p>
-                        <p class="font-termina-md text-25xl text-white font-smooth mt-2 serv-title"> Video Production</p>
+                        <p class="font-termina-md text-25xl text-white font-smooth mt-2 serv-title"> Studio Sessions</p>
                         <p class="font-seg text-m text-white font-smooth mt-2 serv-title "> <a class="no-underline text-white" href=""> Video · Trailer · Lyrics Video </a></p>
                         <p class="font-seg text-m text-white font-smooth mt-2 serv-title hover"> <a class="no-underline text-white" href=""> Coming soon </a></p>
                     </div>
@@ -39,7 +39,7 @@
                 <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col mb-8 px-3">
                     <div class="h-64" style=" background: url('https://images.unsplash.com/photo-1504509546545-e000b4a62425?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'); box-shadow: rgba(20, 20, 20,.5) 625px 10px 108px 6px inset; background-size: cover; background-position: center; ">
                         <p style="opacity: .9" class="font-seg text-m text-white font-smooth mt-2 serv-title"> <a class="no-underline text-white tag-tag" href=""> Starting from ---  </a></p>
-                        <p class="font-termina-md text-25xl text-white font-smooth mt-2 serv-title">Digital Monetization</p>
+                        <p class="font-termina-md text-25xl text-white font-smooth mt-2 serv-title">Studio Rental</p>
                         <p class="font-seg text-m text-white font-smooth mt-2 serv-title "> <a class="no-underline text-white" href=""> Apple · Spotify · Deezer · Audiomack  </a></p>
                         <p class="font-seg text-m text-white font-smooth mt-2 serv-title hover"> <a class="no-underline text-white" href=""> Coming soon </a></p>
                     </div>
