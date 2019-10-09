@@ -1,7 +1,6 @@
 
     <section class=" font-sans mt-8">
-            <div class="container max-w-xl m-auto flex flex-wrap items-center text-center">
-    
+            <div class="container max-w-xl m-auto flex flex-wrap items-center text-center">    
     
                 <h1 class="text-lg ml-4 text-black items-center mb-8  text-grey-darkest font-termina-m container events">Special Packages </h1>
     
