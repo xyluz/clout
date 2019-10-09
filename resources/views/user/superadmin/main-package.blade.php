@@ -3,7 +3,7 @@
 @section('content')
 
 @include('user.layouts.admin-menu');
-<div class="slim-mainpanel">
+<div class="slim-mainpanel"> 
     <div class="container">
             <div style="margin-top: 10px" class="alert alert-outline alert-info" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">

@@ -229,15 +229,34 @@ class AdminController extends Controller
 
     }
 
+
     public function editPackage(Request $request){
 
         $find = CloutPackages::find($request->packageId);
+
+        // return dd($find);
+
+        $smallIcon = $request->small_icon_old != '' ? $request->small_icon_old : '';
+        $largeIcon = $request->large_icon_old != '' ? $request->large_icon_old : '';
+
+        if($request->smallIcon){            
+            $smallIcon = $request->file('smallIcon')->store('public'); 
+        }   
+        if($request->largeIcon){            
+            $largeIcon = $request->file('largeIcon')->store('public');
+        }       
 
         if($find){
 
             $find->package_name = $request->packageName;
             $find->package_description = $request->packageDescription;
             $find->package_price = $request->packagePrice;
+            $find->large_icon = $largeIcon;
+            $find->small_icon = $smallIcon;
+            $find->display_as = $request->displayAs;
+            $find->position = $request->productPosition;
+            $find->single_page_content = $request->moreDetails;
+            $find->color = $request->color;
 
             $find->save();
 

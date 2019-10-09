@@ -71,7 +71,7 @@
                                      
                                       <div class="custom-file">
                                           <input type="file" class="custom-file-input" name="smallIcon" id="customFile3">
-                                          <label class="custom-file-label custom-file-label-inverse" for="customFile">Choose file</label>
+                                           <label class="custom-file-label custom-file-label-inverse" for="customFile">Choose file</label>
                                        </div><!-- custom-file -->
                                   
 
