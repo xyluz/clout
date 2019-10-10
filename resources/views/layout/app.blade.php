@@ -73,7 +73,14 @@
         </a> <!-- .nav-trigger -->
 
         <ul id="cd-navigation">
+           
+            <li><a href="{{route('package')}}">Plans</a></li>
+            <li><a href="{{route('special-packages')}}">Special Packages </a></li>
+            <li><a href="#0">Legal</a></li>
+            <li><a href="#0">Contact</a></li>
             @auth
+           
+            <li><a href="{{route('dashboard')}}">Dashboard</a></li>
             <li>
                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                 {{ __('Logout') }}
@@ -83,7 +90,6 @@
                     @csrf
                 </form>
             </li>
-            <li><a href="{{route('dashboard')}}">Dashboard</a></li>
            
             @else 
 
@@ -92,10 +98,6 @@
             <li><a href="{{route('register')}}">Register</a></li>
 
             @endauth
-            <li><a href="{{route('package')}}">Plans</a></li>
-            <li><a href="{{route('special-packages')}}">Special Packages </a></li>
-            <li><a href="#0">Legal</a></li>
-            <li><a href="#0">Contact</a></li>
             @if(session('cart') && count(session('cart')) > 0)  
 
             <li>
