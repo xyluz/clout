@@ -72,7 +72,7 @@
                 @if($homeproduct_left_items->count() > 0)
                     @foreach($homeproduct_left_items->get() as $item)
                         <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc">
-                        <span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">{{$item->package_item_available_count}} {{$item->package_item_name}}</span>
+                        <span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">{{$item->package_item_available_count ?? ''}} {{$item->package_item_name}}</span>
                         </span>
                     @endforeach
 
@@ -153,7 +153,7 @@
                     @if($homeproduct_center_items->count() > 0)
                         @foreach($homeproduct_center_items->get() as $item)
                             <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc">
-                            <span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">{{$item->package_item_available_count}} {{$item->package_item_name}}</span>
+                            <span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">{{$item->package_item_available_count ?? ''}} {{$item->package_item_name}}</span>
                             </span>
                         @endforeach
 
@@ -245,7 +245,7 @@
   </h1>
 <label for="" class="uppercase tracking-loose text-lg font-termina-m font-smooth p-2">{{$homeproduct_right['package_name'] ?? ''}}</label>
 
-<h1 style="color:#{{$homeproduct_right['color']}}" for="" class="uppercase tracking-loose font-bold text-5xl my-2 font-smooth font-termina-m">&#8358; {{$homeproduct_right['package_price'] ?? ''}}</h1>
+<h1 style="color:#{{$homeproduct_right['color']}}" for="" class="uppercase tracking-loose font-smooth font-bold tex t-5xl my-2 font-termina-m">&#8358; {{$homeproduct_right['package_price'] ?? ''}}</h1>
             <p class="my-2 text-grey-darker font-termina-l pl-6 pr-6 mb-4 m-auto text-lg leading-tight">{{$homeproduct_right['package_description'] ?? ''}}</p>
 
 <br>
@@ -253,11 +253,14 @@
 <div class="mb-4">
                  
         @if($homeproduct_right_items->count() > 0)
+
             @foreach($homeproduct_right_items->get() as $item)
+
                 <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc">
-                <span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">{{$item->package_item_available_count}} {{$item->package_item_name}}</span>
+                <span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">{{$item->package_item_available_count ?? ''}} {{$item->package_item_name}}</span>
                 </span>
-            @endforeach
+           
+                @endforeach
 
         @endif 
    
