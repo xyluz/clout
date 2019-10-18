@@ -1,3 +1,4 @@
+
 <div id="modaldemo8" class="modal fade">
         <div class="modal-dialog modal-dialog-vertical-center" role="document">
           <div class="modal-content bd-0 tx-14">
@@ -17,7 +18,13 @@
                               Package Name
                             </div><!-- col-4 -->
                             <div class="col-9 col-sm-8">
-                                <input required class="form-control" type="text" name="packageName" placeholder="Package Name">
+                                <input required class="form-control @error('packageName') is-invalid @enderror" type="text" name="packageName" placeholder="Package Name">
+
+                                @error('packageName')
+                                  <span class="invalid-feedback" role="alert">
+                                      <strong>{{ $message }}</strong>
+                                  </span>
+                                @enderror 
                             </div><!-- col-8 -->
                           </div><!-- row -->
                          
@@ -26,7 +33,12 @@
                                 Description:
                               </div><!-- col-4 -->
                               <div class="col-7 col-sm-8">
-                                <textarea name="packageDescription" class="form-control"></textarea>
+                                <textarea name="packageDescription" class="form-control @error('packageDescription') is-invalid @enderror"></textarea>
+                                @error('packageDescription')
+                                  <span class="invalid-feedback" role="alert">
+                                      <strong>{{ $message }}</strong>
+                                  </span>
+                                @enderror 
                                </div><!-- col-8 -->
                             </div><!-- row -->
 
@@ -35,7 +47,13 @@
                                     Price (NGN):
                                 </div><!-- col-4 -->
                                 <div class="col-9 col-sm-8">
-                                    <input class="form-control" type="integer" name="packagePrice" placeholder="9800">
+                                    <input class="form-control  @error('packagePrice') is-invalid @enderror" type="integer" name="packagePrice" placeholder="9800">
+                                    
+                                    @error('packagePrice')
+                                      <span class="invalid-feedback" role="alert">
+                                          <strong>{{ $message }}</strong>
+                                      </span>
+                                    @enderror 
                                 </div><!-- col-8 -->
                             </div><!-- row -->
 
@@ -45,7 +63,12 @@
                                 </div><!-- col-4 -->
                                 <div class="col-9 col-sm-8">
                                   <small class="text-info text">hex color, default is 000000. Do not add the '#'</small>
-                                    <input class="form-control" type="integer" name="color" placeholder="000000">
+                                    <input class="form-control  @error('color') is-invalid @enderror" type="integer" name="color" placeholder="000000">
+                                    @error('color')
+                                      <span class="invalid-feedback" role="alert">
+                                          <strong>{{ $message }}</strong>
+                                      </span>
+                                    @enderror 
                                 </div><!-- col-8 -->
                             </div><!-- row -->
 
@@ -56,8 +79,14 @@
                                     <div class="col-9 col-sm-8">
                                        
                                         <div class="custom-file">
-                                            <input type="file" class="custom-file-input" name="largeIcon" id="customFile3">
+                                            <input type="file" class="custom-file-input @error('largeIcon') is-invalid @enderror" name="largeIcon" id="customFile3">
                                             <label class="custom-file-label custom-file-label-inverse" for="customFile">Choose file</label>
+
+                                            @error('largeIcon')
+                                              <span class="invalid-feedback" role="alert">
+                                                  <strong>{{ $message }}</strong>
+                                              </span>
+                                            @enderror 
                                          </div><!-- custom-file -->
                                     
 
@@ -70,8 +99,14 @@
                                   <div class="col-9 col-sm-8">
                                      
                                       <div class="custom-file">
-                                          <input type="file" class="custom-file-input" name="smallIcon" id="customFile3">
+                                          <input type="file" class="custom-file-input @error('smallIcon') is-invalid @enderror" name="smallIcon" id="customFile3">
                                            <label class="custom-file-label custom-file-label-inverse" for="customFile">Choose file</label>
+
+                                           @error('smallIcon')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                          @enderror 
                                        </div><!-- custom-file -->
                                   
 
@@ -84,12 +119,18 @@
                                 </div><!-- col-4 -->
                                 <div class="col-9 col-sm-8">
 
-                                    <select name="displayAs" required class="form-control select2" data-placeholder="Choose one">
+                                    <select name="displayAs" required class="form-control select2 @error('displayAs') is-invalid @enderror" data-placeholder="Choose one">
                                         <option label="choose one">Select</option>
                                         <option value="mainhome">Main Home Page Product</option>
                                         <option value="special">Special Packages</option>
                                         <option value="hidden">Hidden</option>
                                     </select>
+
+                                    @error('displayAs')
+                                      <span class="invalid-feedback" role="alert">
+                                          <strong>{{ $message }}</strong>
+                                      </span>
+                                    @enderror 
                               
                                 </div><!-- col-8 -->
                               </div><!-- row -->
@@ -100,12 +141,18 @@
                                   </div><!-- col-4 -->
                                   <div class="col-9 col-sm-8">
                                       <small>For Main Home Page Product</small>
-                                      <select name="productPosition" required class="form-control select2" data-placeholder="Choose one">
+                                      <select name="productPosition" required class="form-control select2 @error('productPosition') is-invalid @enderror" data-placeholder="Choose one">
                                           <option label="choose one">Select</option>
                                           <option value="left">Left</option>
                                           <option value="center">Center</option>
                                           <option value="right">Right</option>
                                       </select>
+
+                                      @error('productPosition')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                      @enderror 
                                   
                                   </div><!-- col-8 -->
                                 </div><!-- row -->

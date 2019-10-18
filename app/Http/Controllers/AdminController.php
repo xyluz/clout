@@ -14,6 +14,8 @@ use App\Models\Presenter;
 use Alert;
 use Illuminate\Support\Facades\Hash;
 
+use App\Http\Requests\AdminCreatePackageRequest;
+
 
 class AdminController extends Controller
 {
@@ -142,7 +144,7 @@ class AdminController extends Controller
 
     }
 
-    public function createMainPackage(Request $request){
+    public function createMainPackage(AdminCreatePackageRequest $request){
 
         $smallIcon = '';
         $largeIcon = '';
