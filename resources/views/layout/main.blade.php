@@ -177,6 +177,8 @@
             <div style="background:url('img/cb.webp') ; background-size: cover;" class="w-full h-screen-oo lg:w-1/2"></div>
         </section>
 
+        @include('layout.specials')
+
         <section style="background:#fbfdff; " class=" font-sans p-2 shadow">
                 <div class="container max-w-xl m-auto flex flex-wrap items-center text-center ">
                     <h1 class="text-lg ml-4 text-black items-center mt-8 text-black font-termina-m text-center container tracking-wide   mb-6 text-2xl uppercase">THE CLOUT DIFFERENCE</h1>

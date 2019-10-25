@@ -55,7 +55,7 @@ c5-5,9-10.9,11.8-17.5c2.8-6.6,4.3-13.7,4.3-21.1C267.5,94.2,266.1,87.1,263.2,80.5
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
-                @enderror
+                @enderror 
             </div><!-- form-group -->
            
 

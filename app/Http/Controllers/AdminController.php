@@ -147,7 +147,7 @@ class AdminController extends Controller
     public function createMainPackage(AdminCreatePackageRequest $request){
 
         $smallIcon = '';
-        $largeIcon = '';
+        $largeIcon = ''; 
 
         if($request->smallIcon){            
             $smallIcon = $request->file('smallIcon')->store('public'); 
