@@ -34,7 +34,6 @@
     @include('layout.prices')
     @include('layout.newsletter')
     @include('layout.discover')
-    @include('layout.specials')
     @include('layout.faq')
 
    

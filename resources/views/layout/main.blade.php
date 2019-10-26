@@ -79,7 +79,7 @@
               <div class="w-full   p-3">
                 <div class="flex flex-col lg:flex-row  overflow-hidden h-auto lg:h-36 border shadow bg-white ">
                   <img class="block  w-full lg:w-64 flex-none bg-cover h-prod "
-                    src="img/fem.webp">
+                    src="img/fem.webp" alt="Begin Your Journey with Clout">
                   <div class="bg-white  p-4 flex flex-col justify-between leading-normal h-auto bg-white">
                       <div class="text-grey-dark uppercase text-sm tracking-wide lg:w-2/3 leading-tight font-seg antialiased mb-1 ">Begin your Journey</div>
                     <div class="text-black font-medium text-2xl lg:w-2/3  mb-2 leading-tight font-seg ">Produce your next single, mixtape or album with us</div>
@@ -180,39 +180,38 @@
         @include('layout.specials')
 
         <section style="background:#fbfdff; " class=" font-sans p-2 shadow">
-                <div class="container max-w-xl m-auto flex flex-wrap items-center text-center ">
-                    <h1 class="text-lg ml-4 text-black items-center mt-8 text-black font-termina-m text-center container tracking-wide   mb-6 text-2xl uppercase">THE CLOUT DIFFERENCE</h1>
-                    <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col mb-8 px-3">
+            <div class="container max-w-xl m-auto flex flex-wrap items-center text-center ">
+                <h1 class="text-lg ml-4 text-black items-center mt-8 text-black font-termina-m text-center container tracking-wide   mb-6 text-2xl uppercase">THE CLOUT DIFFERENCE</h1>
+                <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col mb-8 px-3">
+                    <div>
+                        <img style="margin-bottom: -4em;"   src="img/track.webp" alt="The Clout Difference" />                 
+                            
                         <div>
-                            <img style="margin-bottom: -4em;"   src="img/track.webp"> 
-                    
-                             
-                            <div>
-                                <h1 class="mt-6  font-termina-m">Trackable Progress</h1>
-                                <p class="mt-2 font-termina-l  text-grey-darker antialiased text-xl leading-tight">Weekly updates of your music statistics, & milestones across social media, radio and our other platforms across board in the most reflective mediums. </p>
-                            </div>
-        
+                            <h1 class="mt-6  font-termina-m">Trackable Progress</h1>
+                            <p class="mt-2 font-termina-l  text-grey-darker antialiased text-xl leading-tight">Weekly updates of your music statistics, & milestones across social media, radio and our other platforms across board in the most reflective mediums. </p>
                         </div>
-        
+    
                     </div>
-        
-                    <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col mb-8 px-3">
-                        <div> <img style="margin-bottom: -1.5em;"  src="img/piggy.webp"></div>
-                        <div>
-                            <h1 class="mt-6  font-termina-m">Affordability </h1>
-                            <p class="mt-2 font-termina-l  antialiased text-xl text-grey-darker leading-tight">Save money with our seamless and affordable medium of promoting your brand and music via the crucial platforms that matter in the epicenter of the nation’s active age bracket</p>
-                        </div>
-                    </div>
-        
-                    <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col mb-8 px-3">
-                        <div><img style="margin-bottom: -1.5em;" src="img/sync.webp"> </div>
-                        <div>
-                            <h1 class="mt-6  font-termina-m" style="margin-top: -10px;">Synchronized Promotion  </h1>
-                            <p class="mt-2 font-termina-l antialiased text-xl text-grey-darker  leading-tight">Simultaneous and circuital radio and digital promotions to ensure maximum continual growth and placement for your brand elements across social media .</p>
-                        </div>
-        
-                    </div>
-        
+    
                 </div>
-            </section>
+    
+                <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col mb-8 px-3">
+                    <div> <img style="margin-bottom: -1.5em;"  src="img/piggy.webp" alt="Affordability"></div>
+                    <div>
+                        <h1 class="mt-6  font-termina-m">Affordability </h1>
+                        <p class="mt-2 font-termina-l  antialiased text-xl text-grey-darker leading-tight">Save money with our seamless and affordable medium of promoting your brand and music via the crucial platforms that matter in the epicenter of the nation’s active age bracket</p>
+                    </div>
+                </div>
+    
+                <div class="w-full md:w-1/2 lg:w-1/3 flex flex-col mb-8 px-3">
+                    <div><img style="margin-bottom: -1.5em;" src="img/sync.webp"> </div>
+                    <div>
+                        <h1 class="mt-6  font-termina-m" style="margin-top: -10px;">Synchronized Promotion  </h1>
+                        <p class="mt-2 font-termina-l antialiased text-xl text-grey-darker  leading-tight">Simultaneous and circuital radio and digital promotions to ensure maximum continual growth and placement for your brand elements across social media .</p>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </section>
             
