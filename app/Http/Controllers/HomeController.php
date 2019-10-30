@@ -73,9 +73,17 @@ class HomeController extends Controller
         return view('thethrone');
     }
 
+    public function legal(){
+        return view('legal');
+    }
+
 
     public function clout(){
         return view('clout');
+    }
+
+    public function contact(){
+        return view('contact');
     }
 
     public function moreClout(){

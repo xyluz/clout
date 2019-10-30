@@ -76,8 +76,8 @@
            
             <li><a href="{{route('package')}}">Plans</a></li>
             <li><a href="{{route('special-packages')}}">Special Packages </a></li>
-            <li><a href="#0">Legal</a></li>
-            <li><a href="#0">Contact</a></li>
+            <li><a href="{{route('legal')}}">Legal</a></li>
+            <li><a href="{{route('contact')}}">Contact</a></li>
             @auth
            
             <li><a href="{{route('dashboard')}}">Dashboard</a></li>
