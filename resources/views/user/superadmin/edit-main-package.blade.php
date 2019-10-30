@@ -110,9 +110,9 @@
                                     <small>For Main Home Page Product</small>
                                     <select name="productPosition" required class="form-control select2" data-placeholder="Choose one">
                                         <option label="choose one">Select</option>
-                                        <option @if($package->position == 'left') selected @endif value="left">Left</option>
-                                        <option  @if($package->center == 'center') selected @endif value="center">Center</option>
-                                        <option  @if($package->right == 'right') selected @endif value="right">Right</option>
+                                        <option  @if($package->position == 'left') selected @endif value="left">Left</option>
+                                        <option  @if($package->position == 'center') selected @endif value="center">Center</option>
+                                        <option  @if($package->position == 'right') selected @endif value="right">Right</option>
                                     </select>
                                 
                                 </div><!-- col-8 -->
