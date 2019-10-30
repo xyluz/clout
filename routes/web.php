@@ -9,6 +9,7 @@ Route::get('getacc','GoogleBusinessConnectController@getAccountName');
 Auth::routes(['verify' => true]);
 
 Route::get('/faq', 'HomeController@faq')->name('faq');
+Route::get('thethrone','HomeController@thethrone')->name('thethrone');
 // Route::get('/clout', 'HomeController@clout')->name('clout');
 // Route::get('/more-clout', 'HomeController@moreClout')->name('more-clout');
 Route::get('/home', 'HomeController@index')->name('home');

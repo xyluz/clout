@@ -68,6 +68,12 @@ class HomeController extends Controller
         return view('faq');
     }
 
+    
+    public function thethrone(){
+        return view('thethrone');
+    }
+
+
     public function clout(){
         return view('clout');
     }
