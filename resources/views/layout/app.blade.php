@@ -178,7 +178,7 @@
                         <ul class="text-grey-dark list-reset font-thin flex flex-col text-left">
                             <li class="inline-block py-2 px-3 text-grey-darkest  no-underline font-seg antialiased mb-4">Connect</li>
                             <li>
-                                <a href="#" class="inline-block py-2 px-3 text-grey-darker hover:text-grey-darkest no-underline">Twitter</a>
+                                <a href="https://twitter.com/clout_ng" class="inline-block py-2 px-3 text-grey-darker hover:text-grey-darkest no-underline">Twitter</a>
                             </li>
                             <li>
                                 <a href="#" class="inline-block py-2 px-3 text-grey-darker hover:text-grey-darkest no-underline">Instagram</a>
@@ -277,10 +277,10 @@
         margin-top: 3em;">
                             <a href=""> <span style="    margin-right: 8em;     background: none;
         color: #000;" class=" mdi-linkedin heart text-xl text-grey-darkest"></span> </a>
-                            <a href=""> <span style="    margin-right: 6em;    background: none;
+                            <a href="https://twitter.com/clout_ng"> <span style="    margin-right: 6em;    background: none;
         color: #000;" class=" mdi-twitter heart text-xl text-grey-darkest"></span> </a>
                             <a href=""> <span style="    margin-right: 4em;    background: none;
-        color: #000;" class=" mdi-instagram heart text-xl text-grey-darkest"></span> </a>
+        color: #000;" class="mdi mdi-instagram heart text-xl text-grey-darkest"></span> </a>
                             <a href=""> <span style="     background: none;
         color: #000;   margin-right: 2em;" class=" mdi-facebook heart text-xl text-grey-darkest"></span> </a>
                    

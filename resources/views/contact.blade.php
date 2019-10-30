@@ -31,7 +31,14 @@
             Contact Form and some text
         </p>
             
-       
+        <p class="leading-tight mb-4 text-grey-darker text-center font-termina-l text-xl w-3/4 m-auto leading-normal mt-2 ">
+           <input type="text" placeholder="Your Name" class="w-3/4" />
+           <input type="text" placeholder="Product" class="w-3/4" />
+           <input type="text" placeholder="Email" class="w-3/4" />
+           <textarea class="w-3/4">
+
+           </textarea>
+        </p>
 
 
     </div>
