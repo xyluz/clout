@@ -11,6 +11,8 @@ use App\Models\Product;
 use App\Models\Media;
 use App\Models\CloutPackages;
 use App\Models\CloutPackagesItems;
+use App\Mail\ContactMail;
+use Illuminate\Support\Facades\Mail;
 
 use App\Http\Requests\ContactRequest;
 
@@ -80,7 +82,11 @@ class HomeController extends Controller
     }
 
     public function submitContact(ContactRequest $request){
-        return $request->all();
+
+        Mail::to('music@clout.ng')->queue(new ContactMail($request->all()));
+        Mail::to($request->email)->queue(new ContactMail($request->all()));
+
+        return view('contact-success');
     }
 
 
