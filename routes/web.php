@@ -12,7 +12,7 @@ Route::post('submit-contact','HomeController@submitContact')->name('submit-conta
 Route::get('/faq', 'HomeController@faq')->name('faq');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 Route::get('/legal', 'HomeController@legal')->name('legal');
-Route::get('thethrone','HomeController@thethrone')->name('thethrone');
+Route::get('theone','HomeController@thethrone')->name('theone');
 // Route::get('/clout', 'HomeController@clout')->name('clout');
 // Route::get('/more-clout', 'HomeController@moreClout')->name('more-clout');
 Route::get('/home', 'HomeController@index')->name('home');
