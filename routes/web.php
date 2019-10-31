@@ -8,6 +8,7 @@ Route::get('getacc','GoogleBusinessConnectController@getAccountName');
 
 Auth::routes(['verify' => true]);
 
+Route::post('submit-contact','HomeController@submitContact')->name('submit-contact');
 Route::get('/faq', 'HomeController@faq')->name('faq');
 Route::get('/contact', 'HomeController@contact')->name('contact');
 Route::get('/legal', 'HomeController@legal')->name('legal');

@@ -23,24 +23,58 @@
 </section>
 <section class="font-sans m-auto diagonal-alt">
 
-        
+         
     <div class="w-full   flex flex-col bg-white text-left">
            <h1 class="  font-termina-m py-2 text-center">Contact Us</h1>
 
         <p class="leading-tight mb-4 text-grey-darker text-center font-termina-l text-xl w-3/4 m-auto leading-normal mt-2 ">
             Contact Form and some text
         </p>
-            
+    <form action="{{route('submit-contact')}}" method="post">     
+        @csrf 
         <p class="leading-tight mb-4 text-grey-darker text-center font-termina-l text-xl w-3/4 m-auto leading-normal mt-2 ">
-           <input type="text" placeholder="Your Name" class="w-3/4" />
-           <input type="text" placeholder="Product" class="w-3/4" />
-           <input type="text" placeholder="Email" class="w-3/4" />
-           <textarea class="w-3/4">
-
-           </textarea>
+          
+                <input type="text" required name="name" placeholder="Your Name" class="w-3/4  @error('name') is-invalid @enderror" />
+            @error('name')
+                <span class="invalid-feedback" role="alert">
+                    <strong>{{ $message }}</strong>
+                </span>
+              @enderror 
         </p>
 
+        <p class="leading-tight mb-4 text-grey-darker text-center font-termina-l text-xl w-3/4 m-auto leading-normal mt-2 ">
+          
+            <input type="email" required name="email" placeholder="Your Email Address" class="w-3/4  @error('email') is-invalid @enderror" />
+            @error('email')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+          @enderror 
+      
+    </p>
+    <p class="leading-tight mb-4 text-grey-darker text-center font-termina-l text-xl w-3/4 m-auto leading-normal mt-2 ">
+          
+        <input type="text" name="product" placeholder="Product of Interest" class="w-3/4 @error('product') is-invalid @enderror" />
+        @error('product')
+        <span class="invalid-feedback" role="alert">
+            <strong>{{ $message }}</strong>
+        </span>
+      @enderror 
+</p>
+<p class="leading-tight mb-4 text-grey-darker text-center font-termina-l text-xl w-3/4 m-auto leading-normal mt-2 ">
+          
 
+    <textarea placeholder="Content" name="contant" class="w-3/4 @error('content') is-invalid @enderror"></textarea>
+
+@error('content')
+    <span class="invalid-feedback" role="alert">
+        <strong>{{ $message }}</strong>
+    </span>
+  @enderror 
+</p>
+
+<button>Submit</button>
+      </form>
     </div>
 
 </section>

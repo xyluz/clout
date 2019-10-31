@@ -12,6 +12,8 @@ use App\Models\Media;
 use App\Models\CloutPackages;
 use App\Models\CloutPackagesItems;
 
+use App\Http\Requests\ContactRequest;
+
 class HomeController extends Controller
 {    
       
@@ -75,6 +77,10 @@ class HomeController extends Controller
 
     public function legal(){
         return view('legal');
+    }
+
+    public function submitContact(ContactRequest $request){
+        return $request->all();
     }
 
 
