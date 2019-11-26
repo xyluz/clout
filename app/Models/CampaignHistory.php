@@ -11,6 +11,7 @@ class CampaignHistory extends Model
         'campaign_id',
         'account_id',
         'url',
-        'description'
+        'description',
+        'title'
     ];
 }

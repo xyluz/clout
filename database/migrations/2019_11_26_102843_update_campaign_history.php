@@ -14,7 +14,7 @@ class UpdateCampaignHistory extends Migration
     public function up()
     {
         Schema::table('campaign_histories', function (Blueprint $table) {
-            $table->string('title')->default('');
+            $table->string('title')->default('no title');
         });
 
     }

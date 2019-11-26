@@ -30,7 +30,7 @@ class AdminController extends Controller
     }
 
     public function campaignUpdate(Request $request){
-       
+        // return $request->all();
         $find = Campaign::where('id',$request->id)->first();
         
              

@@ -124,7 +124,7 @@
                 let title = $(title_id).val();
                 let desc = $(desc_id).val();
 
-                console.log('title',title);
+               
             
                 $.ajax({
                     type: 'POST',                  
@@ -164,6 +164,8 @@
                                     footer: 'User will not be notified'
                                 });
                        }
+
+                       console.log(msg);
 
                     },
                     error: function(response){
