@@ -129,6 +129,7 @@
                     url: '{{route("a.campaign.update")}}',
                     data: { 
                         'id': n, 
+                        'title':title,
                         'play': count ,
                         'url':url,
                         'description' : desc,

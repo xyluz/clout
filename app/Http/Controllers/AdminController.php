@@ -57,6 +57,7 @@ class AdminController extends Controller
                 'campaign_id'=>$find->id,
                 'account_id'=>$find->account_id,
                 'url'=>$request->url,
+                'title'=>$request->title,
                 'description'=>$request->description
             ]);
            

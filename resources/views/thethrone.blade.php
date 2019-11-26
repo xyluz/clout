@@ -61,7 +61,7 @@
         <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">N10,000,000 worth of Clout Services</span></span>
         <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">Mentorship by A-list African & International Artistes</span></span>
         <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">A Music Video</span></span>
-                    <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">+ So much more</span></span>
+        <span style="font-weight: 800; font-family: 'Material Design Icons'" class="mdi-check-circle block mb-2 text-lg bg-gc"><span class="my-2 font-seg leading-normal text-baser points "></span> <span class=" points font-seg">+ So much more</span></span>
 
       
       </div>
