@@ -123,6 +123,8 @@
                 let url = $(url_id).val();
                 let title = $(title_id).val();
                 let desc = $(desc_id).val();
+
+                console.log('title',title);
             
                 $.ajax({
                     type: 'POST',                  
