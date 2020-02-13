@@ -8,13 +8,21 @@ A similar product I built for coolfm is aux.ng
 
 Tools:
 
-PHP / Laravel
-AWS EC2
-AWS SES
-JavaScript
-JQuery
-HTML
-CSS
-Paystack API
-Google Business API
+- PHP / Laravel
+
+- AWS EC2
+
+- AWS SES
+
+- JavaScript
+
+- JQuery
+
+- HTML
+
+- CSS
+
+- Paystack API
+
+- Google Business API
 
