@@ -15,10 +15,10 @@ return [
     |
     | Keys for OAuth 2.0 access, see the API console at
     | https://developers.google.com/console
-    |
+    | Localhost (sample) 
     */
-    'client_id'       => env('GOOGLE_CLIENT_ID', '1045603582736-c24eumavk04bn4j8ehbjpr4pn19d84n8.apps.googleusercontent.com'),
-    'client_secret'   => env('GOOGLE_CLIENT_SECRET', 'amKo6Qv_HPa5rrMw6sywOi7X'),
+    'client_id'       => env('GOOGLE_CLIENT_ID', ''),
+    'client_secret'   => env('GOOGLE_CLIENT_SECRET', ''),
     'redirect_uri'    => env('GOOGLE_REDIRECT', 'http://localhost:8000/get-account-details'),
     'scopes'          => ['https://www.googleapis.com/auth/plus.business.manage'],
     'access_type'     => 'online',
@@ -33,7 +33,7 @@ return [
     | a Server key, and not a Browser key.
     |
     */
-    'developer_key' => env('GOOGLE_DEVELOPER_KEY', 'AIzaSyBBNjx6nv-hHqBNw2hkMqzxOhpmMeqRhDg'),
+    'developer_key' => env('GOOGLE_DEVELOPER_KEY', ''),
 
     /*
     |----------------------------------------------------------------------------
